@@ -161,6 +161,47 @@ namespace Storage.Tests
         }
 
         [Fact]
+        public void StorageAccountCreateWithHttpsOnlyTest()
+        {
+            var handler = new RecordedDelegatingHandler { StatusCodeToReturn = HttpStatusCode.OK };
+
+            using (MockContext context = MockContext.Start(this.GetType().FullName))
+            {
+                var resourcesClient = StorageManagementTestUtilities.GetResourceManagementClient(context, handler);
+                var storageMgmtClient = StorageManagementTestUtilities.GetStorageManagementClient(context, handler);
+
+                // Create resource group
+                var rgname = StorageManagementTestUtilities.CreateResourceGroup(resourcesClient);
+
+                // Create storage account with hot
+                string accountName = TestUtilities.GenerateName("sto");
+                var parameters = new StorageAccountCreateParameters
+                {
+                    Sku = new Sku { Name = SkuName.StandardGRS },
+                    Kind = Kind.Storage,
+                    Location = StorageManagementTestUtilities.DefaultLocation,
+                    SupportsHttpsTrafficOnly = true
+                };
+                var account = storageMgmtClient.StorageAccounts.Create(rgname, accountName, parameters);
+                StorageManagementTestUtilities.VerifyAccountProperties(account, false);
+                Assert.True(account.SupportsHttpsTrafficOnly);
+
+                // Create storage account with cool
+                accountName = TestUtilities.GenerateName("sto");
+                parameters = new StorageAccountCreateParameters
+                {
+                    Sku = new Sku { Name = SkuName.StandardGRS },
+                    Kind = Kind.Storage,
+                    Location = StorageManagementTestUtilities.DefaultLocation,
+                    SupportsHttpsTrafficOnly = false
+                };
+                account = storageMgmtClient.StorageAccounts.Create(rgname, accountName, parameters);
+                StorageManagementTestUtilities.VerifyAccountProperties(account, false);
+                Assert.False(account.SupportsHttpsTrafficOnly);
+            }
+        }
+
+        [Fact]
         public void StorageAccountBeginCreateTest()
         {
             var handler = new RecordedDelegatingHandler { StatusCodeToReturn = HttpStatusCode.OK };
@@ -1211,6 +1252,52 @@ namespace Storage.Tests
                 Assert.Equal(true, account.Encryption.Services.File.Enabled);
                 Assert.NotNull(account.Encryption.Services.File.LastEnabledTime);
 
+            }
+        }
+
+        [Fact]
+        public void StorageAccountUpdateWithHttpsOnlyTest()
+        {
+            var handler = new RecordedDelegatingHandler { StatusCodeToReturn = HttpStatusCode.OK };
+
+            using (MockContext context = MockContext.Start(this.GetType().FullName))
+            {
+                var resourcesClient = StorageManagementTestUtilities.GetResourceManagementClient(context, handler);
+                var storageMgmtClient = StorageManagementTestUtilities.GetStorageManagementClient(context, handler);
+
+                // Create resource group
+                var rgname = StorageManagementTestUtilities.CreateResourceGroup(resourcesClient);
+
+                // Create storage account with hot
+                string accountName = TestUtilities.GenerateName("sto");
+                var parameters = new StorageAccountCreateParameters
+                {
+                    Sku = new Sku { Name = SkuName.StandardGRS },
+                    Kind = Kind.Storage,
+                    Location = StorageManagementTestUtilities.DefaultLocation,
+                    SupportsHttpsTrafficOnly = false
+                };
+                var account = storageMgmtClient.StorageAccounts.Create(rgname, accountName, parameters);
+                StorageManagementTestUtilities.VerifyAccountProperties(account, false);
+                Assert.False(account.SupportsHttpsTrafficOnly);
+
+                var parameter = new StorageAccountUpdateParameters
+                {
+                    SupportsHttpsTrafficOnly = true
+                };
+                storageMgmtClient.StorageAccounts.Update(rgname, accountName, parameter);
+                account = storageMgmtClient.StorageAccounts.GetProperties(rgname, accountName);
+                StorageManagementTestUtilities.VerifyAccountProperties(account, false);
+                Assert.True(account.SupportsHttpsTrafficOnly);
+
+                parameter = new StorageAccountUpdateParameters
+                {
+                    SupportsHttpsTrafficOnly = false
+                };
+                storageMgmtClient.StorageAccounts.Update(rgname, accountName, parameter);
+                account = storageMgmtClient.StorageAccounts.GetProperties(rgname, accountName);
+                StorageManagementTestUtilities.VerifyAccountProperties(account, false);
+                Assert.False(account.SupportsHttpsTrafficOnly);
             }
         }
     }
