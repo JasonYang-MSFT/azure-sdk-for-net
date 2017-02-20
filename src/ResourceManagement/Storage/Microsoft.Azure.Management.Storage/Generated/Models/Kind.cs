@@ -25,7 +25,9 @@ namespace Microsoft.Azure.Management.Storage.Models
         [EnumMember(Value = "Storage")]
         Storage,
         [EnumMember(Value = "BlobStorage")]
-        BlobStorage
+        BlobStorage,
+        [EnumMember(Value = "TableStorage")]
+        TableStorage
     }
 }
 
