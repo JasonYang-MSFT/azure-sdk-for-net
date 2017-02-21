@@ -58,7 +58,7 @@ namespace Microsoft.Azure.Management.Storage.Models
         /// include: 'Hot', 'Cool'</param>
         /// <param name="supportsHttpsTrafficOnly">Allows https traffic only to
         /// storage service if sets to true.</param>
-        public StorageAccountUpdateParameters(Sku sku = default(Sku), IDictionary<string, string> tags = default(IDictionary<string, string>), CustomDomain customDomain = default(CustomDomain), Encryption encryption = default(Encryption), AccessTier? accessTier = default(AccessTier?), bool? supportsHttpsTrafficOnly = default(bool?))
+        public StorageAccountUpdateParameters(Sku sku = default(Sku), IDictionary<string, string> tags = default(IDictionary<string, string>), CustomDomain customDomain = default(CustomDomain), Encryption encryption = default(Encryption), AccessTier? accessTier = default(AccessTier?), bool? supportsHttpsTrafficOnly = default(bool?), StorageNetworkRules networkAcls = default(StorageNetworkRules))
         {
             Sku = sku;
             Tags = tags;
@@ -66,6 +66,7 @@ namespace Microsoft.Azure.Management.Storage.Models
             Encryption = encryption;
             AccessTier = accessTier;
             SupportsHttpsTrafficOnly = supportsHttpsTrafficOnly;
+            NetworkAcls = networkAcls;
         }
 
         /// <summary>
@@ -118,6 +119,11 @@ namespace Microsoft.Azure.Management.Storage.Models
         public bool? SupportsHttpsTrafficOnly { get; set; }
 
         /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "properties.networkAcls")]
+        public StorageNetworkRules NetworkAcls { get; set; }
+
+        /// <summary>
         /// Validate the object.
         /// </summary>
         /// <exception cref="ValidationException">
@@ -132,6 +138,10 @@ namespace Microsoft.Azure.Management.Storage.Models
             if (CustomDomain != null)
             {
                 CustomDomain.Validate();
+            }
+            if (NetworkAcls != null)
+            {
+                NetworkAcls.Validate();
             }
         }
     }

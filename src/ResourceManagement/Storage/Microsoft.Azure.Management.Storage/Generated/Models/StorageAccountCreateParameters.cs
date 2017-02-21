@@ -65,7 +65,7 @@ namespace Microsoft.Azure.Management.Storage.Models
         /// include: 'Hot', 'Cool'</param>
         /// <param name="supportsHttpsTrafficOnly">Allows https traffic only to
         /// storage service if sets to true.</param>
-        public StorageAccountCreateParameters(Sku sku, Kind kind, string location, IDictionary<string, string> tags = default(IDictionary<string, string>), CustomDomain customDomain = default(CustomDomain), Encryption encryption = default(Encryption), AccessTier? accessTier = default(AccessTier?), bool? supportsHttpsTrafficOnly = default(bool?))
+        public StorageAccountCreateParameters(Sku sku, Kind kind, string location, IDictionary<string, string> tags = default(IDictionary<string, string>), CustomDomain customDomain = default(CustomDomain), Encryption encryption = default(Encryption), StorageNetworkRules networkAcls = default(StorageNetworkRules), AccessTier? accessTier = default(AccessTier?), bool? supportsHttpsTrafficOnly = default(bool?))
         {
             Sku = sku;
             Kind = kind;
@@ -73,6 +73,7 @@ namespace Microsoft.Azure.Management.Storage.Models
             Tags = tags;
             CustomDomain = customDomain;
             Encryption = encryption;
+            NetworkAcls = networkAcls;
             AccessTier = accessTier;
             SupportsHttpsTrafficOnly = supportsHttpsTrafficOnly;
         }
@@ -129,6 +130,11 @@ namespace Microsoft.Azure.Management.Storage.Models
         public Encryption Encryption { get; set; }
 
         /// <summary>
+        /// </summary>
+        [JsonProperty(PropertyName = "properties.networkAcls")]
+        public StorageNetworkRules NetworkAcls { get; set; }
+
+        /// <summary>
         /// Gets or sets required for storage accounts where kind =
         /// BlobStorage. The access tier used for billing. Possible values
         /// include: 'Hot', 'Cool'
@@ -166,6 +172,10 @@ namespace Microsoft.Azure.Management.Storage.Models
             if (CustomDomain != null)
             {
                 CustomDomain.Validate();
+            }
+            if (NetworkAcls != null)
+            {
+                NetworkAcls.Validate();
             }
         }
     }
