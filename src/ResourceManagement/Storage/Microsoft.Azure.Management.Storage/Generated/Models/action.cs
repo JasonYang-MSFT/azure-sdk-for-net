@@ -17,10 +17,10 @@ namespace Microsoft.Azure.Management.Storage.Models
     using System.Runtime.Serialization;
 
     /// <summary>
-    /// Defines values for action.
+    /// Defines values for Action.
     /// </summary>
     [JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-    public enum action
+    public enum Action
     {
         [EnumMember(Value = "allow")]
         Allow

@@ -65,7 +65,7 @@ namespace Microsoft.Azure.Management.Storage.Models
         /// include: 'Hot', 'Cool'</param>
         /// <param name="supportsHttpsTrafficOnly">Allows https traffic only to
         /// storage service if sets to true.</param>
-        public StorageAccountCreateParameters(Sku sku, Kind kind, string location, IDictionary<string, string> tags = default(IDictionary<string, string>), CustomDomain customDomain = default(CustomDomain), Encryption encryption = default(Encryption), StorageNetworkRules networkAcls = default(StorageNetworkRules), AccessTier? accessTier = default(AccessTier?), bool? supportsHttpsTrafficOnly = default(bool?))
+        public StorageAccountCreateParameters(Sku sku, Kind kind, string location, IDictionary<string, string> tags = default(IDictionary<string, string>), CustomDomain customDomain = default(CustomDomain), Encryption encryption = default(Encryption), StorageNetworkAcls networkAcls = default(StorageNetworkAcls), AccessTier? accessTier = default(AccessTier?), bool? supportsHttpsTrafficOnly = default(bool?))
         {
             Sku = sku;
             Kind = kind;
@@ -132,7 +132,7 @@ namespace Microsoft.Azure.Management.Storage.Models
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "properties.networkAcls")]
-        public StorageNetworkRules NetworkAcls { get; set; }
+        public StorageNetworkAcls NetworkAcls { get; set; }
 
         /// <summary>
         /// Gets or sets required for storage accounts where kind =

@@ -58,7 +58,7 @@ namespace Microsoft.Azure.Management.Storage.Models
         /// include: 'Hot', 'Cool'</param>
         /// <param name="supportsHttpsTrafficOnly">Allows https traffic only to
         /// storage service if sets to true.</param>
-        public StorageAccountUpdateParameters(Sku sku = default(Sku), IDictionary<string, string> tags = default(IDictionary<string, string>), CustomDomain customDomain = default(CustomDomain), Encryption encryption = default(Encryption), AccessTier? accessTier = default(AccessTier?), bool? supportsHttpsTrafficOnly = default(bool?), StorageNetworkRules networkAcls = default(StorageNetworkRules))
+        public StorageAccountUpdateParameters(Sku sku = default(Sku), IDictionary<string, string> tags = default(IDictionary<string, string>), CustomDomain customDomain = default(CustomDomain), Encryption encryption = default(Encryption), AccessTier? accessTier = default(AccessTier?), bool? supportsHttpsTrafficOnly = default(bool?), StorageNetworkAcls networkAcls = default(StorageNetworkAcls))
         {
             Sku = sku;
             Tags = tags;
@@ -121,7 +121,7 @@ namespace Microsoft.Azure.Management.Storage.Models
         /// <summary>
         /// </summary>
         [JsonProperty(PropertyName = "properties.networkAcls")]
-        public StorageNetworkRules NetworkAcls { get; set; }
+        public StorageNetworkAcls NetworkAcls { get; set; }
 
         /// <summary>
         /// Validate the object.

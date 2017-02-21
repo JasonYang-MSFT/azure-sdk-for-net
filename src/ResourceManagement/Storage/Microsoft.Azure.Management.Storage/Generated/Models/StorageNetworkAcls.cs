@@ -19,15 +19,15 @@ namespace Microsoft.Azure.Management.Storage.Models
     /// <summary>
     /// Network ACL
     /// </summary>
-    public partial class StorageNetworkRules
+    public partial class StorageNetworkAcls
     {
         /// <summary>
-        /// Initializes a new instance of the StorageNetworkRules class.
+        /// Initializes a new instance of the StorageNetworkAcls class.
         /// </summary>
-        public StorageNetworkRules() { }
+        public StorageNetworkAcls() { }
 
         /// <summary>
-        /// Initializes a new instance of the StorageNetworkRules class.
+        /// Initializes a new instance of the StorageNetworkAcls class.
         /// </summary>
         /// <param name="defaultAction">Specifies the default action of allow
         /// or deny when no other rules match. Possible values include:
@@ -40,7 +40,7 @@ namespace Microsoft.Azure.Management.Storage.Models
         /// <param name="virtualNetworkRules">Sets the virtual network ACL
         /// rules</param>
         /// <param name="ipRules">Sets the IP ACL rules</param>
-        public StorageNetworkRules(DefaultAction defaultAction, Bypass? bypass = default(Bypass?), IList<VirtualNetworkRule> virtualNetworkRules = default(IList<VirtualNetworkRule>), IList<IpRule> ipRules = default(IList<IpRule>))
+        public StorageNetworkAcls(DefaultAction defaultAction, Bypass? bypass = default(Bypass?), IList<VirtualNetworkRule> virtualNetworkRules = default(IList<VirtualNetworkRule>), IList<IpRule> ipRules = default(IList<IpRule>))
         {
             Bypass = bypass;
             VirtualNetworkRules = virtualNetworkRules;

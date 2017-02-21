@@ -28,16 +28,16 @@ namespace Microsoft.Azure.Management.Storage.Models
         /// <summary>
         /// Initializes a new instance of the VirtualNetworkRule class.
         /// </summary>
-        /// <param name="virtualNetworkUri">A URL of vnet, subnet, classicVnet
-        /// or classicSubnet.</param>
+        /// <param name="virtualNetworkResourceId">A URL of vnet, subnet,
+        /// classicVnet or classicSubnet.</param>
         /// <param name="action">The action of virtual network ACL rule.
         /// Possible values include: 'allow'</param>
         /// <param name="state">Gets the state of virtual network ACL rule.
         /// Possible values include: 'provisioning', 'deprovisioning',
         /// 'succeeded', 'failed', 'networkSourceDeleted'</param>
-        public VirtualNetworkRule(string virtualNetworkUri, action? action = default(action?), string state = default(string))
+        public VirtualNetworkRule(string virtualNetworkResourceId, Action? action = default(Action?), string state = default(string))
         {
-            VirtualNetworkUri = virtualNetworkUri;
+            VirtualNetworkResourceId = virtualNetworkResourceId;
             Action = action;
             State = state;
         }
@@ -46,14 +46,14 @@ namespace Microsoft.Azure.Management.Storage.Models
         /// Gets or sets a URL of vnet, subnet, classicVnet or classicSubnet.
         /// </summary>
         [JsonProperty(PropertyName = "id")]
-        public string VirtualNetworkUri { get; set; }
+        public string VirtualNetworkResourceId { get; set; }
 
         /// <summary>
         /// Gets or sets the action of virtual network ACL rule. Possible
         /// values include: 'allow'
         /// </summary>
         [JsonProperty(PropertyName = "action")]
-        public action? Action { get; set; }
+        public Action? Action { get; set; }
 
         /// <summary>
         /// Gets the state of virtual network ACL rule. Possible values
@@ -71,9 +71,9 @@ namespace Microsoft.Azure.Management.Storage.Models
         /// </exception>
         public virtual void Validate()
         {
-            if (VirtualNetworkUri == null)
+            if (VirtualNetworkResourceId == null)
             {
-                throw new ValidationException(ValidationRules.CannotBeNull, "VirtualNetworkUri");
+                throw new ValidationException(ValidationRules.CannotBeNull, "VirtualNetworkResourceId");
             }
         }
     }

@@ -32,7 +32,7 @@ namespace Microsoft.Azure.Management.Storage.Models
         /// format. Only IPV4 address is allowed.</param>
         /// <param name="action">The action of IP ACL rule. Possible values
         /// include: 'allow'</param>
-        public IpRule(string iPAddressOrRange, action? action = default(action?))
+        public IpRule(string iPAddressOrRange, Action? action = default(Action?))
         {
             IPAddressOrRange = iPAddressOrRange;
             Action = action;
@@ -50,7 +50,7 @@ namespace Microsoft.Azure.Management.Storage.Models
         /// 'allow'
         /// </summary>
         [JsonProperty(PropertyName = "action")]
-        public action? Action { get; set; }
+        public Action? Action { get; set; }
 
         /// <summary>
         /// Validate the object.
