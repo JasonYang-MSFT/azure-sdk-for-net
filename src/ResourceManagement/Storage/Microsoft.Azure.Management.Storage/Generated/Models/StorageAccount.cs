@@ -42,7 +42,7 @@ namespace Microsoft.Azure.Management.Storage.Models
         /// viewing and grouping a resource (across resource groups).</param>
         /// <param name="sku">Gets the SKU.</param>
         /// <param name="kind">Gets the Kind. Possible values include:
-        /// 'Storage', 'BlobStorage', 'TableStorage'</param>
+        /// 'Storage', 'BlobStorage'</param>
         /// <param name="provisioningState">Gets the status of the storage
         /// account at the time the operation was called. Possible values
         /// include: 'Creating', 'ResolvingDNS', 'Succeeded'</param>
@@ -112,8 +112,7 @@ namespace Microsoft.Azure.Management.Storage.Models
         public Sku Sku { get; protected set; }
 
         /// <summary>
-        /// Gets the Kind. Possible values include: 'Storage', 'BlobStorage',
-        /// 'TableStorage'
+        /// Gets the Kind. Possible values include: 'Storage', 'BlobStorage'
         /// </summary>
         [JsonProperty(PropertyName = "kind")]
         public Kind? Kind { get; protected set; }

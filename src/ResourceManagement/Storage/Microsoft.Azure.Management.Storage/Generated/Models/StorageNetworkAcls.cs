@@ -33,14 +33,14 @@ namespace Microsoft.Azure.Management.Storage.Models
         /// or deny when no other rules match. Possible values include:
         /// 'allow', 'deny'</param>
         /// <param name="bypass">Specifies whether traffic is bypassed for
-        /// Logging/Metrics/Azureservices. Possible values are any combination
-        /// of Logging|Metrics|Azureservices, or None to bypass none of those
-        /// traffics. Possible values include: 'None', 'Logging', 'Metrics',
-        /// 'Azureservices'</param>
+        /// Logging/Metrics/AzureServices. Possible values are any combination
+        /// of Logging|Metrics|AzureServices (For example, "Logging, Metrics"),
+        /// or None to bypass none of those traffics. Possible values include:
+        /// 'None', 'Logging', 'Metrics', 'AzureServices'</param>
         /// <param name="virtualNetworkRules">Sets the virtual network ACL
         /// rules</param>
         /// <param name="ipRules">Sets the IP ACL rules</param>
-        public StorageNetworkAcls(DefaultAction defaultAction, Bypass? bypass = default(Bypass?), IList<VirtualNetworkRule> virtualNetworkRules = default(IList<VirtualNetworkRule>), IList<IpRule> ipRules = default(IList<IpRule>))
+        public StorageNetworkAcls(DefaultAction defaultAction, string bypass = default(string), IList<VirtualNetworkRule> virtualNetworkRules = default(IList<VirtualNetworkRule>), IList<IpRule> ipRules = default(IList<IpRule>))
         {
             Bypass = bypass;
             VirtualNetworkRules = virtualNetworkRules;
@@ -50,13 +50,13 @@ namespace Microsoft.Azure.Management.Storage.Models
 
         /// <summary>
         /// Gets or sets specifies whether traffic is bypassed for
-        /// Logging/Metrics/Azureservices. Possible values are any combination
-        /// of Logging|Metrics|Azureservices, or None to bypass none of those
-        /// traffics. Possible values include: 'None', 'Logging', 'Metrics',
-        /// 'Azureservices'
+        /// Logging/Metrics/AzureServices. Possible values are any combination
+        /// of Logging|Metrics|AzureServices (For example, "Logging, Metrics"),
+        /// or None to bypass none of those traffics. Possible values include:
+        /// 'None', 'Logging', 'Metrics', 'AzureServices'
         /// </summary>
         [JsonProperty(PropertyName = "bypass")]
-        public Bypass? Bypass { get; set; }
+        public string Bypass { get; set; }
 
         /// <summary>
         /// Gets or sets sets the virtual network ACL rules

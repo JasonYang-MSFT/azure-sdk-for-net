@@ -38,8 +38,7 @@ namespace Microsoft.Azure.Management.Storage.Models
         /// </summary>
         /// <param name="sku">Required. Gets or sets the sku name.</param>
         /// <param name="kind">Required. Indicates the type of storage account.
-        /// Possible values include: 'Storage', 'BlobStorage',
-        /// 'TableStorage'</param>
+        /// Possible values include: 'Storage', 'BlobStorage'</param>
         /// <param name="location">Required. Gets or sets the location of the
         /// resource. This will be one of the supported and registered Azure
         /// Geo Regions (e.g. West US, East US, Southeast Asia, etc.). The geo
@@ -86,7 +85,7 @@ namespace Microsoft.Azure.Management.Storage.Models
 
         /// <summary>
         /// Gets or sets required. Indicates the type of storage account.
-        /// Possible values include: 'Storage', 'BlobStorage', 'TableStorage'
+        /// Possible values include: 'Storage', 'BlobStorage'
         /// </summary>
         [JsonProperty(PropertyName = "kind")]
         public Kind Kind { get; set; }
