@@ -4,8 +4,8 @@
 using System.Reflection;
 using System.Resources;
 
-[assembly: AssemblyTitle("Microsoft Azure Compute Management Library")]
-[assembly: AssemblyDescription("Provides management functionality for Microsoft Azure Compute Resources.")]
+[assembly: AssemblyTitle("Microsoft Azure Data Migration Management Library")]
+[assembly: AssemblyDescription("Provides management functionality for Microsoft Azure Data Migration Resources.")]
 
 [assembly: AssemblyVersion("16.0.0.0")]
 [assembly: AssemblyFileVersion("16.2.0.0")]

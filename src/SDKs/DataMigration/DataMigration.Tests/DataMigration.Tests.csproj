@@ -1,8 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <Import Project="$([MSBuild]::GetPathOfFileAbove('AzSdk.test.reference.props'))" />
   <PropertyGroup>
-    <PackageId>Compute.Tests</PackageId>
-    <Description>Compute.Tests Class Library</Description>
+    <PackageId>DataMigration.Tests</PackageId>
+    <Description>DataMigration.Tests Class Library</Description>
     <AssemblyName>DataMigration.Tests</AssemblyName>
     <VersionPrefix>1.0.0-preview</VersionPrefix>    
   </PropertyGroup>
