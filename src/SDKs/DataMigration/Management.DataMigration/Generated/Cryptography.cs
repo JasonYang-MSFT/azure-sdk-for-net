@@ -29,10 +29,14 @@ namespace Microsoft.Azure.DataMigrationService
         {
             if (plaintext == null) { throw new ArgumentNullException("plaintext"); }
             RSAParameters rsaKey = DeserializePublicKey(key);
-            using (var rsa = new RSACryptoServiceProvider())
+            using (var rsa = RSA.Create())
             {
                 rsa.ImportParameters(rsaKey);
-                return rsa.Encrypt(plaintext, true);
+#if NETSTANDARD1_4
+                return rsa.Encrypt(plaintext, RSAEncryptionPadding.Pkcs1);
+#else
+                return rsa.EncryptValue(plaintext);
+#endif
             }
         }
 
