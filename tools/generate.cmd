@@ -40,9 +40,12 @@ if not "%req_help%" == "" (
 :: repo information
 set rp="%1"
 if not "%2" == "" (set version="%2")         else (set version="latest")
-if not "%3" == "" (set specsRepoUser="%3")   else (set specsRepoUser="Azure")
-if not "%4" == "" (set specsRepoBranch="%4") else (set specsRepoBranch="current")
-set configFile="https://github.com/%specsRepoUser%/azure-rest-api-specs/blob/%specsRepoBranch%/specification/%rp%/readme.md"
+if not "%3" == "" (set specsRepoUser="%3")   else (set specsRepoUser="rohit-joy")
+:: if not "%4" == "" (set specsRepoBranch="%4") else (set specsRepoBranch="current")
+if not "%4" == "" (set specsRepoBranch="%4") else (set specsRepoBranch="datamigration-v2017-04-15")
+:: set configFile="https://github.com/%specsRepoUser%/azure-rest-api-specs/blob/%specsRepoBranch%/specification/%rp%/readme.md"
+set configFile="https://github.com/%specsRepoUser%/azure-rest-api-specs-pr/blob/datamigration-v2017-04-15/specification/datamigrationservices/resource-manager/readme.md"
+
 
 :: installation
 if "%5" == "" (call npm i -g autorest)
