@@ -44,7 +44,6 @@ if not "%3" == "" (set specsRepoUser="%3")   else (set specsRepoUser="Azure")
 if not "%4" == "" (set specsRepoBranch="%4") else (set specsRepoBranch="current")
 set configFile="https://github.com/%specsRepoUser%/azure-rest-api-specs/blob/%specsRepoBranch%/specification/%rp%/readme.md"
 
-
 :: installation
 if "%5" == "" (call npm i -g autorest)
 
