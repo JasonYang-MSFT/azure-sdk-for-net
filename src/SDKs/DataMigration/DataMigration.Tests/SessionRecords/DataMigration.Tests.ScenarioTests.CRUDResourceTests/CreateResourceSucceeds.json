@@ -1,0 +1,915 @@
+{
+  "Entries": [
+    {
+      "RequestUri": "/subscriptions/97181df2-909d-420b-ab93-1bff15acb6b7/resourcegroups/dmssdkrg?api-version=2015-11-01",
+      "EncodedRequestUri": "L3N1YnNjcmlwdGlvbnMvOTcxODFkZjItOTA5ZC00MjBiLWFiOTMtMWJmZjE1YWNiNmI3L3Jlc291cmNlZ3JvdXBzL2Rtc3Nka3JnP2FwaS12ZXJzaW9uPTIwMTUtMTEtMDE=",
+      "RequestMethod": "PUT",
+      "RequestBody": "{\r\n  \"location\": \"westus2\"\r\n}",
+      "RequestHeaders": {
+        "Content-Type": [
+          "application/json; charset=utf-8"
+        ],
+        "Content-Length": [
+          "29"
+        ],
+        "x-ms-client-request-id": [
+          "17f937e4-2f11-43e6-8f8b-0f383c837c24"
+        ],
+        "accept-language": [
+          "en-US"
+        ],
+        "User-Agent": [
+          "FxVersion/4.6.25211.01",
+          "Microsoft.Azure.Management.Resources.ResourceManagementClient/1.0.0.0"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"id\": \"/subscriptions/97181df2-909d-420b-ab93-1bff15acb6b7/resourceGroups/dmssdkrg\",\r\n  \"name\": \"dmssdkrg\",\r\n  \"location\": \"westus2\",\r\n  \"properties\": {\r\n    \"provisioningState\": \"Succeeded\"\r\n  }\r\n}",
+      "ResponseHeaders": {
+        "Content-Length": [
+          "170"
+        ],
+        "Content-Type": [
+          "application/json; charset=utf-8"
+        ],
+        "Expires": [
+          "-1"
+        ],
+        "Cache-Control": [
+          "no-cache"
+        ],
+        "Date": [
+          "Fri, 18 Aug 2017 07:19:03 GMT"
+        ],
+        "Pragma": [
+          "no-cache"
+        ],
+        "x-ms-ratelimit-remaining-subscription-writes": [
+          "1199"
+        ],
+        "x-ms-request-id": [
+          "4b8e9885-a184-48b8-aae2-f3ad2a5fdf8f"
+        ],
+        "x-ms-correlation-request-id": [
+          "4b8e9885-a184-48b8-aae2-f3ad2a5fdf8f"
+        ],
+        "x-ms-routing-request-id": [
+          "WESTUS2:20170818T071904Z:4b8e9885-a184-48b8-aae2-f3ad2a5fdf8f"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ]
+      },
+      "StatusCode": 201
+    },
+    {
+      "RequestUri": "/subscriptions/97181df2-909d-420b-ab93-1bff15acb6b7/resourceGroups/dmssdkrg/providers/Microsoft.DataMigration/services/dmssdk?api-version=2017-04-15-privatepreview",
+      "EncodedRequestUri": "L3N1YnNjcmlwdGlvbnMvOTcxODFkZjItOTA5ZC00MjBiLWFiOTMtMWJmZjE1YWNiNmI3L3Jlc291cmNlR3JvdXBzL2Rtc3Nka3JnL3Byb3ZpZGVycy9NaWNyb3NvZnQuRGF0YU1pZ3JhdGlvbi9zZXJ2aWNlcy9kbXNzZGs/YXBpLXZlcnNpb249MjAxNy0wNC0xNS1wcml2YXRlcHJldmlldw==",
+      "RequestMethod": "PUT",
+      "RequestBody": "{\r\n  \"properties\": {\r\n    \"virtualSubnetId\": \"/subscriptions/97181df2-909d-420b-ab93-1bff15acb6b7/resourceGroups/ERNetwork/providers/Microsoft.Network/virtualNetworks/AzureDMS-CORP-WUS2-VNET-5129/subnets/Subnet-1\"\r\n  },\r\n  \"sku\": {\r\n    \"name\": \"PP1\"\r\n  },\r\n  \"location\": \"westus2\"\r\n}",
+      "RequestHeaders": {
+        "Content-Type": [
+          "application/json; charset=utf-8"
+        ],
+        "Content-Length": [
+          "284"
+        ],
+        "x-ms-client-request-id": [
+          "0199f28f-b2f6-43c4-b162-aee23148c0a3"
+        ],
+        "accept-language": [
+          "en-US"
+        ],
+        "User-Agent": [
+          "FxVersion/4.6.25211.01",
+          "Microsoft.Azure.DataMigrationService.DataMigrationServiceClient/16.2.0.0"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"properties\": {\r\n    \"provisioningState\": \"Accepted\",\r\n    \"virtualSubnetId\": \"/subscriptions/97181df2-909d-420b-ab93-1bff15acb6b7/resourceGroups/ERNetwork/providers/Microsoft.Network/virtualNetworks/AzureDMS-CORP-WUS2-VNET-5129/subnets/Subnet-1\"\r\n  },\r\n  \"etag\": \"++iCXDaryoTVoQy5Jj67U4r6oqdxiVUwVesh3WxJfWs=\",\r\n  \"id\": \"/subscriptions/97181df2-909d-420b-ab93-1bff15acb6b7/resourceGroups/dmssdkrg/providers/Microsoft.DataMigration/services/dmssdk\",\r\n  \"kind\": \"vm\",\r\n  \"location\": \"westus2\",\r\n  \"name\": \"dmssdk\",\r\n  \"sku\": {\r\n    \"name\": \"PP1\"\r\n  },\r\n  \"type\": \"Microsoft.DataMigration/services\"\r\n}",
+      "ResponseHeaders": {
+        "Content-Length": [
+          "533"
+        ],
+        "Content-Type": [
+          "application/json; charset=utf-8"
+        ],
+        "Expires": [
+          "-1"
+        ],
+        "Cache-Control": [
+          "no-cache"
+        ],
+        "Date": [
+          "Fri, 18 Aug 2017 07:19:13 GMT"
+        ],
+        "Pragma": [
+          "no-cache"
+        ],
+        "ETag": [
+          "\"++iCXDaryoTVoQy5Jj67U4r6oqdxiVUwVesh3WxJfWs=\""
+        ],
+        "Retry-After": [
+          "30"
+        ],
+        "Server": [
+          "Microsoft-IIS/8.5"
+        ],
+        "Azure-AsyncOperation": [
+          "https://management.azure.com/subscriptions/97181df2-909d-420b-ab93-1bff15acb6b7/providers/Microsoft.DataMigration/locations/westus2/operationStatuses/d905862c-751e-4df1-840b-95d2914cb35b?api-version=2017-04-15-privatepreview"
+        ],
+        "x-ms-request-id": [
+          "112ed450-bf52-4066-99b3-5b6af0c29b00"
+        ],
+        "x-ms-ratelimit-remaining-subscription-writes": [
+          "1197"
+        ],
+        "x-ms-correlation-request-id": [
+          "28ce8a30-7eb2-49ff-8671-132a98c4b065"
+        ],
+        "x-ms-routing-request-id": [
+          "WESTUS2:20170818T071914Z:28ce8a30-7eb2-49ff-8671-132a98c4b065"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ]
+      },
+      "StatusCode": 201
+    },
+    {
+      "RequestUri": "/subscriptions/97181df2-909d-420b-ab93-1bff15acb6b7/providers/Microsoft.DataMigration/locations/westus2/operationStatuses/d905862c-751e-4df1-840b-95d2914cb35b?api-version=2017-04-15-privatepreview",
+      "EncodedRequestUri": "L3N1YnNjcmlwdGlvbnMvOTcxODFkZjItOTA5ZC00MjBiLWFiOTMtMWJmZjE1YWNiNmI3L3Byb3ZpZGVycy9NaWNyb3NvZnQuRGF0YU1pZ3JhdGlvbi9sb2NhdGlvbnMvd2VzdHVzMi9vcGVyYXRpb25TdGF0dXNlcy9kOTA1ODYyYy03NTFlLTRkZjEtODQwYi05NWQyOTE0Y2IzNWI/YXBpLXZlcnNpb249MjAxNy0wNC0xNS1wcml2YXRlcHJldmlldw==",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "User-Agent": [
+          "FxVersion/4.6.25211.01",
+          "Microsoft.Azure.DataMigrationService.DataMigrationServiceClient/16.2.0.0"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"name\": \"d905862c-751e-4df1-840b-95d2914cb35b\",\r\n  \"id\": \"/subscriptions/97181df2-909d-420b-ab93-1bff15acb6b7/providers/Microsoft.DataMigration/locations/westus2/operationStatuses/d905862c-751e-4df1-840b-95d2914cb35b\",\r\n  \"status\": \"Running\"\r\n}",
+      "ResponseHeaders": {
+        "Content-Type": [
+          "application/json; charset=utf-8"
+        ],
+        "Expires": [
+          "-1"
+        ],
+        "Cache-Control": [
+          "no-cache"
+        ],
+        "Date": [
+          "Fri, 18 Aug 2017 07:19:43 GMT"
+        ],
+        "Pragma": [
+          "no-cache"
+        ],
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-IIS/8.5"
+        ],
+        "Vary": [
+          "Accept-Encoding"
+        ],
+        "x-ms-request-id": [
+          "c1a42b62-0237-421b-aaa7-cb2f0805ccce"
+        ],
+        "x-ms-ratelimit-remaining-subscription-reads": [
+          "14941"
+        ],
+        "x-ms-correlation-request-id": [
+          "8c1f3202-b120-4e0a-9e2d-8dfc4e03962e"
+        ],
+        "x-ms-routing-request-id": [
+          "WESTUS2:20170818T071944Z:8c1f3202-b120-4e0a-9e2d-8dfc4e03962e"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ]
+      },
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/subscriptions/97181df2-909d-420b-ab93-1bff15acb6b7/providers/Microsoft.DataMigration/locations/westus2/operationStatuses/d905862c-751e-4df1-840b-95d2914cb35b?api-version=2017-04-15-privatepreview",
+      "EncodedRequestUri": "L3N1YnNjcmlwdGlvbnMvOTcxODFkZjItOTA5ZC00MjBiLWFiOTMtMWJmZjE1YWNiNmI3L3Byb3ZpZGVycy9NaWNyb3NvZnQuRGF0YU1pZ3JhdGlvbi9sb2NhdGlvbnMvd2VzdHVzMi9vcGVyYXRpb25TdGF0dXNlcy9kOTA1ODYyYy03NTFlLTRkZjEtODQwYi05NWQyOTE0Y2IzNWI/YXBpLXZlcnNpb249MjAxNy0wNC0xNS1wcml2YXRlcHJldmlldw==",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "User-Agent": [
+          "FxVersion/4.6.25211.01",
+          "Microsoft.Azure.DataMigrationService.DataMigrationServiceClient/16.2.0.0"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"name\": \"d905862c-751e-4df1-840b-95d2914cb35b\",\r\n  \"id\": \"/subscriptions/97181df2-909d-420b-ab93-1bff15acb6b7/providers/Microsoft.DataMigration/locations/westus2/operationStatuses/d905862c-751e-4df1-840b-95d2914cb35b\",\r\n  \"status\": \"Running\"\r\n}",
+      "ResponseHeaders": {
+        "Content-Type": [
+          "application/json; charset=utf-8"
+        ],
+        "Expires": [
+          "-1"
+        ],
+        "Cache-Control": [
+          "no-cache"
+        ],
+        "Date": [
+          "Fri, 18 Aug 2017 07:20:14 GMT"
+        ],
+        "Pragma": [
+          "no-cache"
+        ],
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-IIS/8.5"
+        ],
+        "Vary": [
+          "Accept-Encoding"
+        ],
+        "x-ms-request-id": [
+          "2bff82bd-cfa6-4029-8136-e83232dad024"
+        ],
+        "x-ms-ratelimit-remaining-subscription-reads": [
+          "14945"
+        ],
+        "x-ms-correlation-request-id": [
+          "b612774b-3e4c-48c7-b9ac-15a92a48b242"
+        ],
+        "x-ms-routing-request-id": [
+          "WESTUS2:20170818T072014Z:b612774b-3e4c-48c7-b9ac-15a92a48b242"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ]
+      },
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/subscriptions/97181df2-909d-420b-ab93-1bff15acb6b7/providers/Microsoft.DataMigration/locations/westus2/operationStatuses/d905862c-751e-4df1-840b-95d2914cb35b?api-version=2017-04-15-privatepreview",
+      "EncodedRequestUri": "L3N1YnNjcmlwdGlvbnMvOTcxODFkZjItOTA5ZC00MjBiLWFiOTMtMWJmZjE1YWNiNmI3L3Byb3ZpZGVycy9NaWNyb3NvZnQuRGF0YU1pZ3JhdGlvbi9sb2NhdGlvbnMvd2VzdHVzMi9vcGVyYXRpb25TdGF0dXNlcy9kOTA1ODYyYy03NTFlLTRkZjEtODQwYi05NWQyOTE0Y2IzNWI/YXBpLXZlcnNpb249MjAxNy0wNC0xNS1wcml2YXRlcHJldmlldw==",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "User-Agent": [
+          "FxVersion/4.6.25211.01",
+          "Microsoft.Azure.DataMigrationService.DataMigrationServiceClient/16.2.0.0"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"name\": \"d905862c-751e-4df1-840b-95d2914cb35b\",\r\n  \"id\": \"/subscriptions/97181df2-909d-420b-ab93-1bff15acb6b7/providers/Microsoft.DataMigration/locations/westus2/operationStatuses/d905862c-751e-4df1-840b-95d2914cb35b\",\r\n  \"status\": \"Running\"\r\n}",
+      "ResponseHeaders": {
+        "Content-Type": [
+          "application/json; charset=utf-8"
+        ],
+        "Expires": [
+          "-1"
+        ],
+        "Cache-Control": [
+          "no-cache"
+        ],
+        "Date": [
+          "Fri, 18 Aug 2017 07:20:44 GMT"
+        ],
+        "Pragma": [
+          "no-cache"
+        ],
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-IIS/8.5"
+        ],
+        "Vary": [
+          "Accept-Encoding"
+        ],
+        "x-ms-request-id": [
+          "9eb1c2a4-507a-4205-8a16-e3dddfa80f42"
+        ],
+        "x-ms-ratelimit-remaining-subscription-reads": [
+          "14944"
+        ],
+        "x-ms-correlation-request-id": [
+          "054c6045-7185-43de-8ba0-4df640c31e95"
+        ],
+        "x-ms-routing-request-id": [
+          "WESTUS2:20170818T072044Z:054c6045-7185-43de-8ba0-4df640c31e95"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ]
+      },
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/subscriptions/97181df2-909d-420b-ab93-1bff15acb6b7/providers/Microsoft.DataMigration/locations/westus2/operationStatuses/d905862c-751e-4df1-840b-95d2914cb35b?api-version=2017-04-15-privatepreview",
+      "EncodedRequestUri": "L3N1YnNjcmlwdGlvbnMvOTcxODFkZjItOTA5ZC00MjBiLWFiOTMtMWJmZjE1YWNiNmI3L3Byb3ZpZGVycy9NaWNyb3NvZnQuRGF0YU1pZ3JhdGlvbi9sb2NhdGlvbnMvd2VzdHVzMi9vcGVyYXRpb25TdGF0dXNlcy9kOTA1ODYyYy03NTFlLTRkZjEtODQwYi05NWQyOTE0Y2IzNWI/YXBpLXZlcnNpb249MjAxNy0wNC0xNS1wcml2YXRlcHJldmlldw==",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "User-Agent": [
+          "FxVersion/4.6.25211.01",
+          "Microsoft.Azure.DataMigrationService.DataMigrationServiceClient/16.2.0.0"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"name\": \"d905862c-751e-4df1-840b-95d2914cb35b\",\r\n  \"id\": \"/subscriptions/97181df2-909d-420b-ab93-1bff15acb6b7/providers/Microsoft.DataMigration/locations/westus2/operationStatuses/d905862c-751e-4df1-840b-95d2914cb35b\",\r\n  \"status\": \"Running\"\r\n}",
+      "ResponseHeaders": {
+        "Content-Type": [
+          "application/json; charset=utf-8"
+        ],
+        "Expires": [
+          "-1"
+        ],
+        "Cache-Control": [
+          "no-cache"
+        ],
+        "Date": [
+          "Fri, 18 Aug 2017 07:21:13 GMT"
+        ],
+        "Pragma": [
+          "no-cache"
+        ],
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-IIS/8.5"
+        ],
+        "Vary": [
+          "Accept-Encoding"
+        ],
+        "x-ms-request-id": [
+          "ee1187f4-59b4-42a1-a0f9-855ea7d7185a"
+        ],
+        "x-ms-ratelimit-remaining-subscription-reads": [
+          "14943"
+        ],
+        "x-ms-correlation-request-id": [
+          "5b52e39c-136d-4a0b-8b23-ec3345965bec"
+        ],
+        "x-ms-routing-request-id": [
+          "WESTUS2:20170818T072114Z:5b52e39c-136d-4a0b-8b23-ec3345965bec"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ]
+      },
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/subscriptions/97181df2-909d-420b-ab93-1bff15acb6b7/providers/Microsoft.DataMigration/locations/westus2/operationStatuses/d905862c-751e-4df1-840b-95d2914cb35b?api-version=2017-04-15-privatepreview",
+      "EncodedRequestUri": "L3N1YnNjcmlwdGlvbnMvOTcxODFkZjItOTA5ZC00MjBiLWFiOTMtMWJmZjE1YWNiNmI3L3Byb3ZpZGVycy9NaWNyb3NvZnQuRGF0YU1pZ3JhdGlvbi9sb2NhdGlvbnMvd2VzdHVzMi9vcGVyYXRpb25TdGF0dXNlcy9kOTA1ODYyYy03NTFlLTRkZjEtODQwYi05NWQyOTE0Y2IzNWI/YXBpLXZlcnNpb249MjAxNy0wNC0xNS1wcml2YXRlcHJldmlldw==",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "User-Agent": [
+          "FxVersion/4.6.25211.01",
+          "Microsoft.Azure.DataMigrationService.DataMigrationServiceClient/16.2.0.0"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"name\": \"d905862c-751e-4df1-840b-95d2914cb35b\",\r\n  \"id\": \"/subscriptions/97181df2-909d-420b-ab93-1bff15acb6b7/providers/Microsoft.DataMigration/locations/westus2/operationStatuses/d905862c-751e-4df1-840b-95d2914cb35b\",\r\n  \"status\": \"Running\"\r\n}",
+      "ResponseHeaders": {
+        "Content-Type": [
+          "application/json; charset=utf-8"
+        ],
+        "Expires": [
+          "-1"
+        ],
+        "Cache-Control": [
+          "no-cache"
+        ],
+        "Date": [
+          "Fri, 18 Aug 2017 07:21:44 GMT"
+        ],
+        "Pragma": [
+          "no-cache"
+        ],
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-IIS/8.5"
+        ],
+        "Vary": [
+          "Accept-Encoding"
+        ],
+        "x-ms-request-id": [
+          "6f96fdda-c9ff-4ea9-bf79-e3217bc8571c"
+        ],
+        "x-ms-ratelimit-remaining-subscription-reads": [
+          "14942"
+        ],
+        "x-ms-correlation-request-id": [
+          "41e1cb84-bebc-43c4-ba7a-1b1bfa96296b"
+        ],
+        "x-ms-routing-request-id": [
+          "WESTUS2:20170818T072144Z:41e1cb84-bebc-43c4-ba7a-1b1bfa96296b"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ]
+      },
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/subscriptions/97181df2-909d-420b-ab93-1bff15acb6b7/providers/Microsoft.DataMigration/locations/westus2/operationStatuses/d905862c-751e-4df1-840b-95d2914cb35b?api-version=2017-04-15-privatepreview",
+      "EncodedRequestUri": "L3N1YnNjcmlwdGlvbnMvOTcxODFkZjItOTA5ZC00MjBiLWFiOTMtMWJmZjE1YWNiNmI3L3Byb3ZpZGVycy9NaWNyb3NvZnQuRGF0YU1pZ3JhdGlvbi9sb2NhdGlvbnMvd2VzdHVzMi9vcGVyYXRpb25TdGF0dXNlcy9kOTA1ODYyYy03NTFlLTRkZjEtODQwYi05NWQyOTE0Y2IzNWI/YXBpLXZlcnNpb249MjAxNy0wNC0xNS1wcml2YXRlcHJldmlldw==",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "User-Agent": [
+          "FxVersion/4.6.25211.01",
+          "Microsoft.Azure.DataMigrationService.DataMigrationServiceClient/16.2.0.0"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"name\": \"d905862c-751e-4df1-840b-95d2914cb35b\",\r\n  \"id\": \"/subscriptions/97181df2-909d-420b-ab93-1bff15acb6b7/providers/Microsoft.DataMigration/locations/westus2/operationStatuses/d905862c-751e-4df1-840b-95d2914cb35b\",\r\n  \"status\": \"Running\"\r\n}",
+      "ResponseHeaders": {
+        "Content-Type": [
+          "application/json; charset=utf-8"
+        ],
+        "Expires": [
+          "-1"
+        ],
+        "Cache-Control": [
+          "no-cache"
+        ],
+        "Date": [
+          "Fri, 18 Aug 2017 07:22:14 GMT"
+        ],
+        "Pragma": [
+          "no-cache"
+        ],
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-IIS/8.5"
+        ],
+        "Vary": [
+          "Accept-Encoding"
+        ],
+        "x-ms-request-id": [
+          "b4a2b36b-f9c5-43c3-aa96-c217ef121aa0"
+        ],
+        "x-ms-ratelimit-remaining-subscription-reads": [
+          "14940"
+        ],
+        "x-ms-correlation-request-id": [
+          "e9754c07-bcf6-41a7-bea7-8f02f3726801"
+        ],
+        "x-ms-routing-request-id": [
+          "WESTUS2:20170818T072214Z:e9754c07-bcf6-41a7-bea7-8f02f3726801"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ]
+      },
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/subscriptions/97181df2-909d-420b-ab93-1bff15acb6b7/providers/Microsoft.DataMigration/locations/westus2/operationStatuses/d905862c-751e-4df1-840b-95d2914cb35b?api-version=2017-04-15-privatepreview",
+      "EncodedRequestUri": "L3N1YnNjcmlwdGlvbnMvOTcxODFkZjItOTA5ZC00MjBiLWFiOTMtMWJmZjE1YWNiNmI3L3Byb3ZpZGVycy9NaWNyb3NvZnQuRGF0YU1pZ3JhdGlvbi9sb2NhdGlvbnMvd2VzdHVzMi9vcGVyYXRpb25TdGF0dXNlcy9kOTA1ODYyYy03NTFlLTRkZjEtODQwYi05NWQyOTE0Y2IzNWI/YXBpLXZlcnNpb249MjAxNy0wNC0xNS1wcml2YXRlcHJldmlldw==",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "User-Agent": [
+          "FxVersion/4.6.25211.01",
+          "Microsoft.Azure.DataMigrationService.DataMigrationServiceClient/16.2.0.0"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"name\": \"d905862c-751e-4df1-840b-95d2914cb35b\",\r\n  \"id\": \"/subscriptions/97181df2-909d-420b-ab93-1bff15acb6b7/providers/Microsoft.DataMigration/locations/westus2/operationStatuses/d905862c-751e-4df1-840b-95d2914cb35b\",\r\n  \"status\": \"Running\"\r\n}",
+      "ResponseHeaders": {
+        "Content-Type": [
+          "application/json; charset=utf-8"
+        ],
+        "Expires": [
+          "-1"
+        ],
+        "Cache-Control": [
+          "no-cache"
+        ],
+        "Date": [
+          "Fri, 18 Aug 2017 07:22:43 GMT"
+        ],
+        "Pragma": [
+          "no-cache"
+        ],
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-IIS/8.5"
+        ],
+        "Vary": [
+          "Accept-Encoding"
+        ],
+        "x-ms-request-id": [
+          "511d8f7d-7632-4290-98eb-4c27ee59696c"
+        ],
+        "x-ms-ratelimit-remaining-subscription-reads": [
+          "14939"
+        ],
+        "x-ms-correlation-request-id": [
+          "116f3abd-fd1e-46e3-8393-bac6f267d989"
+        ],
+        "x-ms-routing-request-id": [
+          "WESTUS2:20170818T072244Z:116f3abd-fd1e-46e3-8393-bac6f267d989"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ]
+      },
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/subscriptions/97181df2-909d-420b-ab93-1bff15acb6b7/providers/Microsoft.DataMigration/locations/westus2/operationStatuses/d905862c-751e-4df1-840b-95d2914cb35b?api-version=2017-04-15-privatepreview",
+      "EncodedRequestUri": "L3N1YnNjcmlwdGlvbnMvOTcxODFkZjItOTA5ZC00MjBiLWFiOTMtMWJmZjE1YWNiNmI3L3Byb3ZpZGVycy9NaWNyb3NvZnQuRGF0YU1pZ3JhdGlvbi9sb2NhdGlvbnMvd2VzdHVzMi9vcGVyYXRpb25TdGF0dXNlcy9kOTA1ODYyYy03NTFlLTRkZjEtODQwYi05NWQyOTE0Y2IzNWI/YXBpLXZlcnNpb249MjAxNy0wNC0xNS1wcml2YXRlcHJldmlldw==",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "User-Agent": [
+          "FxVersion/4.6.25211.01",
+          "Microsoft.Azure.DataMigrationService.DataMigrationServiceClient/16.2.0.0"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"name\": \"d905862c-751e-4df1-840b-95d2914cb35b\",\r\n  \"id\": \"/subscriptions/97181df2-909d-420b-ab93-1bff15acb6b7/providers/Microsoft.DataMigration/locations/westus2/operationStatuses/d905862c-751e-4df1-840b-95d2914cb35b\",\r\n  \"status\": \"Running\"\r\n}",
+      "ResponseHeaders": {
+        "Content-Type": [
+          "application/json; charset=utf-8"
+        ],
+        "Expires": [
+          "-1"
+        ],
+        "Cache-Control": [
+          "no-cache"
+        ],
+        "Date": [
+          "Fri, 18 Aug 2017 07:23:13 GMT"
+        ],
+        "Pragma": [
+          "no-cache"
+        ],
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-IIS/8.5"
+        ],
+        "Vary": [
+          "Accept-Encoding"
+        ],
+        "x-ms-request-id": [
+          "f4531ea4-61eb-4232-a5af-6415be54314e"
+        ],
+        "x-ms-ratelimit-remaining-subscription-reads": [
+          "14937"
+        ],
+        "x-ms-correlation-request-id": [
+          "4c886ac5-7c95-4727-a2fd-aa0a7fffa611"
+        ],
+        "x-ms-routing-request-id": [
+          "WESTUS2:20170818T072314Z:4c886ac5-7c95-4727-a2fd-aa0a7fffa611"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ]
+      },
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/subscriptions/97181df2-909d-420b-ab93-1bff15acb6b7/providers/Microsoft.DataMigration/locations/westus2/operationStatuses/d905862c-751e-4df1-840b-95d2914cb35b?api-version=2017-04-15-privatepreview",
+      "EncodedRequestUri": "L3N1YnNjcmlwdGlvbnMvOTcxODFkZjItOTA5ZC00MjBiLWFiOTMtMWJmZjE1YWNiNmI3L3Byb3ZpZGVycy9NaWNyb3NvZnQuRGF0YU1pZ3JhdGlvbi9sb2NhdGlvbnMvd2VzdHVzMi9vcGVyYXRpb25TdGF0dXNlcy9kOTA1ODYyYy03NTFlLTRkZjEtODQwYi05NWQyOTE0Y2IzNWI/YXBpLXZlcnNpb249MjAxNy0wNC0xNS1wcml2YXRlcHJldmlldw==",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "User-Agent": [
+          "FxVersion/4.6.25211.01",
+          "Microsoft.Azure.DataMigrationService.DataMigrationServiceClient/16.2.0.0"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"name\": \"d905862c-751e-4df1-840b-95d2914cb35b\",\r\n  \"id\": \"/subscriptions/97181df2-909d-420b-ab93-1bff15acb6b7/providers/Microsoft.DataMigration/locations/westus2/operationStatuses/d905862c-751e-4df1-840b-95d2914cb35b\",\r\n  \"status\": \"Running\"\r\n}",
+      "ResponseHeaders": {
+        "Content-Type": [
+          "application/json; charset=utf-8"
+        ],
+        "Expires": [
+          "-1"
+        ],
+        "Cache-Control": [
+          "no-cache"
+        ],
+        "Date": [
+          "Fri, 18 Aug 2017 07:23:44 GMT"
+        ],
+        "Pragma": [
+          "no-cache"
+        ],
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-IIS/8.5"
+        ],
+        "Vary": [
+          "Accept-Encoding"
+        ],
+        "x-ms-request-id": [
+          "01d89237-425d-4aec-afd3-86c2fc2e1f41"
+        ],
+        "x-ms-ratelimit-remaining-subscription-reads": [
+          "14936"
+        ],
+        "x-ms-correlation-request-id": [
+          "dd2db5d5-6d64-483c-9009-d2e867bd60dd"
+        ],
+        "x-ms-routing-request-id": [
+          "WESTUS2:20170818T072344Z:dd2db5d5-6d64-483c-9009-d2e867bd60dd"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ]
+      },
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/subscriptions/97181df2-909d-420b-ab93-1bff15acb6b7/providers/Microsoft.DataMigration/locations/westus2/operationStatuses/d905862c-751e-4df1-840b-95d2914cb35b?api-version=2017-04-15-privatepreview",
+      "EncodedRequestUri": "L3N1YnNjcmlwdGlvbnMvOTcxODFkZjItOTA5ZC00MjBiLWFiOTMtMWJmZjE1YWNiNmI3L3Byb3ZpZGVycy9NaWNyb3NvZnQuRGF0YU1pZ3JhdGlvbi9sb2NhdGlvbnMvd2VzdHVzMi9vcGVyYXRpb25TdGF0dXNlcy9kOTA1ODYyYy03NTFlLTRkZjEtODQwYi05NWQyOTE0Y2IzNWI/YXBpLXZlcnNpb249MjAxNy0wNC0xNS1wcml2YXRlcHJldmlldw==",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "User-Agent": [
+          "FxVersion/4.6.25211.01",
+          "Microsoft.Azure.DataMigrationService.DataMigrationServiceClient/16.2.0.0"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"name\": \"d905862c-751e-4df1-840b-95d2914cb35b\",\r\n  \"id\": \"/subscriptions/97181df2-909d-420b-ab93-1bff15acb6b7/providers/Microsoft.DataMigration/locations/westus2/operationStatuses/d905862c-751e-4df1-840b-95d2914cb35b\",\r\n  \"status\": \"Running\"\r\n}",
+      "ResponseHeaders": {
+        "Content-Type": [
+          "application/json; charset=utf-8"
+        ],
+        "Expires": [
+          "-1"
+        ],
+        "Cache-Control": [
+          "no-cache"
+        ],
+        "Date": [
+          "Fri, 18 Aug 2017 07:24:14 GMT"
+        ],
+        "Pragma": [
+          "no-cache"
+        ],
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-IIS/8.5"
+        ],
+        "Vary": [
+          "Accept-Encoding"
+        ],
+        "x-ms-request-id": [
+          "faa89bdb-e619-4ab3-bee2-3e4b0de92baa"
+        ],
+        "x-ms-ratelimit-remaining-subscription-reads": [
+          "14934"
+        ],
+        "x-ms-correlation-request-id": [
+          "967f0736-a7a0-4b99-9b07-474546c3ae2d"
+        ],
+        "x-ms-routing-request-id": [
+          "WESTUS2:20170818T072414Z:967f0736-a7a0-4b99-9b07-474546c3ae2d"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ]
+      },
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/subscriptions/97181df2-909d-420b-ab93-1bff15acb6b7/providers/Microsoft.DataMigration/locations/westus2/operationStatuses/d905862c-751e-4df1-840b-95d2914cb35b?api-version=2017-04-15-privatepreview",
+      "EncodedRequestUri": "L3N1YnNjcmlwdGlvbnMvOTcxODFkZjItOTA5ZC00MjBiLWFiOTMtMWJmZjE1YWNiNmI3L3Byb3ZpZGVycy9NaWNyb3NvZnQuRGF0YU1pZ3JhdGlvbi9sb2NhdGlvbnMvd2VzdHVzMi9vcGVyYXRpb25TdGF0dXNlcy9kOTA1ODYyYy03NTFlLTRkZjEtODQwYi05NWQyOTE0Y2IzNWI/YXBpLXZlcnNpb249MjAxNy0wNC0xNS1wcml2YXRlcHJldmlldw==",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "User-Agent": [
+          "FxVersion/4.6.25211.01",
+          "Microsoft.Azure.DataMigrationService.DataMigrationServiceClient/16.2.0.0"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"name\": \"d905862c-751e-4df1-840b-95d2914cb35b\",\r\n  \"id\": \"/subscriptions/97181df2-909d-420b-ab93-1bff15acb6b7/providers/Microsoft.DataMigration/locations/westus2/operationStatuses/d905862c-751e-4df1-840b-95d2914cb35b\",\r\n  \"status\": \"Running\"\r\n}",
+      "ResponseHeaders": {
+        "Content-Type": [
+          "application/json; charset=utf-8"
+        ],
+        "Expires": [
+          "-1"
+        ],
+        "Cache-Control": [
+          "no-cache"
+        ],
+        "Date": [
+          "Fri, 18 Aug 2017 07:24:44 GMT"
+        ],
+        "Pragma": [
+          "no-cache"
+        ],
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-IIS/8.5"
+        ],
+        "Vary": [
+          "Accept-Encoding"
+        ],
+        "x-ms-request-id": [
+          "d60d1cb5-5b17-4801-91ab-119bc2a5d280"
+        ],
+        "x-ms-ratelimit-remaining-subscription-reads": [
+          "14933"
+        ],
+        "x-ms-correlation-request-id": [
+          "bccff3d7-256a-47cf-ae91-aa11beee46a5"
+        ],
+        "x-ms-routing-request-id": [
+          "WESTUS2:20170818T072444Z:bccff3d7-256a-47cf-ae91-aa11beee46a5"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ]
+      },
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/subscriptions/97181df2-909d-420b-ab93-1bff15acb6b7/providers/Microsoft.DataMigration/locations/westus2/operationStatuses/d905862c-751e-4df1-840b-95d2914cb35b?api-version=2017-04-15-privatepreview",
+      "EncodedRequestUri": "L3N1YnNjcmlwdGlvbnMvOTcxODFkZjItOTA5ZC00MjBiLWFiOTMtMWJmZjE1YWNiNmI3L3Byb3ZpZGVycy9NaWNyb3NvZnQuRGF0YU1pZ3JhdGlvbi9sb2NhdGlvbnMvd2VzdHVzMi9vcGVyYXRpb25TdGF0dXNlcy9kOTA1ODYyYy03NTFlLTRkZjEtODQwYi05NWQyOTE0Y2IzNWI/YXBpLXZlcnNpb249MjAxNy0wNC0xNS1wcml2YXRlcHJldmlldw==",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "User-Agent": [
+          "FxVersion/4.6.25211.01",
+          "Microsoft.Azure.DataMigrationService.DataMigrationServiceClient/16.2.0.0"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"name\": \"d905862c-751e-4df1-840b-95d2914cb35b\",\r\n  \"id\": \"/subscriptions/97181df2-909d-420b-ab93-1bff15acb6b7/providers/Microsoft.DataMigration/locations/westus2/operationStatuses/d905862c-751e-4df1-840b-95d2914cb35b\",\r\n  \"status\": \"Running\"\r\n}",
+      "ResponseHeaders": {
+        "Content-Type": [
+          "application/json; charset=utf-8"
+        ],
+        "Expires": [
+          "-1"
+        ],
+        "Cache-Control": [
+          "no-cache"
+        ],
+        "Date": [
+          "Fri, 18 Aug 2017 07:25:13 GMT"
+        ],
+        "Pragma": [
+          "no-cache"
+        ],
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-IIS/8.5"
+        ],
+        "Vary": [
+          "Accept-Encoding"
+        ],
+        "x-ms-request-id": [
+          "9514e492-570f-46a0-821c-5c35606bcaea"
+        ],
+        "x-ms-ratelimit-remaining-subscription-reads": [
+          "14939"
+        ],
+        "x-ms-correlation-request-id": [
+          "ec3bd8be-5670-4dd0-af00-d42a4baffdd4"
+        ],
+        "x-ms-routing-request-id": [
+          "WESTUS2:20170818T072514Z:ec3bd8be-5670-4dd0-af00-d42a4baffdd4"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ]
+      },
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/subscriptions/97181df2-909d-420b-ab93-1bff15acb6b7/providers/Microsoft.DataMigration/locations/westus2/operationStatuses/d905862c-751e-4df1-840b-95d2914cb35b?api-version=2017-04-15-privatepreview",
+      "EncodedRequestUri": "L3N1YnNjcmlwdGlvbnMvOTcxODFkZjItOTA5ZC00MjBiLWFiOTMtMWJmZjE1YWNiNmI3L3Byb3ZpZGVycy9NaWNyb3NvZnQuRGF0YU1pZ3JhdGlvbi9sb2NhdGlvbnMvd2VzdHVzMi9vcGVyYXRpb25TdGF0dXNlcy9kOTA1ODYyYy03NTFlLTRkZjEtODQwYi05NWQyOTE0Y2IzNWI/YXBpLXZlcnNpb249MjAxNy0wNC0xNS1wcml2YXRlcHJldmlldw==",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "User-Agent": [
+          "FxVersion/4.6.25211.01",
+          "Microsoft.Azure.DataMigrationService.DataMigrationServiceClient/16.2.0.0"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"name\": \"d905862c-751e-4df1-840b-95d2914cb35b\",\r\n  \"id\": \"/subscriptions/97181df2-909d-420b-ab93-1bff15acb6b7/providers/Microsoft.DataMigration/locations/westus2/operationStatuses/d905862c-751e-4df1-840b-95d2914cb35b\",\r\n  \"status\": \"Succeeded\"\r\n}",
+      "ResponseHeaders": {
+        "Content-Type": [
+          "application/json; charset=utf-8"
+        ],
+        "Expires": [
+          "-1"
+        ],
+        "Cache-Control": [
+          "no-cache"
+        ],
+        "Date": [
+          "Fri, 18 Aug 2017 07:25:44 GMT"
+        ],
+        "Pragma": [
+          "no-cache"
+        ],
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "Server": [
+          "Microsoft-IIS/8.5"
+        ],
+        "Vary": [
+          "Accept-Encoding"
+        ],
+        "x-ms-request-id": [
+          "1c4be3df-7f6d-44d1-bcbc-6e6648418814"
+        ],
+        "x-ms-ratelimit-remaining-subscription-reads": [
+          "14938"
+        ],
+        "x-ms-correlation-request-id": [
+          "6ed5f26a-0cd6-45eb-b5e9-57bd8e21d5c1"
+        ],
+        "x-ms-routing-request-id": [
+          "WESTUS2:20170818T072544Z:6ed5f26a-0cd6-45eb-b5e9-57bd8e21d5c1"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ]
+      },
+      "StatusCode": 200
+    },
+    {
+      "RequestUri": "/subscriptions/97181df2-909d-420b-ab93-1bff15acb6b7/resourceGroups/dmssdkrg/providers/Microsoft.DataMigration/services/dmssdk?api-version=2017-04-15-privatepreview",
+      "EncodedRequestUri": "L3N1YnNjcmlwdGlvbnMvOTcxODFkZjItOTA5ZC00MjBiLWFiOTMtMWJmZjE1YWNiNmI3L3Jlc291cmNlR3JvdXBzL2Rtc3Nka3JnL3Byb3ZpZGVycy9NaWNyb3NvZnQuRGF0YU1pZ3JhdGlvbi9zZXJ2aWNlcy9kbXNzZGs/YXBpLXZlcnNpb249MjAxNy0wNC0xNS1wcml2YXRlcHJldmlldw==",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "User-Agent": [
+          "FxVersion/4.6.25211.01",
+          "Microsoft.Azure.DataMigrationService.DataMigrationServiceClient/16.2.0.0"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"properties\": {\r\n    \"provisioningState\": \"Succeeded\",\r\n    \"publicKey\": \"0;AQAB;wlh9vPN13RwHcvhgUpqlLfyVY1VzIwflsQ5Dh9rE4Q/mO9Zjt1s1JzMIe7KBHDmZoqTcNwVjBrtzgWXnp8x9Q3xkzZKLtA5ltVwXXcAl6aqLehW2wcL7lf7izW7gBfvOsi7sBZet1uVaqn3aXtgQ01jCYinGTtf2fZl/qXCZ6ufPbe5TYV5Nu4fb/oMOiW6QuH22LqIRPx4FlzJmBb6M+D9hcWsntT/dgraJRIudrLOSDE/n0/G0CwDlxCakLyknM2Gica9AeMjSFnlaSRjkzIBsIF3veRT1YnO6ol4yJwXJQJjN+XmOm8FpmbYL06HhVi4T9F//Qfs1BlIVY/MoQQ==\",\r\n    \"virtualSubnetId\": \"/subscriptions/97181df2-909d-420b-ab93-1bff15acb6b7/resourceGroups/ERNetwork/providers/Microsoft.Network/virtualNetworks/AzureDMS-CORP-WUS2-VNET-5129/subnets/Subnet-1\"\r\n  },\r\n  \"etag\": \"oW2ZHcZ/o2/MxpmrMk11pByUKYJ/OA3P7np68fQGmRM=\",\r\n  \"id\": \"/subscriptions/97181df2-909d-420b-ab93-1bff15acb6b7/resourceGroups/dmssdkrg/providers/Microsoft.DataMigration/services/dmssdk\",\r\n  \"kind\": \"vm\",\r\n  \"location\": \"westus2\",\r\n  \"name\": \"dmssdk\",\r\n  \"sku\": {\r\n    \"name\": \"PP1\"\r\n  },\r\n  \"type\": \"Microsoft.DataMigration/services\"\r\n}",
+      "ResponseHeaders": {
+        "Content-Type": [
+          "application/json; charset=utf-8"
+        ],
+        "Expires": [
+          "-1"
+        ],
+        "Cache-Control": [
+          "no-cache"
+        ],
+        "Date": [
+          "Fri, 18 Aug 2017 07:25:44 GMT"
+        ],
+        "Pragma": [
+          "no-cache"
+        ],
+        "Transfer-Encoding": [
+          "chunked"
+        ],
+        "ETag": [
+          "\"oW2ZHcZ/o2/MxpmrMk11pByUKYJ/OA3P7np68fQGmRM=\""
+        ],
+        "Server": [
+          "Microsoft-IIS/8.5"
+        ],
+        "Vary": [
+          "Accept-Encoding"
+        ],
+        "x-ms-request-id": [
+          "9ae2ed76-2279-4f79-abdf-73a3edf9c010"
+        ],
+        "x-ms-ratelimit-remaining-subscription-reads": [
+          "14937"
+        ],
+        "x-ms-correlation-request-id": [
+          "8ad0e8a7-8210-4c8a-817e-9fa0c83612ad"
+        ],
+        "x-ms-routing-request-id": [
+          "WESTUS2:20170818T072544Z:8ad0e8a7-8210-4c8a-817e-9fa0c83612ad"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ]
+      },
+      "StatusCode": 200
+    }
+  ],
+  "Names": {},
+  "Variables": {
+    "SubscriptionId": "97181df2-909d-420b-ab93-1bff15acb6b7"
+  }
+}
