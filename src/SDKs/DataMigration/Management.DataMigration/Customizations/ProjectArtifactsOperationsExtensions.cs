@@ -10,7 +10,7 @@ using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Microsoft.Azure.DataMigrationService
+namespace Microsoft.Azure.Management.DataMigration
 {
     public static partial class ProjectsOperationsExtensions
     {

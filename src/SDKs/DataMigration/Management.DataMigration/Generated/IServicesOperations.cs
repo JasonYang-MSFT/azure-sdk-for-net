@@ -2,9 +2,10 @@
 // Changes may cause incorrect behavior and will be lost if the code is
 // regenerated.
 
-namespace Microsoft.Azure.DataMigrationService
+namespace Microsoft.Azure.Management.DataMigration
 {
     using Microsoft.Azure;
+    using Microsoft.Azure.Management;
     using Microsoft.Rest;
     using Microsoft.Rest.Azure;
     using Models;
@@ -59,7 +60,7 @@ namespace Microsoft.Azure.DataMigrationService
         /// <exception cref="Microsoft.Rest.ValidationException">
         /// Thrown when a required parameter is null
         /// </exception>
-        Task<AzureOperationResponse<DataMigrationServiceModel>> CreateOrUpdateWithHttpMessagesAsync(DataMigrationServiceModel parameters, string groupName, string resourceName, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<AzureOperationResponse<DataMigrationService>> CreateOrUpdateWithHttpMessagesAsync(DataMigrationService parameters, string groupName, string resourceName, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Get DMS Service Instance
         /// </summary>
@@ -90,7 +91,7 @@ namespace Microsoft.Azure.DataMigrationService
         /// <exception cref="Microsoft.Rest.ValidationException">
         /// Thrown when a required parameter is null
         /// </exception>
-        Task<AzureOperationResponse<DataMigrationServiceModel>> GetWithHttpMessagesAsync(string groupName, string resourceName, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<AzureOperationResponse<DataMigrationService>> GetWithHttpMessagesAsync(string groupName, string resourceName, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Delete DMS Service Instance
         /// </summary>
@@ -154,7 +155,7 @@ namespace Microsoft.Azure.DataMigrationService
         /// <exception cref="Microsoft.Rest.ValidationException">
         /// Thrown when a required parameter is null
         /// </exception>
-        Task<AzureOperationResponse<DataMigrationServiceModel>> UpdateWithHttpMessagesAsync(DataMigrationServiceModel parameters, string groupName, string resourceName, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<AzureOperationResponse<DataMigrationService>> UpdateWithHttpMessagesAsync(DataMigrationService parameters, string groupName, string resourceName, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Check service health status
         /// </summary>
@@ -313,7 +314,7 @@ namespace Microsoft.Azure.DataMigrationService
         /// <exception cref="Microsoft.Rest.ValidationException">
         /// Thrown when a required parameter is null
         /// </exception>
-        Task<AzureOperationResponse<IPage<DataMigrationServiceModel>>> ListByResourceGroupWithHttpMessagesAsync(string groupName, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<AzureOperationResponse<IPage<DataMigrationService>>> ListByResourceGroupWithHttpMessagesAsync(string groupName, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Get services in subscription
         /// </summary>
@@ -337,7 +338,7 @@ namespace Microsoft.Azure.DataMigrationService
         /// <exception cref="Microsoft.Rest.ValidationException">
         /// Thrown when a required parameter is null
         /// </exception>
-        Task<AzureOperationResponse<IPage<DataMigrationServiceModel>>> ListWithHttpMessagesAsync(Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<AzureOperationResponse<IPage<DataMigrationService>>> ListWithHttpMessagesAsync(Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Check name validity and availability
         /// </summary>
@@ -405,7 +406,7 @@ namespace Microsoft.Azure.DataMigrationService
         /// <exception cref="Microsoft.Rest.ValidationException">
         /// Thrown when a required parameter is null
         /// </exception>
-        Task<AzureOperationResponse<DataMigrationServiceModel>> BeginCreateOrUpdateWithHttpMessagesAsync(DataMigrationServiceModel parameters, string groupName, string resourceName, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<AzureOperationResponse<DataMigrationService>> BeginCreateOrUpdateWithHttpMessagesAsync(DataMigrationService parameters, string groupName, string resourceName, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Delete DMS Service Instance
         /// </summary>
@@ -469,7 +470,7 @@ namespace Microsoft.Azure.DataMigrationService
         /// <exception cref="Microsoft.Rest.ValidationException">
         /// Thrown when a required parameter is null
         /// </exception>
-        Task<AzureOperationResponse<DataMigrationServiceModel>> BeginUpdateWithHttpMessagesAsync(DataMigrationServiceModel parameters, string groupName, string resourceName, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<AzureOperationResponse<DataMigrationService>> BeginUpdateWithHttpMessagesAsync(DataMigrationService parameters, string groupName, string resourceName, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Get compatible SKUs
         /// </summary>
@@ -523,7 +524,7 @@ namespace Microsoft.Azure.DataMigrationService
         /// <exception cref="Microsoft.Rest.ValidationException">
         /// Thrown when a required parameter is null
         /// </exception>
-        Task<AzureOperationResponse<IPage<DataMigrationServiceModel>>> ListByResourceGroupNextWithHttpMessagesAsync(string nextPageLink, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<AzureOperationResponse<IPage<DataMigrationService>>> ListByResourceGroupNextWithHttpMessagesAsync(string nextPageLink, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Get services in subscription
         /// </summary>
@@ -550,6 +551,6 @@ namespace Microsoft.Azure.DataMigrationService
         /// <exception cref="Microsoft.Rest.ValidationException">
         /// Thrown when a required parameter is null
         /// </exception>
-        Task<AzureOperationResponse<IPage<DataMigrationServiceModel>>> ListNextWithHttpMessagesAsync(string nextPageLink, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<AzureOperationResponse<IPage<DataMigrationService>>> ListNextWithHttpMessagesAsync(string nextPageLink, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
     }
 }

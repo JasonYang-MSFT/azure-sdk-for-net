@@ -1,7 +1,7 @@
 ﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License. See License.txt in the project root for license information.
 
-using Microsoft.Azure.DataMigrationService;
+using Microsoft.Azure.Management.DataMigration;
 using Microsoft.Azure.Management.Resources;
 using Microsoft.Azure.Management.Resources.Models;
 using Microsoft.Azure.Test.HttpRecorder;
@@ -41,7 +41,7 @@ namespace DataMigration.Tests.Helpers
                 return resourcesClient;
             }
         }
-
+        
         public static DataMigrationServiceClient GetDataMigrationManagementClient(MockContext context, RecordedDelegatingHandler handler)
         {
             DataMigrationServiceClient dmClient;

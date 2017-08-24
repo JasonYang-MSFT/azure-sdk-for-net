@@ -2,8 +2,8 @@
 // Licensed under the MIT License. See License.txt in the project root for license information.
 
 using DataMigration.Tests.Helpers;
-using Microsoft.Azure.DataMigrationService;
-using Microsoft.Azure.DataMigrationService.Models;
+using Microsoft.Azure.Management.DataMigration;
+using Microsoft.Azure.Management.DataMigration.Models;
 using Microsoft.Azure.Management.Resources;
 using Microsoft.Azure.Management.Resources.Models;
 using Microsoft.Rest.ClientRuntime.Azure.TestFramework;
@@ -32,12 +32,12 @@ namespace DataMigration.Tests.ScenarioTests
             }
         }
         
-        private DataMigrationServiceModel CreateDMSInstance(MockContext context,
+        private DataMigrationService CreateDMSInstance(MockContext context,
             DataMigrationServiceClient client, 
             ResourceGroup resourceGroup, 
             string dmsInstanceName)
         {
-            return client.Services.CreateOrUpdate(new DataMigrationServiceModel(
+            return client.Services.CreateOrUpdate(new DataMigrationService(
                 type: "Microsoft.DataMigration/services",
                 location: resourceGroup.Location,
                 virtualSubnetId: "/subscriptions/97181df2-909d-420b-ab93-1bff15acb6b7/resourceGroups/ERNetwork/providers/Microsoft.Network/virtualNetworks/AzureDMS-CORP-WUS2-VNET-5129/subnets/Subnet-1",
