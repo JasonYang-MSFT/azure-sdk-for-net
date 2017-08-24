@@ -2,10 +2,11 @@
 // Changes may cause incorrect behavior and will be lost if the code is
 // regenerated.
 
-namespace Microsoft.Azure.DataMigrationService.Models
+namespace Microsoft.Azure.Management.DataMigration.Models
 {
     using Microsoft.Azure;
-    using Microsoft.Azure.DataMigrationService;
+    using Microsoft.Azure.Management;
+    using Microsoft.Azure.Management.DataMigration;
     using Microsoft.Rest;
     using Microsoft.Rest.Serialization;
     using Newtonsoft.Json;
@@ -17,18 +18,18 @@ namespace Microsoft.Azure.DataMigrationService.Models
     /// A Data Migration Service resource
     /// </summary>
     [Rest.Serialization.JsonTransformation]
-    public partial class DataMigrationServiceModel : Resource
+    public partial class DataMigrationService : Resource
     {
         /// <summary>
-        /// Initializes a new instance of the DataMigrationServiceModel class.
+        /// Initializes a new instance of the DataMigrationService class.
         /// </summary>
-        public DataMigrationServiceModel()
+        public DataMigrationService()
         {
           CustomInit();
         }
 
         /// <summary>
-        /// Initializes a new instance of the DataMigrationServiceModel class.
+        /// Initializes a new instance of the DataMigrationService class.
         /// </summary>
         /// <param name="id">Resource Id</param>
         /// <param name="type">Resource Type</param>
@@ -48,7 +49,7 @@ namespace Microsoft.Azure.DataMigrationService.Models
         /// Microsoft.Network/virtualNetworks/subnets resource to which the
         /// service should be joined</param>
         /// <param name="sku">Service SKU</param>
-        public DataMigrationServiceModel(string id = default(string), string type = default(string), IDictionary<string, string> tags = default(IDictionary<string, string>), string location = default(string), string name = default(string), string etag = default(string), string kind = default(string), ServiceProvisioningState? provisioningState = default(ServiceProvisioningState?), string publicKey = default(string), string virtualSubnetId = default(string), ServiceSku sku = default(ServiceSku))
+        public DataMigrationService(string id = default(string), string type = default(string), IDictionary<string, string> tags = default(IDictionary<string, string>), string location = default(string), string name = default(string), string etag = default(string), string kind = default(string), ServiceProvisioningState? provisioningState = default(ServiceProvisioningState?), string publicKey = default(string), string virtualSubnetId = default(string), ServiceSku sku = default(ServiceSku))
             : base(id, type, tags, location, name)
         {
             Etag = etag;

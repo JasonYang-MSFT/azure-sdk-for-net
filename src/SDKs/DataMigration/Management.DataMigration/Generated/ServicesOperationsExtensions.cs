@@ -2,9 +2,10 @@
 // Changes may cause incorrect behavior and will be lost if the code is
 // regenerated.
 
-namespace Microsoft.Azure.DataMigrationService
+namespace Microsoft.Azure.Management.DataMigration
 {
     using Microsoft.Azure;
+    using Microsoft.Azure.Management;
     using Microsoft.Rest;
     using Microsoft.Rest.Azure;
     using Models;
@@ -44,7 +45,7 @@ namespace Microsoft.Azure.DataMigrationService
             /// <param name='resourceName'>
             /// Name of the resource
             /// </param>
-            public static DataMigrationServiceModel CreateOrUpdate(this IServicesOperations operations, DataMigrationServiceModel parameters, string groupName, string resourceName)
+            public static DataMigrationService CreateOrUpdate(this IServicesOperations operations, DataMigrationService parameters, string groupName, string resourceName)
             {
                 return operations.CreateOrUpdateAsync(parameters, groupName, resourceName).GetAwaiter().GetResult();
             }
@@ -80,7 +81,7 @@ namespace Microsoft.Azure.DataMigrationService
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<DataMigrationServiceModel> CreateOrUpdateAsync(this IServicesOperations operations, DataMigrationServiceModel parameters, string groupName, string resourceName, CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<DataMigrationService> CreateOrUpdateAsync(this IServicesOperations operations, DataMigrationService parameters, string groupName, string resourceName, CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.CreateOrUpdateWithHttpMessagesAsync(parameters, groupName, resourceName, null, cancellationToken).ConfigureAwait(false))
                 {
@@ -106,7 +107,7 @@ namespace Microsoft.Azure.DataMigrationService
             /// <param name='resourceName'>
             /// Name of the resource
             /// </param>
-            public static DataMigrationServiceModel Get(this IServicesOperations operations, string groupName, string resourceName)
+            public static DataMigrationService Get(this IServicesOperations operations, string groupName, string resourceName)
             {
                 return operations.GetAsync(groupName, resourceName).GetAwaiter().GetResult();
             }
@@ -132,7 +133,7 @@ namespace Microsoft.Azure.DataMigrationService
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<DataMigrationServiceModel> GetAsync(this IServicesOperations operations, string groupName, string resourceName, CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<DataMigrationService> GetAsync(this IServicesOperations operations, string groupName, string resourceName, CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.GetWithHttpMessagesAsync(groupName, resourceName, null, cancellationToken).ConfigureAwait(false))
                 {
@@ -212,7 +213,7 @@ namespace Microsoft.Azure.DataMigrationService
             /// <param name='resourceName'>
             /// Name of the resource
             /// </param>
-            public static DataMigrationServiceModel Update(this IServicesOperations operations, DataMigrationServiceModel parameters, string groupName, string resourceName)
+            public static DataMigrationService Update(this IServicesOperations operations, DataMigrationService parameters, string groupName, string resourceName)
             {
                 return operations.UpdateAsync(parameters, groupName, resourceName).GetAwaiter().GetResult();
             }
@@ -243,7 +244,7 @@ namespace Microsoft.Azure.DataMigrationService
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<DataMigrationServiceModel> UpdateAsync(this IServicesOperations operations, DataMigrationServiceModel parameters, string groupName, string resourceName, CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<DataMigrationService> UpdateAsync(this IServicesOperations operations, DataMigrationService parameters, string groupName, string resourceName, CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.UpdateWithHttpMessagesAsync(parameters, groupName, resourceName, null, cancellationToken).ConfigureAwait(false))
                 {
@@ -487,7 +488,7 @@ namespace Microsoft.Azure.DataMigrationService
             /// <param name='groupName'>
             /// Name of the resource group
             /// </param>
-            public static IPage<DataMigrationServiceModel> ListByResourceGroup(this IServicesOperations operations, string groupName)
+            public static IPage<DataMigrationService> ListByResourceGroup(this IServicesOperations operations, string groupName)
             {
                 return operations.ListByResourceGroupAsync(groupName).GetAwaiter().GetResult();
             }
@@ -509,7 +510,7 @@ namespace Microsoft.Azure.DataMigrationService
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<IPage<DataMigrationServiceModel>> ListByResourceGroupAsync(this IServicesOperations operations, string groupName, CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<IPage<DataMigrationService>> ListByResourceGroupAsync(this IServicesOperations operations, string groupName, CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.ListByResourceGroupWithHttpMessagesAsync(groupName, null, cancellationToken).ConfigureAwait(false))
                 {
@@ -528,7 +529,7 @@ namespace Microsoft.Azure.DataMigrationService
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
-            public static IPage<DataMigrationServiceModel> List(this IServicesOperations operations)
+            public static IPage<DataMigrationService> List(this IServicesOperations operations)
             {
                 return operations.ListAsync().GetAwaiter().GetResult();
             }
@@ -547,7 +548,7 @@ namespace Microsoft.Azure.DataMigrationService
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<IPage<DataMigrationServiceModel>> ListAsync(this IServicesOperations operations, CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<IPage<DataMigrationService>> ListAsync(this IServicesOperations operations, CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.ListWithHttpMessagesAsync(null, cancellationToken).ConfigureAwait(false))
                 {
@@ -625,7 +626,7 @@ namespace Microsoft.Azure.DataMigrationService
             /// <param name='resourceName'>
             /// Name of the resource
             /// </param>
-            public static DataMigrationServiceModel BeginCreateOrUpdate(this IServicesOperations operations, DataMigrationServiceModel parameters, string groupName, string resourceName)
+            public static DataMigrationService BeginCreateOrUpdate(this IServicesOperations operations, DataMigrationService parameters, string groupName, string resourceName)
             {
                 return operations.BeginCreateOrUpdateAsync(parameters, groupName, resourceName).GetAwaiter().GetResult();
             }
@@ -661,7 +662,7 @@ namespace Microsoft.Azure.DataMigrationService
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<DataMigrationServiceModel> BeginCreateOrUpdateAsync(this IServicesOperations operations, DataMigrationServiceModel parameters, string groupName, string resourceName, CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<DataMigrationService> BeginCreateOrUpdateAsync(this IServicesOperations operations, DataMigrationService parameters, string groupName, string resourceName, CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.BeginCreateOrUpdateWithHttpMessagesAsync(parameters, groupName, resourceName, null, cancellationToken).ConfigureAwait(false))
                 {
@@ -741,7 +742,7 @@ namespace Microsoft.Azure.DataMigrationService
             /// <param name='resourceName'>
             /// Name of the resource
             /// </param>
-            public static DataMigrationServiceModel BeginUpdate(this IServicesOperations operations, DataMigrationServiceModel parameters, string groupName, string resourceName)
+            public static DataMigrationService BeginUpdate(this IServicesOperations operations, DataMigrationService parameters, string groupName, string resourceName)
             {
                 return operations.BeginUpdateAsync(parameters, groupName, resourceName).GetAwaiter().GetResult();
             }
@@ -772,7 +773,7 @@ namespace Microsoft.Azure.DataMigrationService
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<DataMigrationServiceModel> BeginUpdateAsync(this IServicesOperations operations, DataMigrationServiceModel parameters, string groupName, string resourceName, CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<DataMigrationService> BeginUpdateAsync(this IServicesOperations operations, DataMigrationService parameters, string groupName, string resourceName, CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.BeginUpdateWithHttpMessagesAsync(parameters, groupName, resourceName, null, cancellationToken).ConfigureAwait(false))
                 {
@@ -838,7 +839,7 @@ namespace Microsoft.Azure.DataMigrationService
             /// <param name='nextPageLink'>
             /// The NextLink from the previous successful call to List operation.
             /// </param>
-            public static IPage<DataMigrationServiceModel> ListByResourceGroupNext(this IServicesOperations operations, string nextPageLink)
+            public static IPage<DataMigrationService> ListByResourceGroupNext(this IServicesOperations operations, string nextPageLink)
             {
                 return operations.ListByResourceGroupNextAsync(nextPageLink).GetAwaiter().GetResult();
             }
@@ -860,7 +861,7 @@ namespace Microsoft.Azure.DataMigrationService
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<IPage<DataMigrationServiceModel>> ListByResourceGroupNextAsync(this IServicesOperations operations, string nextPageLink, CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<IPage<DataMigrationService>> ListByResourceGroupNextAsync(this IServicesOperations operations, string nextPageLink, CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.ListByResourceGroupNextWithHttpMessagesAsync(nextPageLink, null, cancellationToken).ConfigureAwait(false))
                 {
@@ -882,7 +883,7 @@ namespace Microsoft.Azure.DataMigrationService
             /// <param name='nextPageLink'>
             /// The NextLink from the previous successful call to List operation.
             /// </param>
-            public static IPage<DataMigrationServiceModel> ListNext(this IServicesOperations operations, string nextPageLink)
+            public static IPage<DataMigrationService> ListNext(this IServicesOperations operations, string nextPageLink)
             {
                 return operations.ListNextAsync(nextPageLink).GetAwaiter().GetResult();
             }
@@ -904,7 +905,7 @@ namespace Microsoft.Azure.DataMigrationService
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<IPage<DataMigrationServiceModel>> ListNextAsync(this IServicesOperations operations, string nextPageLink, CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<IPage<DataMigrationService>> ListNextAsync(this IServicesOperations operations, string nextPageLink, CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.ListNextWithHttpMessagesAsync(nextPageLink, null, cancellationToken).ConfigureAwait(false))
                 {

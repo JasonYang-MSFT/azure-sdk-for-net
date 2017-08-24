@@ -8,7 +8,7 @@ using System;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace Microsoft.Azure.DataMigrationService
+namespace Microsoft.Azure.Management.DataMigration
 {
     /// <summary>
     /// Provides helper methods for performing RSA encryption

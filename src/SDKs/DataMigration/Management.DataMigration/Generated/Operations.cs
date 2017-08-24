@@ -2,9 +2,10 @@
 // Changes may cause incorrect behavior and will be lost if the code is
 // regenerated.
 
-namespace Microsoft.Azure.DataMigrationService
+namespace Microsoft.Azure.Management.DataMigration
 {
     using Microsoft.Azure;
+    using Microsoft.Azure.Management;
     using Microsoft.Rest;
     using Microsoft.Rest.Azure;
     using Models;

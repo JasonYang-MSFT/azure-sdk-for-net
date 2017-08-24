@@ -2,9 +2,10 @@
 // Changes may cause incorrect behavior and will be lost if the code is
 // regenerated.
 
-namespace Microsoft.Azure.DataMigrationService
+namespace Microsoft.Azure.Management.DataMigration
 {
     using Microsoft.Azure;
+    using Microsoft.Azure.Management;
     using Microsoft.Rest;
     using Microsoft.Rest.Azure;
     using Models;
@@ -76,10 +77,10 @@ namespace Microsoft.Azure.DataMigrationService
         /// <param name='cancellationToken'>
         /// The cancellation token.
         /// </param>
-        public async Task<AzureOperationResponse<DataMigrationServiceModel>> CreateOrUpdateWithHttpMessagesAsync(DataMigrationServiceModel parameters, string groupName, string resourceName, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<AzureOperationResponse<DataMigrationService>> CreateOrUpdateWithHttpMessagesAsync(DataMigrationService parameters, string groupName, string resourceName, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // Send Request
-            AzureOperationResponse<DataMigrationServiceModel> _response = await BeginCreateOrUpdateWithHttpMessagesAsync(parameters, groupName, resourceName, customHeaders, cancellationToken).ConfigureAwait(false);
+            AzureOperationResponse<DataMigrationService> _response = await BeginCreateOrUpdateWithHttpMessagesAsync(parameters, groupName, resourceName, customHeaders, cancellationToken).ConfigureAwait(false);
             return await Client.GetPutOrPatchOperationResultAsync(_response, customHeaders, cancellationToken).ConfigureAwait(false);
         }
 
@@ -119,7 +120,7 @@ namespace Microsoft.Azure.DataMigrationService
         /// <return>
         /// A response object containing the response body and response headers.
         /// </return>
-        public async Task<AzureOperationResponse<DataMigrationServiceModel>> GetWithHttpMessagesAsync(string groupName, string resourceName, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<AzureOperationResponse<DataMigrationService>> GetWithHttpMessagesAsync(string groupName, string resourceName, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             if (Client.SubscriptionId == null)
             {
@@ -248,7 +249,7 @@ namespace Microsoft.Azure.DataMigrationService
                 throw ex;
             }
             // Create Result
-            var _result = new AzureOperationResponse<DataMigrationServiceModel>();
+            var _result = new AzureOperationResponse<DataMigrationService>();
             _result.Request = _httpRequest;
             _result.Response = _httpResponse;
             if (_httpResponse.Headers.Contains("x-ms-request-id"))
@@ -261,7 +262,7 @@ namespace Microsoft.Azure.DataMigrationService
                 _responseContent = await _httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
                 try
                 {
-                    _result.Body = Rest.Serialization.SafeJsonConvert.DeserializeObject<DataMigrationServiceModel>(_responseContent, Client.DeserializationSettings);
+                    _result.Body = Rest.Serialization.SafeJsonConvert.DeserializeObject<DataMigrationService>(_responseContent, Client.DeserializationSettings);
                 }
                 catch (JsonException ex)
                 {
@@ -334,10 +335,10 @@ namespace Microsoft.Azure.DataMigrationService
         /// <param name='cancellationToken'>
         /// The cancellation token.
         /// </param>
-        public async Task<AzureOperationResponse<DataMigrationServiceModel>> UpdateWithHttpMessagesAsync(DataMigrationServiceModel parameters, string groupName, string resourceName, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<AzureOperationResponse<DataMigrationService>> UpdateWithHttpMessagesAsync(DataMigrationService parameters, string groupName, string resourceName, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // Send Request
-            AzureOperationResponse<DataMigrationServiceModel> _response = await BeginUpdateWithHttpMessagesAsync(parameters, groupName, resourceName, customHeaders, cancellationToken).ConfigureAwait(false);
+            AzureOperationResponse<DataMigrationService> _response = await BeginUpdateWithHttpMessagesAsync(parameters, groupName, resourceName, customHeaders, cancellationToken).ConfigureAwait(false);
             return await Client.GetPutOrPatchOperationResultAsync(_response, customHeaders, cancellationToken).ConfigureAwait(false);
         }
 
@@ -1195,7 +1196,7 @@ namespace Microsoft.Azure.DataMigrationService
         /// <return>
         /// A response object containing the response body and response headers.
         /// </return>
-        public async Task<AzureOperationResponse<IPage<DataMigrationServiceModel>>> ListByResourceGroupWithHttpMessagesAsync(string groupName, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<AzureOperationResponse<IPage<DataMigrationService>>> ListByResourceGroupWithHttpMessagesAsync(string groupName, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             if (Client.SubscriptionId == null)
             {
@@ -1318,7 +1319,7 @@ namespace Microsoft.Azure.DataMigrationService
                 throw ex;
             }
             // Create Result
-            var _result = new AzureOperationResponse<IPage<DataMigrationServiceModel>>();
+            var _result = new AzureOperationResponse<IPage<DataMigrationService>>();
             _result.Request = _httpRequest;
             _result.Response = _httpResponse;
             if (_httpResponse.Headers.Contains("x-ms-request-id"))
@@ -1331,7 +1332,7 @@ namespace Microsoft.Azure.DataMigrationService
                 _responseContent = await _httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
                 try
                 {
-                    _result.Body = Rest.Serialization.SafeJsonConvert.DeserializeObject<Page<DataMigrationServiceModel>>(_responseContent, Client.DeserializationSettings);
+                    _result.Body = Rest.Serialization.SafeJsonConvert.DeserializeObject<Page<DataMigrationService>>(_responseContent, Client.DeserializationSettings);
                 }
                 catch (JsonException ex)
                 {
@@ -1379,7 +1380,7 @@ namespace Microsoft.Azure.DataMigrationService
         /// <return>
         /// A response object containing the response body and response headers.
         /// </return>
-        public async Task<AzureOperationResponse<IPage<DataMigrationServiceModel>>> ListWithHttpMessagesAsync(Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<AzureOperationResponse<IPage<DataMigrationService>>> ListWithHttpMessagesAsync(Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             if (Client.SubscriptionId == null)
             {
@@ -1496,7 +1497,7 @@ namespace Microsoft.Azure.DataMigrationService
                 throw ex;
             }
             // Create Result
-            var _result = new AzureOperationResponse<IPage<DataMigrationServiceModel>>();
+            var _result = new AzureOperationResponse<IPage<DataMigrationService>>();
             _result.Request = _httpRequest;
             _result.Response = _httpResponse;
             if (_httpResponse.Headers.Contains("x-ms-request-id"))
@@ -1509,7 +1510,7 @@ namespace Microsoft.Azure.DataMigrationService
                 _responseContent = await _httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
                 try
                 {
-                    _result.Body = Rest.Serialization.SafeJsonConvert.DeserializeObject<Page<DataMigrationServiceModel>>(_responseContent, Client.DeserializationSettings);
+                    _result.Body = Rest.Serialization.SafeJsonConvert.DeserializeObject<Page<DataMigrationService>>(_responseContent, Client.DeserializationSettings);
                 }
                 catch (JsonException ex)
                 {
@@ -1765,7 +1766,7 @@ namespace Microsoft.Azure.DataMigrationService
         /// <return>
         /// A response object containing the response body and response headers.
         /// </return>
-        public async Task<AzureOperationResponse<DataMigrationServiceModel>> BeginCreateOrUpdateWithHttpMessagesAsync(DataMigrationServiceModel parameters, string groupName, string resourceName, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<AzureOperationResponse<DataMigrationService>> BeginCreateOrUpdateWithHttpMessagesAsync(DataMigrationService parameters, string groupName, string resourceName, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             if (parameters == null)
             {
@@ -1905,7 +1906,7 @@ namespace Microsoft.Azure.DataMigrationService
                 throw ex;
             }
             // Create Result
-            var _result = new AzureOperationResponse<DataMigrationServiceModel>();
+            var _result = new AzureOperationResponse<DataMigrationService>();
             _result.Request = _httpRequest;
             _result.Response = _httpResponse;
             if (_httpResponse.Headers.Contains("x-ms-request-id"))
@@ -1918,7 +1919,7 @@ namespace Microsoft.Azure.DataMigrationService
                 _responseContent = await _httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
                 try
                 {
-                    _result.Body = Rest.Serialization.SafeJsonConvert.DeserializeObject<DataMigrationServiceModel>(_responseContent, Client.DeserializationSettings);
+                    _result.Body = Rest.Serialization.SafeJsonConvert.DeserializeObject<DataMigrationService>(_responseContent, Client.DeserializationSettings);
                 }
                 catch (JsonException ex)
                 {
@@ -1936,7 +1937,7 @@ namespace Microsoft.Azure.DataMigrationService
                 _responseContent = await _httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
                 try
                 {
-                    _result.Body = Rest.Serialization.SafeJsonConvert.DeserializeObject<DataMigrationServiceModel>(_responseContent, Client.DeserializationSettings);
+                    _result.Body = Rest.Serialization.SafeJsonConvert.DeserializeObject<DataMigrationService>(_responseContent, Client.DeserializationSettings);
                 }
                 catch (JsonException ex)
                 {
@@ -2172,7 +2173,7 @@ namespace Microsoft.Azure.DataMigrationService
         /// <return>
         /// A response object containing the response body and response headers.
         /// </return>
-        public async Task<AzureOperationResponse<DataMigrationServiceModel>> BeginUpdateWithHttpMessagesAsync(DataMigrationServiceModel parameters, string groupName, string resourceName, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<AzureOperationResponse<DataMigrationService>> BeginUpdateWithHttpMessagesAsync(DataMigrationService parameters, string groupName, string resourceName, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             if (parameters == null)
             {
@@ -2312,7 +2313,7 @@ namespace Microsoft.Azure.DataMigrationService
                 throw ex;
             }
             // Create Result
-            var _result = new AzureOperationResponse<DataMigrationServiceModel>();
+            var _result = new AzureOperationResponse<DataMigrationService>();
             _result.Request = _httpRequest;
             _result.Response = _httpResponse;
             if (_httpResponse.Headers.Contains("x-ms-request-id"))
@@ -2325,7 +2326,7 @@ namespace Microsoft.Azure.DataMigrationService
                 _responseContent = await _httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
                 try
                 {
-                    _result.Body = Rest.Serialization.SafeJsonConvert.DeserializeObject<DataMigrationServiceModel>(_responseContent, Client.DeserializationSettings);
+                    _result.Body = Rest.Serialization.SafeJsonConvert.DeserializeObject<DataMigrationService>(_responseContent, Client.DeserializationSettings);
                 }
                 catch (JsonException ex)
                 {
@@ -2549,7 +2550,7 @@ namespace Microsoft.Azure.DataMigrationService
         /// <return>
         /// A response object containing the response body and response headers.
         /// </return>
-        public async Task<AzureOperationResponse<IPage<DataMigrationServiceModel>>> ListByResourceGroupNextWithHttpMessagesAsync(string nextPageLink, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<AzureOperationResponse<IPage<DataMigrationService>>> ListByResourceGroupNextWithHttpMessagesAsync(string nextPageLink, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             if (nextPageLink == null)
             {
@@ -2658,7 +2659,7 @@ namespace Microsoft.Azure.DataMigrationService
                 throw ex;
             }
             // Create Result
-            var _result = new AzureOperationResponse<IPage<DataMigrationServiceModel>>();
+            var _result = new AzureOperationResponse<IPage<DataMigrationService>>();
             _result.Request = _httpRequest;
             _result.Response = _httpResponse;
             if (_httpResponse.Headers.Contains("x-ms-request-id"))
@@ -2671,7 +2672,7 @@ namespace Microsoft.Azure.DataMigrationService
                 _responseContent = await _httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
                 try
                 {
-                    _result.Body = Rest.Serialization.SafeJsonConvert.DeserializeObject<Page<DataMigrationServiceModel>>(_responseContent, Client.DeserializationSettings);
+                    _result.Body = Rest.Serialization.SafeJsonConvert.DeserializeObject<Page<DataMigrationService>>(_responseContent, Client.DeserializationSettings);
                 }
                 catch (JsonException ex)
                 {
@@ -2722,7 +2723,7 @@ namespace Microsoft.Azure.DataMigrationService
         /// <return>
         /// A response object containing the response body and response headers.
         /// </return>
-        public async Task<AzureOperationResponse<IPage<DataMigrationServiceModel>>> ListNextWithHttpMessagesAsync(string nextPageLink, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<AzureOperationResponse<IPage<DataMigrationService>>> ListNextWithHttpMessagesAsync(string nextPageLink, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             if (nextPageLink == null)
             {
@@ -2831,7 +2832,7 @@ namespace Microsoft.Azure.DataMigrationService
                 throw ex;
             }
             // Create Result
-            var _result = new AzureOperationResponse<IPage<DataMigrationServiceModel>>();
+            var _result = new AzureOperationResponse<IPage<DataMigrationService>>();
             _result.Request = _httpRequest;
             _result.Response = _httpResponse;
             if (_httpResponse.Headers.Contains("x-ms-request-id"))
@@ -2844,7 +2845,7 @@ namespace Microsoft.Azure.DataMigrationService
                 _responseContent = await _httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
                 try
                 {
-                    _result.Body = Rest.Serialization.SafeJsonConvert.DeserializeObject<Page<DataMigrationServiceModel>>(_responseContent, Client.DeserializationSettings);
+                    _result.Body = Rest.Serialization.SafeJsonConvert.DeserializeObject<Page<DataMigrationService>>(_responseContent, Client.DeserializationSettings);
                 }
                 catch (JsonException ex)
                 {
