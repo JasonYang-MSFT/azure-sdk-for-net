@@ -35,14 +35,16 @@ namespace Microsoft.Azure.Management.DataMigration.Models
         /// <param name="targetConnectionInfo">Information for connecting to
         /// target</param>
         /// <param name="targetDatabaseName">Target database name</param>
+        /// <param name="projectName">Name of the migration project</param>
         /// <param name="projectLocation">An URL that points to the drop
         /// location to access project artifacts</param>
         /// <param name="selectedTables">Metadata of the tables selected for
         /// migration</param>
-        public NonSqlMigrationTaskInput(SqlConnectionInfo targetConnectionInfo, string targetDatabaseName, string projectLocation, IList<NonSqlDataMigrationTable> selectedTables)
+        public NonSqlMigrationTaskInput(SqlConnectionInfo targetConnectionInfo, string targetDatabaseName, string projectName, string projectLocation, IList<NonSqlDataMigrationTable> selectedTables)
         {
             TargetConnectionInfo = targetConnectionInfo;
             TargetDatabaseName = targetDatabaseName;
+            ProjectName = projectName;
             ProjectLocation = projectLocation;
             SelectedTables = selectedTables;
             CustomInit();
@@ -64,6 +66,12 @@ namespace Microsoft.Azure.Management.DataMigration.Models
         /// </summary>
         [JsonProperty(PropertyName = "targetDatabaseName")]
         public string TargetDatabaseName { get; set; }
+
+        /// <summary>
+        /// Gets or sets name of the migration project
+        /// </summary>
+        [JsonProperty(PropertyName = "projectName")]
+        public string ProjectName { get; set; }
 
         /// <summary>
         /// Gets or sets an URL that points to the drop location to access
@@ -93,6 +101,10 @@ namespace Microsoft.Azure.Management.DataMigration.Models
             if (TargetDatabaseName == null)
             {
                 throw new ValidationException(ValidationRules.CannotBeNull, "TargetDatabaseName");
+            }
+            if (ProjectName == null)
+            {
+                throw new ValidationException(ValidationRules.CannotBeNull, "ProjectName");
             }
             if (ProjectLocation == null)
             {

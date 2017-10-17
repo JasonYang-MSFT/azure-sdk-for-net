@@ -48,6 +48,10 @@ namespace Microsoft.Azure.Management.DataMigration.Models
         /// name to database id</param>
         /// <param name="databaseSummary">Summary of database results in the
         /// migration</param>
+        /// <param name="migrationValidationResult">Migration Validation
+        /// Results</param>
+        /// <param name="migrationReportResult">Migration Validation
+        /// Results</param>
         /// <param name="sourceServerVersion">Source server version</param>
         /// <param name="sourceServerBrandVersion">Source server brand
         /// version</param>
@@ -56,7 +60,7 @@ namespace Microsoft.Azure.Management.DataMigration.Models
         /// version</param>
         /// <param name="exceptionsAndWarnings">Migration exceptions and
         /// warnings.</param>
-        public MigrateSqlServerSqlDbTaskOutputMigrationLevel(string id = default(string), string name = default(string), System.DateTimeOffset? startedOn = default(System.DateTimeOffset?), System.DateTimeOffset? endedOn = default(System.DateTimeOffset?), MigrationStatus? status = default(MigrationStatus?), MigrationState? state = default(MigrationState?), string statusMessage = default(string), string message = default(string), IDictionary<string, string> databases = default(IDictionary<string, string>), IDictionary<string, DataItemMigrationSummaryResult> databaseSummary = default(IDictionary<string, DataItemMigrationSummaryResult>), string sourceServerVersion = default(string), string sourceServerBrandVersion = default(string), string targetServerVersion = default(string), string targetServerBrandVersion = default(string), IList<ReportableException> exceptionsAndWarnings = default(IList<ReportableException>))
+        public MigrateSqlServerSqlDbTaskOutputMigrationLevel(string id = default(string), string name = default(string), System.DateTimeOffset? startedOn = default(System.DateTimeOffset?), System.DateTimeOffset? endedOn = default(System.DateTimeOffset?), MigrationStatus? status = default(MigrationStatus?), MigrationState? state = default(MigrationState?), string statusMessage = default(string), string message = default(string), IDictionary<string, string> databases = default(IDictionary<string, string>), IDictionary<string, DataItemMigrationSummaryResult> databaseSummary = default(IDictionary<string, DataItemMigrationSummaryResult>), MigrationValidationResult migrationValidationResult = default(MigrationValidationResult), MigrationReportResult migrationReportResult = default(MigrationReportResult), string sourceServerVersion = default(string), string sourceServerBrandVersion = default(string), string targetServerVersion = default(string), string targetServerBrandVersion = default(string), IList<ReportableException> exceptionsAndWarnings = default(IList<ReportableException>))
             : base(id)
         {
             Name = name;
@@ -68,6 +72,8 @@ namespace Microsoft.Azure.Management.DataMigration.Models
             Message = message;
             Databases = databases;
             DatabaseSummary = databaseSummary;
+            MigrationValidationResult = migrationValidationResult;
+            MigrationReportResult = migrationReportResult;
             SourceServerVersion = sourceServerVersion;
             SourceServerBrandVersion = sourceServerBrandVersion;
             TargetServerVersion = targetServerVersion;
@@ -138,6 +144,18 @@ namespace Microsoft.Azure.Management.DataMigration.Models
         /// </summary>
         [JsonProperty(PropertyName = "databaseSummary")]
         public IDictionary<string, DataItemMigrationSummaryResult> DatabaseSummary { get; private set; }
+
+        /// <summary>
+        /// Gets or sets migration Validation Results
+        /// </summary>
+        [JsonProperty(PropertyName = "migrationValidationResult")]
+        public MigrationValidationResult MigrationValidationResult { get; set; }
+
+        /// <summary>
+        /// Gets or sets migration Validation Results
+        /// </summary>
+        [JsonProperty(PropertyName = "migrationReportResult")]
+        public MigrationReportResult MigrationReportResult { get; set; }
 
         /// <summary>
         /// Gets source server version

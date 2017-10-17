@@ -34,11 +34,15 @@ namespace Microsoft.Azure.Management.DataMigration.Models
         /// <param name="objectName">The unescaped name of the object</param>
         /// <param name="schemaName">The unescaped name of the schema
         /// containing the object</param>
-        public DatabaseObjectName(string databaseName = default(string), string objectName = default(string), string schemaName = default(string))
+        /// <param name="objectType">Type of the object in the database.
+        /// Possible values include: 'StoredProcedures', 'Table', 'User',
+        /// 'View', 'Function'</param>
+        public DatabaseObjectName(string databaseName = default(string), string objectName = default(string), string schemaName = default(string), ObjectType? objectType = default(ObjectType?))
         {
             DatabaseName = databaseName;
             ObjectName = objectName;
             SchemaName = schemaName;
+            ObjectType = objectType;
             CustomInit();
         }
 
@@ -64,6 +68,13 @@ namespace Microsoft.Azure.Management.DataMigration.Models
         /// </summary>
         [JsonProperty(PropertyName = "schemaName")]
         public string SchemaName { get; private set; }
+
+        /// <summary>
+        /// Gets or sets type of the object in the database. Possible values
+        /// include: 'StoredProcedures', 'Table', 'User', 'View', 'Function'
+        /// </summary>
+        [JsonProperty(PropertyName = "objectType")]
+        public ObjectType? ObjectType { get; set; }
 
     }
 }

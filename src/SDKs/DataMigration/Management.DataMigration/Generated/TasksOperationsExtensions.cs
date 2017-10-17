@@ -39,12 +39,15 @@ namespace Microsoft.Azure.Management.DataMigration
             /// <param name='serviceName'>
             /// Name of the service
             /// </param>
+            /// <param name='projectName'>
+            /// Name of the project
+            /// </param>
             /// <param name='taskType'>
             /// Filter tasks by task type
             /// </param>
-            public static IPage<ProjectTask> List(this ITasksOperations operations, string groupName, string serviceName, string taskType = default(string))
+            public static IPage<ProjectTask> List(this ITasksOperations operations, string groupName, string serviceName, string projectName, string taskType = default(string))
             {
-                return operations.ListAsync(groupName, serviceName, taskType).GetAwaiter().GetResult();
+                return operations.ListAsync(groupName, serviceName, projectName, taskType).GetAwaiter().GetResult();
             }
 
             /// <summary>
@@ -65,15 +68,18 @@ namespace Microsoft.Azure.Management.DataMigration
             /// <param name='serviceName'>
             /// Name of the service
             /// </param>
+            /// <param name='projectName'>
+            /// Name of the project
+            /// </param>
             /// <param name='taskType'>
             /// Filter tasks by task type
             /// </param>
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<IPage<ProjectTask>> ListAsync(this ITasksOperations operations, string groupName, string serviceName, string taskType = default(string), CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<IPage<ProjectTask>> ListAsync(this ITasksOperations operations, string groupName, string serviceName, string projectName, string taskType = default(string), CancellationToken cancellationToken = default(CancellationToken))
             {
-                using (var _result = await operations.ListWithHttpMessagesAsync(groupName, serviceName, taskType, null, cancellationToken).ConfigureAwait(false))
+                using (var _result = await operations.ListWithHttpMessagesAsync(groupName, serviceName, projectName, taskType, null, cancellationToken).ConfigureAwait(false))
                 {
                     return _result.Body;
                 }
@@ -100,12 +106,15 @@ namespace Microsoft.Azure.Management.DataMigration
             /// <param name='serviceName'>
             /// Name of the service
             /// </param>
+            /// <param name='projectName'>
+            /// Name of the project
+            /// </param>
             /// <param name='taskName'>
             /// Name of the Task
             /// </param>
-            public static ProjectTask CreateOrUpdate(this ITasksOperations operations, ProjectTask parameters, string groupName, string serviceName, string taskName)
+            public static ProjectTask CreateOrUpdate(this ITasksOperations operations, ProjectTask parameters, string groupName, string serviceName, string projectName, string taskName)
             {
-                return operations.CreateOrUpdateAsync(parameters, groupName, serviceName, taskName).GetAwaiter().GetResult();
+                return operations.CreateOrUpdateAsync(parameters, groupName, serviceName, projectName, taskName).GetAwaiter().GetResult();
             }
 
             /// <summary>
@@ -129,15 +138,18 @@ namespace Microsoft.Azure.Management.DataMigration
             /// <param name='serviceName'>
             /// Name of the service
             /// </param>
+            /// <param name='projectName'>
+            /// Name of the project
+            /// </param>
             /// <param name='taskName'>
             /// Name of the Task
             /// </param>
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<ProjectTask> CreateOrUpdateAsync(this ITasksOperations operations, ProjectTask parameters, string groupName, string serviceName, string taskName, CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<ProjectTask> CreateOrUpdateAsync(this ITasksOperations operations, ProjectTask parameters, string groupName, string serviceName, string projectName, string taskName, CancellationToken cancellationToken = default(CancellationToken))
             {
-                using (var _result = await operations.CreateOrUpdateWithHttpMessagesAsync(parameters, groupName, serviceName, taskName, null, cancellationToken).ConfigureAwait(false))
+                using (var _result = await operations.CreateOrUpdateWithHttpMessagesAsync(parameters, groupName, serviceName, projectName, taskName, null, cancellationToken).ConfigureAwait(false))
                 {
                     return _result.Body;
                 }
@@ -160,15 +172,18 @@ namespace Microsoft.Azure.Management.DataMigration
             /// <param name='serviceName'>
             /// Name of the service
             /// </param>
+            /// <param name='projectName'>
+            /// Name of the project
+            /// </param>
             /// <param name='taskName'>
             /// Name of the Task
             /// </param>
             /// <param name='expand'>
             /// Expand the response
             /// </param>
-            public static ProjectTask Get(this ITasksOperations operations, string groupName, string serviceName, string taskName, string expand = default(string))
+            public static ProjectTask Get(this ITasksOperations operations, string groupName, string serviceName, string projectName, string taskName, string expand = default(string))
             {
-                return operations.GetAsync(groupName, serviceName, taskName, expand).GetAwaiter().GetResult();
+                return operations.GetAsync(groupName, serviceName, projectName, taskName, expand).GetAwaiter().GetResult();
             }
 
             /// <summary>
@@ -188,6 +203,9 @@ namespace Microsoft.Azure.Management.DataMigration
             /// <param name='serviceName'>
             /// Name of the service
             /// </param>
+            /// <param name='projectName'>
+            /// Name of the project
+            /// </param>
             /// <param name='taskName'>
             /// Name of the Task
             /// </param>
@@ -197,9 +215,9 @@ namespace Microsoft.Azure.Management.DataMigration
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<ProjectTask> GetAsync(this ITasksOperations operations, string groupName, string serviceName, string taskName, string expand = default(string), CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<ProjectTask> GetAsync(this ITasksOperations operations, string groupName, string serviceName, string projectName, string taskName, string expand = default(string), CancellationToken cancellationToken = default(CancellationToken))
             {
-                using (var _result = await operations.GetWithHttpMessagesAsync(groupName, serviceName, taskName, expand, null, cancellationToken).ConfigureAwait(false))
+                using (var _result = await operations.GetWithHttpMessagesAsync(groupName, serviceName, projectName, taskName, expand, null, cancellationToken).ConfigureAwait(false))
                 {
                     return _result.Body;
                 }
@@ -222,12 +240,15 @@ namespace Microsoft.Azure.Management.DataMigration
             /// <param name='serviceName'>
             /// Name of the service
             /// </param>
+            /// <param name='projectName'>
+            /// Name of the project
+            /// </param>
             /// <param name='taskName'>
             /// Name of the Task
             /// </param>
-            public static void Delete(this ITasksOperations operations, string groupName, string serviceName, string taskName)
+            public static void Delete(this ITasksOperations operations, string groupName, string serviceName, string projectName, string taskName)
             {
-                operations.DeleteAsync(groupName, serviceName, taskName).GetAwaiter().GetResult();
+                operations.DeleteAsync(groupName, serviceName, projectName, taskName).GetAwaiter().GetResult();
             }
 
             /// <summary>
@@ -247,15 +268,18 @@ namespace Microsoft.Azure.Management.DataMigration
             /// <param name='serviceName'>
             /// Name of the service
             /// </param>
+            /// <param name='projectName'>
+            /// Name of the project
+            /// </param>
             /// <param name='taskName'>
             /// Name of the Task
             /// </param>
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task DeleteAsync(this ITasksOperations operations, string groupName, string serviceName, string taskName, CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task DeleteAsync(this ITasksOperations operations, string groupName, string serviceName, string projectName, string taskName, CancellationToken cancellationToken = default(CancellationToken))
             {
-                (await operations.DeleteWithHttpMessagesAsync(groupName, serviceName, taskName, null, cancellationToken).ConfigureAwait(false)).Dispose();
+                (await operations.DeleteWithHttpMessagesAsync(groupName, serviceName, projectName, taskName, null, cancellationToken).ConfigureAwait(false)).Dispose();
             }
 
             /// <summary>
@@ -279,12 +303,15 @@ namespace Microsoft.Azure.Management.DataMigration
             /// <param name='serviceName'>
             /// Name of the service
             /// </param>
+            /// <param name='projectName'>
+            /// Name of the project
+            /// </param>
             /// <param name='taskName'>
             /// Name of the Task
             /// </param>
-            public static ProjectTask Update(this ITasksOperations operations, ProjectTask parameters, string groupName, string serviceName, string taskName)
+            public static ProjectTask Update(this ITasksOperations operations, ProjectTask parameters, string groupName, string serviceName, string projectName, string taskName)
             {
-                return operations.UpdateAsync(parameters, groupName, serviceName, taskName).GetAwaiter().GetResult();
+                return operations.UpdateAsync(parameters, groupName, serviceName, projectName, taskName).GetAwaiter().GetResult();
             }
 
             /// <summary>
@@ -308,15 +335,18 @@ namespace Microsoft.Azure.Management.DataMigration
             /// <param name='serviceName'>
             /// Name of the service
             /// </param>
+            /// <param name='projectName'>
+            /// Name of the project
+            /// </param>
             /// <param name='taskName'>
             /// Name of the Task
             /// </param>
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<ProjectTask> UpdateAsync(this ITasksOperations operations, ProjectTask parameters, string groupName, string serviceName, string taskName, CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<ProjectTask> UpdateAsync(this ITasksOperations operations, ProjectTask parameters, string groupName, string serviceName, string projectName, string taskName, CancellationToken cancellationToken = default(CancellationToken))
             {
-                using (var _result = await operations.UpdateWithHttpMessagesAsync(parameters, groupName, serviceName, taskName, null, cancellationToken).ConfigureAwait(false))
+                using (var _result = await operations.UpdateWithHttpMessagesAsync(parameters, groupName, serviceName, projectName, taskName, null, cancellationToken).ConfigureAwait(false))
                 {
                     return _result.Body;
                 }
@@ -339,12 +369,15 @@ namespace Microsoft.Azure.Management.DataMigration
             /// <param name='serviceName'>
             /// Name of the service
             /// </param>
+            /// <param name='projectName'>
+            /// Name of the project
+            /// </param>
             /// <param name='taskName'>
             /// Name of the Task
             /// </param>
-            public static ProjectTask Cancel(this ITasksOperations operations, string groupName, string serviceName, string taskName)
+            public static ProjectTask Cancel(this ITasksOperations operations, string groupName, string serviceName, string projectName, string taskName)
             {
-                return operations.CancelAsync(groupName, serviceName, taskName).GetAwaiter().GetResult();
+                return operations.CancelAsync(groupName, serviceName, projectName, taskName).GetAwaiter().GetResult();
             }
 
             /// <summary>
@@ -364,15 +397,18 @@ namespace Microsoft.Azure.Management.DataMigration
             /// <param name='serviceName'>
             /// Name of the service
             /// </param>
+            /// <param name='projectName'>
+            /// Name of the project
+            /// </param>
             /// <param name='taskName'>
             /// Name of the Task
             /// </param>
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<ProjectTask> CancelAsync(this ITasksOperations operations, string groupName, string serviceName, string taskName, CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<ProjectTask> CancelAsync(this ITasksOperations operations, string groupName, string serviceName, string projectName, string taskName, CancellationToken cancellationToken = default(CancellationToken))
             {
-                using (var _result = await operations.CancelWithHttpMessagesAsync(groupName, serviceName, taskName, null, cancellationToken).ConfigureAwait(false))
+                using (var _result = await operations.CancelWithHttpMessagesAsync(groupName, serviceName, projectName, taskName, null, cancellationToken).ConfigureAwait(false))
                 {
                     return _result.Body;
                 }

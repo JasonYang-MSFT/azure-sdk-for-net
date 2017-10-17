@@ -39,6 +39,9 @@ namespace Microsoft.Azure.Management.DataMigration
         /// <param name='serviceName'>
         /// Name of the service
         /// </param>
+        /// <param name='projectName'>
+        /// Name of the project
+        /// </param>
         /// <param name='taskType'>
         /// Filter tasks by task type
         /// </param>
@@ -57,7 +60,7 @@ namespace Microsoft.Azure.Management.DataMigration
         /// <exception cref="Microsoft.Rest.ValidationException">
         /// Thrown when a required parameter is null
         /// </exception>
-        Task<AzureOperationResponse<IPage<ProjectTask>>> ListWithHttpMessagesAsync(string groupName, string serviceName, string taskType = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<AzureOperationResponse<IPage<ProjectTask>>> ListWithHttpMessagesAsync(string groupName, string serviceName, string projectName, string taskType = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Create or update task
         /// </summary>
@@ -75,6 +78,9 @@ namespace Microsoft.Azure.Management.DataMigration
         /// </param>
         /// <param name='serviceName'>
         /// Name of the service
+        /// </param>
+        /// <param name='projectName'>
+        /// Name of the project
         /// </param>
         /// <param name='taskName'>
         /// Name of the Task
@@ -94,7 +100,7 @@ namespace Microsoft.Azure.Management.DataMigration
         /// <exception cref="Microsoft.Rest.ValidationException">
         /// Thrown when a required parameter is null
         /// </exception>
-        Task<AzureOperationResponse<ProjectTask>> CreateOrUpdateWithHttpMessagesAsync(ProjectTask parameters, string groupName, string serviceName, string taskName, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<AzureOperationResponse<ProjectTask>> CreateOrUpdateWithHttpMessagesAsync(ProjectTask parameters, string groupName, string serviceName, string projectName, string taskName, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Get task information
         /// </summary>
@@ -108,6 +114,9 @@ namespace Microsoft.Azure.Management.DataMigration
         /// </param>
         /// <param name='serviceName'>
         /// Name of the service
+        /// </param>
+        /// <param name='projectName'>
+        /// Name of the project
         /// </param>
         /// <param name='taskName'>
         /// Name of the Task
@@ -130,7 +139,7 @@ namespace Microsoft.Azure.Management.DataMigration
         /// <exception cref="Microsoft.Rest.ValidationException">
         /// Thrown when a required parameter is null
         /// </exception>
-        Task<AzureOperationResponse<ProjectTask>> GetWithHttpMessagesAsync(string groupName, string serviceName, string taskName, string expand = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<AzureOperationResponse<ProjectTask>> GetWithHttpMessagesAsync(string groupName, string serviceName, string projectName, string taskName, string expand = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Delete task
         /// </summary>
@@ -144,6 +153,9 @@ namespace Microsoft.Azure.Management.DataMigration
         /// </param>
         /// <param name='serviceName'>
         /// Name of the service
+        /// </param>
+        /// <param name='projectName'>
+        /// Name of the project
         /// </param>
         /// <param name='taskName'>
         /// Name of the Task
@@ -160,7 +172,7 @@ namespace Microsoft.Azure.Management.DataMigration
         /// <exception cref="Microsoft.Rest.ValidationException">
         /// Thrown when a required parameter is null
         /// </exception>
-        Task<AzureOperationResponse> DeleteWithHttpMessagesAsync(string groupName, string serviceName, string taskName, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<AzureOperationResponse> DeleteWithHttpMessagesAsync(string groupName, string serviceName, string projectName, string taskName, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Create or update task
         /// </summary>
@@ -179,6 +191,9 @@ namespace Microsoft.Azure.Management.DataMigration
         /// <param name='serviceName'>
         /// Name of the service
         /// </param>
+        /// <param name='projectName'>
+        /// Name of the project
+        /// </param>
         /// <param name='taskName'>
         /// Name of the Task
         /// </param>
@@ -197,7 +212,7 @@ namespace Microsoft.Azure.Management.DataMigration
         /// <exception cref="Microsoft.Rest.ValidationException">
         /// Thrown when a required parameter is null
         /// </exception>
-        Task<AzureOperationResponse<ProjectTask>> UpdateWithHttpMessagesAsync(ProjectTask parameters, string groupName, string serviceName, string taskName, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<AzureOperationResponse<ProjectTask>> UpdateWithHttpMessagesAsync(ProjectTask parameters, string groupName, string serviceName, string projectName, string taskName, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Cancel a task
         /// </summary>
@@ -212,6 +227,9 @@ namespace Microsoft.Azure.Management.DataMigration
         /// <param name='serviceName'>
         /// Name of the service
         /// </param>
+        /// <param name='projectName'>
+        /// Name of the project
+        /// </param>
         /// <param name='taskName'>
         /// Name of the Task
         /// </param>
@@ -230,7 +248,7 @@ namespace Microsoft.Azure.Management.DataMigration
         /// <exception cref="Microsoft.Rest.ValidationException">
         /// Thrown when a required parameter is null
         /// </exception>
-        Task<AzureOperationResponse<ProjectTask>> CancelWithHttpMessagesAsync(string groupName, string serviceName, string taskName, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<AzureOperationResponse<ProjectTask>> CancelWithHttpMessagesAsync(string groupName, string serviceName, string projectName, string taskName, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Get tasks in a service
         /// </summary>

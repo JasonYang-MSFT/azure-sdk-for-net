@@ -32,10 +32,12 @@ namespace Microsoft.Azure.Management.DataMigration.Models
         /// Initializes a new instance of the GetProjectDetailsNonSqlTaskInput
         /// class.
         /// </summary>
+        /// <param name="projectName">Name of the migration project</param>
         /// <param name="projectLocation">A URL that points to the location to
         /// access project artifacts</param>
-        public GetProjectDetailsNonSqlTaskInput(string projectLocation)
+        public GetProjectDetailsNonSqlTaskInput(string projectName, string projectLocation)
         {
+            ProjectName = projectName;
             ProjectLocation = projectLocation;
             CustomInit();
         }
@@ -44,6 +46,12 @@ namespace Microsoft.Azure.Management.DataMigration.Models
         /// An initialization method that performs custom operations like setting defaults
         /// </summary>
         partial void CustomInit();
+
+        /// <summary>
+        /// Gets or sets name of the migration project
+        /// </summary>
+        [JsonProperty(PropertyName = "projectName")]
+        public string ProjectName { get; set; }
 
         /// <summary>
         /// Gets or sets a URL that points to the location to access project
@@ -60,6 +68,10 @@ namespace Microsoft.Azure.Management.DataMigration.Models
         /// </exception>
         public virtual void Validate()
         {
+            if (ProjectName == null)
+            {
+                throw new ValidationException(ValidationRules.CannotBeNull, "ProjectName");
+            }
             if (ProjectLocation == null)
             {
                 throw new ValidationException(ValidationRules.CannotBeNull, "ProjectLocation");

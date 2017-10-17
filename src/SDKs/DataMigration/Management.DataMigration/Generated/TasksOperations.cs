@@ -65,6 +65,9 @@ namespace Microsoft.Azure.Management.DataMigration
         /// <param name='serviceName'>
         /// Name of the service
         /// </param>
+        /// <param name='projectName'>
+        /// Name of the project
+        /// </param>
         /// <param name='taskType'>
         /// Filter tasks by task type
         /// </param>
@@ -89,7 +92,7 @@ namespace Microsoft.Azure.Management.DataMigration
         /// <return>
         /// A response object containing the response body and response headers.
         /// </return>
-        public async Task<AzureOperationResponse<IPage<ProjectTask>>> ListWithHttpMessagesAsync(string groupName, string serviceName, string taskType = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<AzureOperationResponse<IPage<ProjectTask>>> ListWithHttpMessagesAsync(string groupName, string serviceName, string projectName, string taskType = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             if (Client.SubscriptionId == null)
             {
@@ -102,6 +105,10 @@ namespace Microsoft.Azure.Management.DataMigration
             if (serviceName == null)
             {
                 throw new ValidationException(ValidationRules.CannotBeNull, "serviceName");
+            }
+            if (projectName == null)
+            {
+                throw new ValidationException(ValidationRules.CannotBeNull, "projectName");
             }
             if (Client.ApiVersion == null)
             {
@@ -116,6 +123,7 @@ namespace Microsoft.Azure.Management.DataMigration
                 Dictionary<string, object> tracingParameters = new Dictionary<string, object>();
                 tracingParameters.Add("groupName", groupName);
                 tracingParameters.Add("serviceName", serviceName);
+                tracingParameters.Add("projectName", projectName);
                 tracingParameters.Add("taskType", taskType);
                 tracingParameters.Add("cancellationToken", cancellationToken);
                 ServiceClientTracing.Enter(_invocationId, this, "List", tracingParameters);
@@ -126,6 +134,7 @@ namespace Microsoft.Azure.Management.DataMigration
             _url = _url.Replace("{subscriptionId}", System.Uri.EscapeDataString(Client.SubscriptionId));
             _url = _url.Replace("{groupName}", System.Uri.EscapeDataString(groupName));
             _url = _url.Replace("{serviceName}", System.Uri.EscapeDataString(serviceName));
+            _url = _url.Replace("{projectName}", System.Uri.EscapeDataString(projectName));
             List<string> _queryParameters = new List<string>();
             if (Client.ApiVersion != null)
             {
@@ -273,6 +282,9 @@ namespace Microsoft.Azure.Management.DataMigration
         /// <param name='serviceName'>
         /// Name of the service
         /// </param>
+        /// <param name='projectName'>
+        /// Name of the project
+        /// </param>
         /// <param name='taskName'>
         /// Name of the Task
         /// </param>
@@ -297,7 +309,7 @@ namespace Microsoft.Azure.Management.DataMigration
         /// <return>
         /// A response object containing the response body and response headers.
         /// </return>
-        public async Task<AzureOperationResponse<ProjectTask>> CreateOrUpdateWithHttpMessagesAsync(ProjectTask parameters, string groupName, string serviceName, string taskName, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<AzureOperationResponse<ProjectTask>> CreateOrUpdateWithHttpMessagesAsync(ProjectTask parameters, string groupName, string serviceName, string projectName, string taskName, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             if (parameters == null)
             {
@@ -314,6 +326,10 @@ namespace Microsoft.Azure.Management.DataMigration
             if (serviceName == null)
             {
                 throw new ValidationException(ValidationRules.CannotBeNull, "serviceName");
+            }
+            if (projectName == null)
+            {
+                throw new ValidationException(ValidationRules.CannotBeNull, "projectName");
             }
             if (taskName == null)
             {
@@ -333,6 +349,7 @@ namespace Microsoft.Azure.Management.DataMigration
                 tracingParameters.Add("parameters", parameters);
                 tracingParameters.Add("groupName", groupName);
                 tracingParameters.Add("serviceName", serviceName);
+                tracingParameters.Add("projectName", projectName);
                 tracingParameters.Add("taskName", taskName);
                 tracingParameters.Add("cancellationToken", cancellationToken);
                 ServiceClientTracing.Enter(_invocationId, this, "CreateOrUpdate", tracingParameters);
@@ -343,6 +360,7 @@ namespace Microsoft.Azure.Management.DataMigration
             _url = _url.Replace("{subscriptionId}", System.Uri.EscapeDataString(Client.SubscriptionId));
             _url = _url.Replace("{groupName}", System.Uri.EscapeDataString(groupName));
             _url = _url.Replace("{serviceName}", System.Uri.EscapeDataString(serviceName));
+            _url = _url.Replace("{projectName}", System.Uri.EscapeDataString(projectName));
             _url = _url.Replace("{taskName}", System.Uri.EscapeDataString(taskName));
             List<string> _queryParameters = new List<string>();
             if (Client.ApiVersion != null)
@@ -507,6 +525,9 @@ namespace Microsoft.Azure.Management.DataMigration
         /// <param name='serviceName'>
         /// Name of the service
         /// </param>
+        /// <param name='projectName'>
+        /// Name of the project
+        /// </param>
         /// <param name='taskName'>
         /// Name of the Task
         /// </param>
@@ -534,7 +555,7 @@ namespace Microsoft.Azure.Management.DataMigration
         /// <return>
         /// A response object containing the response body and response headers.
         /// </return>
-        public async Task<AzureOperationResponse<ProjectTask>> GetWithHttpMessagesAsync(string groupName, string serviceName, string taskName, string expand = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<AzureOperationResponse<ProjectTask>> GetWithHttpMessagesAsync(string groupName, string serviceName, string projectName, string taskName, string expand = default(string), Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             if (Client.SubscriptionId == null)
             {
@@ -547,6 +568,10 @@ namespace Microsoft.Azure.Management.DataMigration
             if (serviceName == null)
             {
                 throw new ValidationException(ValidationRules.CannotBeNull, "serviceName");
+            }
+            if (projectName == null)
+            {
+                throw new ValidationException(ValidationRules.CannotBeNull, "projectName");
             }
             if (taskName == null)
             {
@@ -566,6 +591,7 @@ namespace Microsoft.Azure.Management.DataMigration
                 tracingParameters.Add("expand", expand);
                 tracingParameters.Add("groupName", groupName);
                 tracingParameters.Add("serviceName", serviceName);
+                tracingParameters.Add("projectName", projectName);
                 tracingParameters.Add("taskName", taskName);
                 tracingParameters.Add("cancellationToken", cancellationToken);
                 ServiceClientTracing.Enter(_invocationId, this, "Get", tracingParameters);
@@ -576,6 +602,7 @@ namespace Microsoft.Azure.Management.DataMigration
             _url = _url.Replace("{subscriptionId}", System.Uri.EscapeDataString(Client.SubscriptionId));
             _url = _url.Replace("{groupName}", System.Uri.EscapeDataString(groupName));
             _url = _url.Replace("{serviceName}", System.Uri.EscapeDataString(serviceName));
+            _url = _url.Replace("{projectName}", System.Uri.EscapeDataString(projectName));
             _url = _url.Replace("{taskName}", System.Uri.EscapeDataString(taskName));
             List<string> _queryParameters = new List<string>();
             if (expand != null)
@@ -720,6 +747,9 @@ namespace Microsoft.Azure.Management.DataMigration
         /// <param name='serviceName'>
         /// Name of the service
         /// </param>
+        /// <param name='projectName'>
+        /// Name of the project
+        /// </param>
         /// <param name='taskName'>
         /// Name of the Task
         /// </param>
@@ -741,7 +771,7 @@ namespace Microsoft.Azure.Management.DataMigration
         /// <return>
         /// A response object containing the response body and response headers.
         /// </return>
-        public async Task<AzureOperationResponse> DeleteWithHttpMessagesAsync(string groupName, string serviceName, string taskName, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<AzureOperationResponse> DeleteWithHttpMessagesAsync(string groupName, string serviceName, string projectName, string taskName, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             if (Client.SubscriptionId == null)
             {
@@ -754,6 +784,10 @@ namespace Microsoft.Azure.Management.DataMigration
             if (serviceName == null)
             {
                 throw new ValidationException(ValidationRules.CannotBeNull, "serviceName");
+            }
+            if (projectName == null)
+            {
+                throw new ValidationException(ValidationRules.CannotBeNull, "projectName");
             }
             if (taskName == null)
             {
@@ -772,6 +806,7 @@ namespace Microsoft.Azure.Management.DataMigration
                 Dictionary<string, object> tracingParameters = new Dictionary<string, object>();
                 tracingParameters.Add("groupName", groupName);
                 tracingParameters.Add("serviceName", serviceName);
+                tracingParameters.Add("projectName", projectName);
                 tracingParameters.Add("taskName", taskName);
                 tracingParameters.Add("cancellationToken", cancellationToken);
                 ServiceClientTracing.Enter(_invocationId, this, "Delete", tracingParameters);
@@ -782,6 +817,7 @@ namespace Microsoft.Azure.Management.DataMigration
             _url = _url.Replace("{subscriptionId}", System.Uri.EscapeDataString(Client.SubscriptionId));
             _url = _url.Replace("{groupName}", System.Uri.EscapeDataString(groupName));
             _url = _url.Replace("{serviceName}", System.Uri.EscapeDataString(serviceName));
+            _url = _url.Replace("{projectName}", System.Uri.EscapeDataString(projectName));
             _url = _url.Replace("{taskName}", System.Uri.EscapeDataString(taskName));
             List<string> _queryParameters = new List<string>();
             if (Client.ApiVersion != null)
@@ -908,6 +944,9 @@ namespace Microsoft.Azure.Management.DataMigration
         /// <param name='serviceName'>
         /// Name of the service
         /// </param>
+        /// <param name='projectName'>
+        /// Name of the project
+        /// </param>
         /// <param name='taskName'>
         /// Name of the Task
         /// </param>
@@ -932,7 +971,7 @@ namespace Microsoft.Azure.Management.DataMigration
         /// <return>
         /// A response object containing the response body and response headers.
         /// </return>
-        public async Task<AzureOperationResponse<ProjectTask>> UpdateWithHttpMessagesAsync(ProjectTask parameters, string groupName, string serviceName, string taskName, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<AzureOperationResponse<ProjectTask>> UpdateWithHttpMessagesAsync(ProjectTask parameters, string groupName, string serviceName, string projectName, string taskName, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             if (parameters == null)
             {
@@ -949,6 +988,10 @@ namespace Microsoft.Azure.Management.DataMigration
             if (serviceName == null)
             {
                 throw new ValidationException(ValidationRules.CannotBeNull, "serviceName");
+            }
+            if (projectName == null)
+            {
+                throw new ValidationException(ValidationRules.CannotBeNull, "projectName");
             }
             if (taskName == null)
             {
@@ -968,6 +1011,7 @@ namespace Microsoft.Azure.Management.DataMigration
                 tracingParameters.Add("parameters", parameters);
                 tracingParameters.Add("groupName", groupName);
                 tracingParameters.Add("serviceName", serviceName);
+                tracingParameters.Add("projectName", projectName);
                 tracingParameters.Add("taskName", taskName);
                 tracingParameters.Add("cancellationToken", cancellationToken);
                 ServiceClientTracing.Enter(_invocationId, this, "Update", tracingParameters);
@@ -978,6 +1022,7 @@ namespace Microsoft.Azure.Management.DataMigration
             _url = _url.Replace("{subscriptionId}", System.Uri.EscapeDataString(Client.SubscriptionId));
             _url = _url.Replace("{groupName}", System.Uri.EscapeDataString(groupName));
             _url = _url.Replace("{serviceName}", System.Uri.EscapeDataString(serviceName));
+            _url = _url.Replace("{projectName}", System.Uri.EscapeDataString(projectName));
             _url = _url.Replace("{taskName}", System.Uri.EscapeDataString(taskName));
             List<string> _queryParameters = new List<string>();
             if (Client.ApiVersion != null)
@@ -1124,6 +1169,9 @@ namespace Microsoft.Azure.Management.DataMigration
         /// <param name='serviceName'>
         /// Name of the service
         /// </param>
+        /// <param name='projectName'>
+        /// Name of the project
+        /// </param>
         /// <param name='taskName'>
         /// Name of the Task
         /// </param>
@@ -1148,7 +1196,7 @@ namespace Microsoft.Azure.Management.DataMigration
         /// <return>
         /// A response object containing the response body and response headers.
         /// </return>
-        public async Task<AzureOperationResponse<ProjectTask>> CancelWithHttpMessagesAsync(string groupName, string serviceName, string taskName, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<AzureOperationResponse<ProjectTask>> CancelWithHttpMessagesAsync(string groupName, string serviceName, string projectName, string taskName, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             if (Client.SubscriptionId == null)
             {
@@ -1161,6 +1209,10 @@ namespace Microsoft.Azure.Management.DataMigration
             if (serviceName == null)
             {
                 throw new ValidationException(ValidationRules.CannotBeNull, "serviceName");
+            }
+            if (projectName == null)
+            {
+                throw new ValidationException(ValidationRules.CannotBeNull, "projectName");
             }
             if (taskName == null)
             {
@@ -1179,6 +1231,7 @@ namespace Microsoft.Azure.Management.DataMigration
                 Dictionary<string, object> tracingParameters = new Dictionary<string, object>();
                 tracingParameters.Add("groupName", groupName);
                 tracingParameters.Add("serviceName", serviceName);
+                tracingParameters.Add("projectName", projectName);
                 tracingParameters.Add("taskName", taskName);
                 tracingParameters.Add("cancellationToken", cancellationToken);
                 ServiceClientTracing.Enter(_invocationId, this, "Cancel", tracingParameters);
@@ -1189,6 +1242,7 @@ namespace Microsoft.Azure.Management.DataMigration
             _url = _url.Replace("{subscriptionId}", System.Uri.EscapeDataString(Client.SubscriptionId));
             _url = _url.Replace("{groupName}", System.Uri.EscapeDataString(groupName));
             _url = _url.Replace("{serviceName}", System.Uri.EscapeDataString(serviceName));
+            _url = _url.Replace("{projectName}", System.Uri.EscapeDataString(projectName));
             _url = _url.Replace("{taskName}", System.Uri.EscapeDataString(taskName));
             List<string> _queryParameters = new List<string>();
             if (Client.ApiVersion != null)

@@ -34,7 +34,11 @@ namespace Microsoft.Azure.Management.DataMigration.Models
         [EnumMember(Value = "SQLDB")]
         SQLDB,
         [EnumMember(Value = "SQLDW")]
-        SQLDW
+        SQLDW,
+        [EnumMember(Value = "SQLMI")]
+        SQLMI,
+        [EnumMember(Value = "SQLVM")]
+        SQLVM
     }
     internal static class ProjectTargetPlatformEnumExtension
     {
@@ -61,6 +65,10 @@ namespace Microsoft.Azure.Management.DataMigration.Models
                     return "SQLDB";
                 case ProjectTargetPlatform.SQLDW:
                     return "SQLDW";
+                case ProjectTargetPlatform.SQLMI:
+                    return "SQLMI";
+                case ProjectTargetPlatform.SQLVM:
+                    return "SQLVM";
             }
             return null;
         }
@@ -83,6 +91,10 @@ namespace Microsoft.Azure.Management.DataMigration.Models
                     return ProjectTargetPlatform.SQLDB;
                 case "SQLDW":
                     return ProjectTargetPlatform.SQLDW;
+                case "SQLMI":
+                    return ProjectTargetPlatform.SQLMI;
+                case "SQLVM":
+                    return ProjectTargetPlatform.SQLVM;
             }
             return null;
         }

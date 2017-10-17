@@ -36,14 +36,15 @@ namespace Microsoft.Azure.Management.DataMigration.Models
         /// <param name="targetConnectionInfo">Information for connecting to
         /// target</param>
         /// <param name="targetDatabaseName">Target database name</param>
+        /// <param name="projectName">Name of the migration project</param>
         /// <param name="projectLocation">An URL that points to the drop
         /// location to access project artifacts</param>
         /// <param name="selectedTables">Metadata of the tables selected for
         /// migration</param>
         /// <param name="sourceConnectionInfo">Information for connecting to
         /// Oracle source</param>
-        public MigrateOracleSqlTaskInput(SqlConnectionInfo targetConnectionInfo, string targetDatabaseName, string projectLocation, IList<NonSqlDataMigrationTable> selectedTables, OracleConnectionInfo sourceConnectionInfo)
-            : base(targetConnectionInfo, targetDatabaseName, projectLocation, selectedTables)
+        public MigrateOracleSqlTaskInput(SqlConnectionInfo targetConnectionInfo, string targetDatabaseName, string projectName, string projectLocation, IList<NonSqlDataMigrationTable> selectedTables, OracleConnectionInfo sourceConnectionInfo)
+            : base(targetConnectionInfo, targetDatabaseName, projectName, projectLocation, selectedTables)
         {
             SourceConnectionInfo = sourceConnectionInfo;
             CustomInit();

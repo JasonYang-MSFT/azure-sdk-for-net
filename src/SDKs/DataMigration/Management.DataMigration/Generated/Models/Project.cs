@@ -40,7 +40,7 @@ namespace Microsoft.Azure.Management.DataMigration.Models
         /// 'Sybase'</param>
         /// <param name="targetPlatform">Target platform for the project.
         /// Possible values include: 'SQL10', 'SQL11', 'SQL12', 'SQL13',
-        /// 'SQL14', 'SQLDB', 'SQLDW'</param>
+        /// 'SQL14', 'SQLDB', 'SQLDW', 'SQLMI', 'SQLVM'</param>
         /// <param name="id">Resource ID.</param>
         /// <param name="name">Resource name.</param>
         /// <param name="type">Resource type.</param>
@@ -79,7 +79,7 @@ namespace Microsoft.Azure.Management.DataMigration.Models
         /// <summary>
         /// Gets or sets target platform for the project. Possible values
         /// include: 'SQL10', 'SQL11', 'SQL12', 'SQL13', 'SQL14', 'SQLDB',
-        /// 'SQLDW'
+        /// 'SQLDW', 'SQLMI', 'SQLVM'
         /// </summary>
         [JsonProperty(PropertyName = "properties.targetPlatform")]
         public ProjectTargetPlatform TargetPlatform { get; set; }
