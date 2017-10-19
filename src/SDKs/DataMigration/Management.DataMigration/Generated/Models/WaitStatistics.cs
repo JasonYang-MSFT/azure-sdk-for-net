@@ -30,7 +30,7 @@ namespace Microsoft.Azure.Management.DataMigration.Models
         /// Initializes a new instance of the WaitStatistics class.
         /// </summary>
         /// <param name="waitType">Type of the Wait</param>
-        /// <param name="waitTimeMs">Total wait time</param>
+        /// <param name="waitTimeMs">Total wait time in millisecond(s) </param>
         /// <param name="waitCount">Total no. of waits</param>
         public WaitStatistics(string waitType = default(string), double? waitTimeMs = default(double?), long? waitCount = default(long?))
         {
@@ -52,7 +52,7 @@ namespace Microsoft.Azure.Management.DataMigration.Models
         public string WaitType { get; set; }
 
         /// <summary>
-        /// Gets or sets total wait time
+        /// Gets or sets total wait time in millisecond(s)
         /// </summary>
         [JsonProperty(PropertyName = "waitTimeMs")]
         public double? WaitTimeMs { get; set; }

@@ -11,6 +11,8 @@
 namespace Microsoft.Azure.Management.DataMigration.Models
 {
     using Newtonsoft.Json;
+    using System.Collections;
+    using System.Collections.Generic;
     using System.Linq;
 
     /// <summary>
@@ -31,14 +33,21 @@ namespace Microsoft.Azure.Management.DataMigration.Models
         /// Initializes a new instance of the
         /// DataMigrationServiceStatusResponse class.
         /// </summary>
+        /// <param name="agentVersion">The DMS instance agent version</param>
         /// <param name="status">The machine-readable status, such as
-        /// 'Offline', 'Online', 'Deploying', 'Deleting', or 'Failed'</param>
+        /// 'Offline', 'Online', 'Deploying', 'Deleting', 'Stopped',
+        /// 'Stopping', 'Starting', 'FailedToStart', 'FailedToStop', or
+        /// 'Failed'</param>
         /// <param name="vmSize">The services virtual machine size, such as
         /// 'Standard_D2_v2'</param>
-        public DataMigrationServiceStatusResponse(string status = default(string), string vmSize = default(string))
+        /// <param name="supportedTaskTypes">The list of supported task
+        /// types</param>
+        public DataMigrationServiceStatusResponse(string agentVersion = default(string), string status = default(string), string vmSize = default(string), IList<string> supportedTaskTypes = default(IList<string>))
         {
+            AgentVersion = agentVersion;
             Status = status;
             VmSize = vmSize;
+            SupportedTaskTypes = supportedTaskTypes;
             CustomInit();
         }
 
@@ -48,8 +57,15 @@ namespace Microsoft.Azure.Management.DataMigration.Models
         partial void CustomInit();
 
         /// <summary>
+        /// Gets or sets the DMS instance agent version
+        /// </summary>
+        [JsonProperty(PropertyName = "agentVersion")]
+        public string AgentVersion { get; set; }
+
+        /// <summary>
         /// Gets or sets the machine-readable status, such as 'Offline',
-        /// 'Online', 'Deploying', 'Deleting', or 'Failed'
+        /// 'Online', 'Deploying', 'Deleting', 'Stopped', 'Stopping',
+        /// 'Starting', 'FailedToStart', 'FailedToStop', or 'Failed'
         /// </summary>
         [JsonProperty(PropertyName = "status")]
         public string Status { get; set; }
@@ -60,6 +76,12 @@ namespace Microsoft.Azure.Management.DataMigration.Models
         /// </summary>
         [JsonProperty(PropertyName = "vmSize")]
         public string VmSize { get; set; }
+
+        /// <summary>
+        /// Gets or sets the list of supported task types
+        /// </summary>
+        [JsonProperty(PropertyName = "supportedTaskTypes")]
+        public IList<string> SupportedTaskTypes { get; set; }
 
     }
 }

@@ -42,16 +42,17 @@ namespace Microsoft.Azure.Management.DataMigration.Models
         /// target</param>
         /// <param name="selectedDatabases">Databases to migrate</param>
         /// <param name="validationOptions">Options for enabling various post
-        /// migration validations. Avaliable options,
-        /// 1.) Data Integrity Check: Performs a checksum based comparision on
+        /// migration validations. Available options,
+        /// 1.) Data Integrity Check: Performs a checksum based comparison on
         /// source and target tables after the migration to ensure the
         /// correctness of the data.
-        /// 2.) Schema Validation: Performs a through schema comparison between
-        /// the source and target tables and provides a list of differences
-        /// between the source and target database, 3.) Query Analysis:
-        /// Executes a set of queries picked up automatically either from the
-        /// Query Plan Cache or Query Store and execute them and compares the
-        /// execution time between the source and target database.</param>
+        /// 2.) Schema Validation: Performs a thorough schema comparison
+        /// between the source and target tables and provides a list of
+        /// differences between the source and target database, 3.) Query
+        /// Analysis: Executes a set of queries picked up automatically either
+        /// from the Query Plan Cache or Query Store and execute them and
+        /// compares the execution time between the source and target
+        /// database.</param>
         public MigrateSqlServerSqlDbTaskInput(string name, SqlConnectionInfo sourceConnectionInfo, SqlConnectionInfo targetConnectionInfo, IList<MigrateSqlServerSqlDbDatabaseInput> selectedDatabases, MigrationValidationOptions validationOptions = default(MigrationValidationOptions))
             : base(name, sourceConnectionInfo, targetConnectionInfo)
         {
@@ -73,16 +74,16 @@ namespace Microsoft.Azure.Management.DataMigration.Models
 
         /// <summary>
         /// Gets or sets options for enabling various post migration
-        /// validations. Avaliable options,
-        /// 1.) Data Integrity Check: Performs a checksum based comparision on
+        /// validations. Available options,
+        /// 1.) Data Integrity Check: Performs a checksum based comparison on
         /// source and target tables after the migration to ensure the
         /// correctness of the data.
-        /// 2.) Schema Validation: Performs a through schema comparison between
-        /// the source and target tables and provides a list of differences
-        /// between the source and target database, 3.) Query Analysis:
-        /// Executes a set of queries picked up automatically either from the
-        /// Query Plan Cache or Query Store and execute them and compares the
-        /// execution time between the source and target database.
+        /// 2.) Schema Validation: Performs a thorough schema comparison
+        /// between the source and target tables and provides a list of
+        /// differences between the source and target database, 3.) Query
+        /// Analysis: Executes a set of queries picked up automatically either
+        /// from the Query Plan Cache or Query Store and execute them and
+        /// compares the execution time between the source and target database.
         /// </summary>
         [JsonProperty(PropertyName = "validationOptions")]
         public MigrationValidationOptions ValidationOptions { get; set; }

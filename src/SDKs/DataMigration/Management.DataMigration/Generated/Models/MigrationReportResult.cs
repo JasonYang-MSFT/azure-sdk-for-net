@@ -14,7 +14,8 @@ namespace Microsoft.Azure.Management.DataMigration.Models
     using System.Linq;
 
     /// <summary>
-    /// Hold the Migration Validation Report
+    /// Migration validation report result, contains the url for downloading
+    /// the generated report.
     /// </summary>
     public partial class MigrationReportResult
     {

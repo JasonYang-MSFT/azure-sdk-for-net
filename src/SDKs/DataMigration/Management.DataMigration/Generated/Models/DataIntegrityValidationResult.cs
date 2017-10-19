@@ -35,7 +35,8 @@ namespace Microsoft.Azure.Management.DataMigration.Models
         /// </summary>
         /// <param name="failedObjects">List of failed table names of source
         /// and target pair</param>
-        /// <param name="validationErrors">Name of the source database</param>
+        /// <param name="validationErrors">List of errors that happened while
+        /// performing data integrity validation</param>
         public DataIntegrityValidationResult(IDictionary<string, string> failedObjects = default(IDictionary<string, string>), ValidationError validationErrors = default(ValidationError))
         {
             FailedObjects = failedObjects;
@@ -55,7 +56,8 @@ namespace Microsoft.Azure.Management.DataMigration.Models
         public IDictionary<string, string> FailedObjects { get; set; }
 
         /// <summary>
-        /// Gets or sets name of the source database
+        /// Gets or sets list of errors that happened while performing data
+        /// integrity validation
         /// </summary>
         [JsonProperty(PropertyName = "validationErrors")]
         public ValidationError ValidationErrors { get; set; }

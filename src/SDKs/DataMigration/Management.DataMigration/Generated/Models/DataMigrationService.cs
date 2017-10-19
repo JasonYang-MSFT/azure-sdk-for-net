@@ -45,6 +45,7 @@ namespace Microsoft.Azure.Management.DataMigration.Models
         /// supported.</param>
         /// <param name="provisioningState">The resource's provisioning state.
         /// Possible values include: 'Accepted', 'Deleting', 'Deploying',
+        /// 'Stopped', 'Stopping', 'Starting', 'FailedToStart', 'FailedToStop',
         /// 'Succeeded', 'Failed'</param>
         /// <param name="publicKey">The public key of the service, used to
         /// encrypt secrets sent to the service</param>
@@ -84,7 +85,9 @@ namespace Microsoft.Azure.Management.DataMigration.Models
 
         /// <summary>
         /// Gets or sets the resource's provisioning state. Possible values
-        /// include: 'Accepted', 'Deleting', 'Deploying', 'Succeeded', 'Failed'
+        /// include: 'Accepted', 'Deleting', 'Deploying', 'Stopped',
+        /// 'Stopping', 'Starting', 'FailedToStart', 'FailedToStop',
+        /// 'Succeeded', 'Failed'
         /// </summary>
         [JsonProperty(PropertyName = "properties.provisioningState")]
         public ServiceProvisioningState? ProvisioningState { get; set; }

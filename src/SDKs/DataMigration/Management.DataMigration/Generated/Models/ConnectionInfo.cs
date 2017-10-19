@@ -32,8 +32,7 @@ namespace Microsoft.Azure.Management.DataMigration.Models
         /// <param name="userName">User name</param>
         /// <param name="password">Password credential. It must be RSA
         /// encrypted by the public key of the VM, then base64 encoded. It must
-        /// never be the plaintext! Cryptography class contains helper methods
-        /// to perform the encryption.
+        /// never be the plaintext!
         /// </param>
         public ConnectionInfo(string userName = default(string), string password = default(string))
         {
@@ -56,8 +55,7 @@ namespace Microsoft.Azure.Management.DataMigration.Models
         /// <summary>
         /// Gets or sets password credential. It must be RSA encrypted by the
         /// public key of the VM, then base64 encoded. It must never be the
-        /// plaintext! Cryptography class contains helper methods to perform
-        /// the encryption.
+        /// plaintext!
         ///
         /// </summary>
         [JsonProperty(PropertyName = "password")]

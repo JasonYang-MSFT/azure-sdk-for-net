@@ -27,6 +27,16 @@ namespace Microsoft.Azure.Management.DataMigration.Models
         Deleting,
         [EnumMember(Value = "Deploying")]
         Deploying,
+        [EnumMember(Value = "Stopped")]
+        Stopped,
+        [EnumMember(Value = "Stopping")]
+        Stopping,
+        [EnumMember(Value = "Starting")]
+        Starting,
+        [EnumMember(Value = "FailedToStart")]
+        FailedToStart,
+        [EnumMember(Value = "FailedToStop")]
+        FailedToStop,
         [EnumMember(Value = "Succeeded")]
         Succeeded,
         [EnumMember(Value = "Failed")]
@@ -49,6 +59,16 @@ namespace Microsoft.Azure.Management.DataMigration.Models
                     return "Deleting";
                 case ServiceProvisioningState.Deploying:
                     return "Deploying";
+                case ServiceProvisioningState.Stopped:
+                    return "Stopped";
+                case ServiceProvisioningState.Stopping:
+                    return "Stopping";
+                case ServiceProvisioningState.Starting:
+                    return "Starting";
+                case ServiceProvisioningState.FailedToStart:
+                    return "FailedToStart";
+                case ServiceProvisioningState.FailedToStop:
+                    return "FailedToStop";
                 case ServiceProvisioningState.Succeeded:
                     return "Succeeded";
                 case ServiceProvisioningState.Failed:
@@ -67,6 +87,16 @@ namespace Microsoft.Azure.Management.DataMigration.Models
                     return ServiceProvisioningState.Deleting;
                 case "Deploying":
                     return ServiceProvisioningState.Deploying;
+                case "Stopped":
+                    return ServiceProvisioningState.Stopped;
+                case "Stopping":
+                    return ServiceProvisioningState.Stopping;
+                case "Starting":
+                    return ServiceProvisioningState.Starting;
+                case "FailedToStart":
+                    return ServiceProvisioningState.FailedToStart;
+                case "FailedToStop":
+                    return ServiceProvisioningState.FailedToStop;
                 case "Succeeded":
                     return ServiceProvisioningState.Succeeded;
                 case "Failed":

@@ -39,17 +39,17 @@ namespace Microsoft.Azure.Management.DataMigration.Models
         /// database</param>
         /// <param name="startedOn">Validation start time</param>
         /// <param name="endedOn">Validation end time</param>
-        /// <param name="dataIntegrityValidationResults">Provides data
-        /// integrity validation results between the source and target tables
-        /// that are migrated.</param>
-        /// <param name="schemaValidationResults">Provides schema comparison
-        /// results between source and target database</param>
-        /// <param name="queryAnalysisResults">Results of some of the query
-        /// execution results between source and target database</param>
+        /// <param name="dataIntegrityValidationResult">Provides data integrity
+        /// validation result between the source and target tables that are
+        /// migrated.</param>
+        /// <param name="schemaValidationResult">Provides schema comparison
+        /// result between source and target database</param>
+        /// <param name="queryAnalysisValidationResult">Results of some of the
+        /// query execution result between source and target database</param>
         /// <param name="status">Current status of migration. Possible values
         /// include: 'NotStarted', 'Initialized', 'InProgress', 'Completed',
         /// 'Failed'</param>
-        public MigrationValidationDatabaseLevelResult(string id = default(string), string migrationId = default(string), string sourceDatabaseName = default(string), string targetDatabaseName = default(string), System.DateTimeOffset? startedOn = default(System.DateTimeOffset?), System.DateTimeOffset? endedOn = default(System.DateTimeOffset?), DataIntegrityValidationResult dataIntegrityValidationResults = default(DataIntegrityValidationResult), SchemaComparisonValidationResult schemaValidationResults = default(SchemaComparisonValidationResult), QueryAnalysisResult queryAnalysisResults = default(QueryAnalysisResult), ValidationStatus? status = default(ValidationStatus?))
+        public MigrationValidationDatabaseLevelResult(string id = default(string), string migrationId = default(string), string sourceDatabaseName = default(string), string targetDatabaseName = default(string), System.DateTimeOffset? startedOn = default(System.DateTimeOffset?), System.DateTimeOffset? endedOn = default(System.DateTimeOffset?), DataIntegrityValidationResult dataIntegrityValidationResult = default(DataIntegrityValidationResult), SchemaComparisonValidationResult schemaValidationResult = default(SchemaComparisonValidationResult), QueryAnalysisValidationResult queryAnalysisValidationResult = default(QueryAnalysisValidationResult), ValidationStatus? status = default(ValidationStatus?))
         {
             Id = id;
             MigrationId = migrationId;
@@ -57,9 +57,9 @@ namespace Microsoft.Azure.Management.DataMigration.Models
             TargetDatabaseName = targetDatabaseName;
             StartedOn = startedOn;
             EndedOn = endedOn;
-            DataIntegrityValidationResults = dataIntegrityValidationResults;
-            SchemaValidationResults = schemaValidationResults;
-            QueryAnalysisResults = queryAnalysisResults;
+            DataIntegrityValidationResult = dataIntegrityValidationResult;
+            SchemaValidationResult = schemaValidationResult;
+            QueryAnalysisValidationResult = queryAnalysisValidationResult;
             Status = status;
             CustomInit();
         }
@@ -106,25 +106,25 @@ namespace Microsoft.Azure.Management.DataMigration.Models
         public System.DateTimeOffset? EndedOn { get; private set; }
 
         /// <summary>
-        /// Gets provides data integrity validation results between the source
+        /// Gets provides data integrity validation result between the source
         /// and target tables that are migrated.
         /// </summary>
-        [JsonProperty(PropertyName = "dataIntegrityValidationResults")]
-        public DataIntegrityValidationResult DataIntegrityValidationResults { get; private set; }
+        [JsonProperty(PropertyName = "dataIntegrityValidationResult")]
+        public DataIntegrityValidationResult DataIntegrityValidationResult { get; private set; }
 
         /// <summary>
-        /// Gets provides schema comparison results between source and target
+        /// Gets provides schema comparison result between source and target
         /// database
         /// </summary>
-        [JsonProperty(PropertyName = "schemaValidationResults")]
-        public SchemaComparisonValidationResult SchemaValidationResults { get; private set; }
+        [JsonProperty(PropertyName = "schemaValidationResult")]
+        public SchemaComparisonValidationResult SchemaValidationResult { get; private set; }
 
         /// <summary>
-        /// Gets results of some of the query execution results between source
+        /// Gets results of some of the query execution result between source
         /// and target database
         /// </summary>
-        [JsonProperty(PropertyName = "queryAnalysisResults")]
-        public QueryAnalysisResult QueryAnalysisResults { get; private set; }
+        [JsonProperty(PropertyName = "queryAnalysisValidationResult")]
+        public QueryAnalysisValidationResult QueryAnalysisValidationResult { get; private set; }
 
         /// <summary>
         /// Gets current status of migration. Possible values include:

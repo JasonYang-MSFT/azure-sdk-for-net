@@ -33,20 +33,21 @@ namespace Microsoft.Azure.Management.DataMigration.Models
         /// Initializes a new instance of the ExecutionStatistics class.
         /// </summary>
         /// <param name="executionCount">No. of query executions</param>
-        /// <param name="cpuTimeMs">CPU Time for the query execution</param>
-        /// <param name="elapsedTimeMs">Time take for executing the
-        /// query</param>
-        /// <param name="waitStats">Time take for executing the query</param>
-        /// <param name="isError">Did this query result in execution
+        /// <param name="cpuTimeMs">CPU Time in millisecond(s) for the query
+        /// execution</param>
+        /// <param name="elapsedTimeMs">Time taken in millisecond(s) for
+        /// executing the query</param>
+        /// <param name="waitStats">List of wait statistics</param>
+        /// <param name="hasErrors">Indicates whether the query resulted in an
         /// error</param>
         /// <param name="sqlErrors">List of sql Errors</param>
-        public ExecutionStatistics(long? executionCount = default(long?), double? cpuTimeMs = default(double?), double? elapsedTimeMs = default(double?), WaitStatistics waitStats = default(WaitStatistics), bool? isError = default(bool?), IList<string> sqlErrors = default(IList<string>))
+        public ExecutionStatistics(long? executionCount = default(long?), double? cpuTimeMs = default(double?), double? elapsedTimeMs = default(double?), WaitStatistics waitStats = default(WaitStatistics), bool? hasErrors = default(bool?), IList<string> sqlErrors = default(IList<string>))
         {
             ExecutionCount = executionCount;
             CpuTimeMs = cpuTimeMs;
             ElapsedTimeMs = elapsedTimeMs;
             WaitStats = waitStats;
-            IsError = isError;
+            HasErrors = hasErrors;
             SqlErrors = sqlErrors;
             CustomInit();
         }
@@ -63,28 +64,28 @@ namespace Microsoft.Azure.Management.DataMigration.Models
         public long? ExecutionCount { get; set; }
 
         /// <summary>
-        /// Gets or sets CPU Time for the query execution
+        /// Gets or sets CPU Time in millisecond(s) for the query execution
         /// </summary>
         [JsonProperty(PropertyName = "cpuTimeMs")]
         public double? CpuTimeMs { get; set; }
 
         /// <summary>
-        /// Gets or sets time take for executing the query
+        /// Gets or sets time taken in millisecond(s) for executing the query
         /// </summary>
         [JsonProperty(PropertyName = "elapsedTimeMs")]
         public double? ElapsedTimeMs { get; set; }
 
         /// <summary>
-        /// Gets or sets time take for executing the query
+        /// Gets or sets list of wait statistics
         /// </summary>
         [JsonProperty(PropertyName = "waitStats")]
         public WaitStatistics WaitStats { get; set; }
 
         /// <summary>
-        /// Gets or sets did this query result in execution error
+        /// Gets or sets indicates whether the query resulted in an error
         /// </summary>
-        [JsonProperty(PropertyName = "isError")]
-        public bool? IsError { get; set; }
+        [JsonProperty(PropertyName = "hasErrors")]
+        public bool? HasErrors { get; set; }
 
         /// <summary>
         /// Gets or sets list of sql Errors

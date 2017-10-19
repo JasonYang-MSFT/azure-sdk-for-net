@@ -187,6 +187,61 @@ namespace Microsoft.Azure.Management.DataMigration
         /// </exception>
         Task<AzureOperationResponse<DataMigrationServiceStatusResponse>> CheckStatusWithHttpMessagesAsync(string groupName, string serviceName, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
+        /// Start service
+        /// </summary>
+        /// <remarks>
+        /// The services resource is the top-level resource that represents the
+        /// Data Migration Service. This action starts the service and the
+        /// service can be used for data migration.
+        /// </remarks>
+        /// <param name='groupName'>
+        /// Name of the resource group
+        /// </param>
+        /// <param name='serviceName'>
+        /// Name of the service
+        /// </param>
+        /// <param name='customHeaders'>
+        /// The headers that will be added to request.
+        /// </param>
+        /// <param name='cancellationToken'>
+        /// The cancellation token.
+        /// </param>
+        /// <exception cref="ApiErrorException">
+        /// Thrown when the operation returned an invalid status code
+        /// </exception>
+        /// <exception cref="Microsoft.Rest.ValidationException">
+        /// Thrown when a required parameter is null
+        /// </exception>
+        Task<AzureOperationResponse> StartWithHttpMessagesAsync(string groupName, string serviceName, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Stop service
+        /// </summary>
+        /// <remarks>
+        /// The services resource is the top-level resource that represents the
+        /// Data Migration Service. This action stops the service and the
+        /// service cannot be used for data migration. The service owner won't
+        /// be billed when the service is stopped.
+        /// </remarks>
+        /// <param name='groupName'>
+        /// Name of the resource group
+        /// </param>
+        /// <param name='serviceName'>
+        /// Name of the service
+        /// </param>
+        /// <param name='customHeaders'>
+        /// The headers that will be added to request.
+        /// </param>
+        /// <param name='cancellationToken'>
+        /// The cancellation token.
+        /// </param>
+        /// <exception cref="ApiErrorException">
+        /// Thrown when the operation returned an invalid status code
+        /// </exception>
+        /// <exception cref="Microsoft.Rest.ValidationException">
+        /// Thrown when a required parameter is null
+        /// </exception>
+        Task<AzureOperationResponse> StopWithHttpMessagesAsync(string groupName, string serviceName, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
         /// Get compatible SKUs
         /// </summary>
         /// <remarks>
@@ -428,6 +483,61 @@ namespace Microsoft.Azure.Management.DataMigration
         /// Thrown when a required parameter is null
         /// </exception>
         Task<AzureOperationResponse<DataMigrationService>> BeginUpdateWithHttpMessagesAsync(DataMigrationService parameters, string groupName, string serviceName, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Start service
+        /// </summary>
+        /// <remarks>
+        /// The services resource is the top-level resource that represents the
+        /// Data Migration Service. This action starts the service and the
+        /// service can be used for data migration.
+        /// </remarks>
+        /// <param name='groupName'>
+        /// Name of the resource group
+        /// </param>
+        /// <param name='serviceName'>
+        /// Name of the service
+        /// </param>
+        /// <param name='customHeaders'>
+        /// The headers that will be added to request.
+        /// </param>
+        /// <param name='cancellationToken'>
+        /// The cancellation token.
+        /// </param>
+        /// <exception cref="ApiErrorException">
+        /// Thrown when the operation returned an invalid status code
+        /// </exception>
+        /// <exception cref="Microsoft.Rest.ValidationException">
+        /// Thrown when a required parameter is null
+        /// </exception>
+        Task<AzureOperationResponse> BeginStartWithHttpMessagesAsync(string groupName, string serviceName, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Stop service
+        /// </summary>
+        /// <remarks>
+        /// The services resource is the top-level resource that represents the
+        /// Data Migration Service. This action stops the service and the
+        /// service cannot be used for data migration. The service owner won't
+        /// be billed when the service is stopped.
+        /// </remarks>
+        /// <param name='groupName'>
+        /// Name of the resource group
+        /// </param>
+        /// <param name='serviceName'>
+        /// Name of the service
+        /// </param>
+        /// <param name='customHeaders'>
+        /// The headers that will be added to request.
+        /// </param>
+        /// <param name='cancellationToken'>
+        /// The cancellation token.
+        /// </param>
+        /// <exception cref="ApiErrorException">
+        /// Thrown when the operation returned an invalid status code
+        /// </exception>
+        /// <exception cref="Microsoft.Rest.ValidationException">
+        /// Thrown when a required parameter is null
+        /// </exception>
+        Task<AzureOperationResponse> BeginStopWithHttpMessagesAsync(string groupName, string serviceName, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Get compatible SKUs
         /// </summary>

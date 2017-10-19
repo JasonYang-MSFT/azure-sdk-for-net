@@ -35,8 +35,7 @@ namespace Microsoft.Azure.Management.DataMigration.Models
         /// <param name="userName">User name</param>
         /// <param name="password">Password credential. It must be RSA
         /// encrypted by the public key of the VM, then base64 encoded. It must
-        /// never be the plaintext! Cryptography class contains helper methods
-        /// to perform the encryption.
+        /// never be the plaintext!
         /// </param>
         /// <param name="authentication">Authentication type to use for
         /// connection. Possible values include: 'None',

@@ -299,6 +299,102 @@ namespace Microsoft.Azure.Management.DataMigration
             }
 
             /// <summary>
+            /// Start service
+            /// </summary>
+            /// <remarks>
+            /// The services resource is the top-level resource that represents the Data
+            /// Migration Service. This action starts the service and the service can be
+            /// used for data migration.
+            /// </remarks>
+            /// <param name='operations'>
+            /// The operations group for this extension method.
+            /// </param>
+            /// <param name='groupName'>
+            /// Name of the resource group
+            /// </param>
+            /// <param name='serviceName'>
+            /// Name of the service
+            /// </param>
+            public static void Start(this IServicesOperations operations, string groupName, string serviceName)
+            {
+                operations.StartAsync(groupName, serviceName).GetAwaiter().GetResult();
+            }
+
+            /// <summary>
+            /// Start service
+            /// </summary>
+            /// <remarks>
+            /// The services resource is the top-level resource that represents the Data
+            /// Migration Service. This action starts the service and the service can be
+            /// used for data migration.
+            /// </remarks>
+            /// <param name='operations'>
+            /// The operations group for this extension method.
+            /// </param>
+            /// <param name='groupName'>
+            /// Name of the resource group
+            /// </param>
+            /// <param name='serviceName'>
+            /// Name of the service
+            /// </param>
+            /// <param name='cancellationToken'>
+            /// The cancellation token.
+            /// </param>
+            public static async Task StartAsync(this IServicesOperations operations, string groupName, string serviceName, CancellationToken cancellationToken = default(CancellationToken))
+            {
+                (await operations.StartWithHttpMessagesAsync(groupName, serviceName, null, cancellationToken).ConfigureAwait(false)).Dispose();
+            }
+
+            /// <summary>
+            /// Stop service
+            /// </summary>
+            /// <remarks>
+            /// The services resource is the top-level resource that represents the Data
+            /// Migration Service. This action stops the service and the service cannot be
+            /// used for data migration. The service owner won't be billed when the service
+            /// is stopped.
+            /// </remarks>
+            /// <param name='operations'>
+            /// The operations group for this extension method.
+            /// </param>
+            /// <param name='groupName'>
+            /// Name of the resource group
+            /// </param>
+            /// <param name='serviceName'>
+            /// Name of the service
+            /// </param>
+            public static void Stop(this IServicesOperations operations, string groupName, string serviceName)
+            {
+                operations.StopAsync(groupName, serviceName).GetAwaiter().GetResult();
+            }
+
+            /// <summary>
+            /// Stop service
+            /// </summary>
+            /// <remarks>
+            /// The services resource is the top-level resource that represents the Data
+            /// Migration Service. This action stops the service and the service cannot be
+            /// used for data migration. The service owner won't be billed when the service
+            /// is stopped.
+            /// </remarks>
+            /// <param name='operations'>
+            /// The operations group for this extension method.
+            /// </param>
+            /// <param name='groupName'>
+            /// Name of the resource group
+            /// </param>
+            /// <param name='serviceName'>
+            /// Name of the service
+            /// </param>
+            /// <param name='cancellationToken'>
+            /// The cancellation token.
+            /// </param>
+            public static async Task StopAsync(this IServicesOperations operations, string groupName, string serviceName, CancellationToken cancellationToken = default(CancellationToken))
+            {
+                (await operations.StopWithHttpMessagesAsync(groupName, serviceName, null, cancellationToken).ConfigureAwait(false)).Dispose();
+            }
+
+            /// <summary>
             /// Get compatible SKUs
             /// </summary>
             /// <remarks>
@@ -701,6 +797,102 @@ namespace Microsoft.Azure.Management.DataMigration
                 {
                     return _result.Body;
                 }
+            }
+
+            /// <summary>
+            /// Start service
+            /// </summary>
+            /// <remarks>
+            /// The services resource is the top-level resource that represents the Data
+            /// Migration Service. This action starts the service and the service can be
+            /// used for data migration.
+            /// </remarks>
+            /// <param name='operations'>
+            /// The operations group for this extension method.
+            /// </param>
+            /// <param name='groupName'>
+            /// Name of the resource group
+            /// </param>
+            /// <param name='serviceName'>
+            /// Name of the service
+            /// </param>
+            public static void BeginStart(this IServicesOperations operations, string groupName, string serviceName)
+            {
+                operations.BeginStartAsync(groupName, serviceName).GetAwaiter().GetResult();
+            }
+
+            /// <summary>
+            /// Start service
+            /// </summary>
+            /// <remarks>
+            /// The services resource is the top-level resource that represents the Data
+            /// Migration Service. This action starts the service and the service can be
+            /// used for data migration.
+            /// </remarks>
+            /// <param name='operations'>
+            /// The operations group for this extension method.
+            /// </param>
+            /// <param name='groupName'>
+            /// Name of the resource group
+            /// </param>
+            /// <param name='serviceName'>
+            /// Name of the service
+            /// </param>
+            /// <param name='cancellationToken'>
+            /// The cancellation token.
+            /// </param>
+            public static async Task BeginStartAsync(this IServicesOperations operations, string groupName, string serviceName, CancellationToken cancellationToken = default(CancellationToken))
+            {
+                (await operations.BeginStartWithHttpMessagesAsync(groupName, serviceName, null, cancellationToken).ConfigureAwait(false)).Dispose();
+            }
+
+            /// <summary>
+            /// Stop service
+            /// </summary>
+            /// <remarks>
+            /// The services resource is the top-level resource that represents the Data
+            /// Migration Service. This action stops the service and the service cannot be
+            /// used for data migration. The service owner won't be billed when the service
+            /// is stopped.
+            /// </remarks>
+            /// <param name='operations'>
+            /// The operations group for this extension method.
+            /// </param>
+            /// <param name='groupName'>
+            /// Name of the resource group
+            /// </param>
+            /// <param name='serviceName'>
+            /// Name of the service
+            /// </param>
+            public static void BeginStop(this IServicesOperations operations, string groupName, string serviceName)
+            {
+                operations.BeginStopAsync(groupName, serviceName).GetAwaiter().GetResult();
+            }
+
+            /// <summary>
+            /// Stop service
+            /// </summary>
+            /// <remarks>
+            /// The services resource is the top-level resource that represents the Data
+            /// Migration Service. This action stops the service and the service cannot be
+            /// used for data migration. The service owner won't be billed when the service
+            /// is stopped.
+            /// </remarks>
+            /// <param name='operations'>
+            /// The operations group for this extension method.
+            /// </param>
+            /// <param name='groupName'>
+            /// Name of the resource group
+            /// </param>
+            /// <param name='serviceName'>
+            /// Name of the service
+            /// </param>
+            /// <param name='cancellationToken'>
+            /// The cancellation token.
+            /// </param>
+            public static async Task BeginStopAsync(this IServicesOperations operations, string groupName, string serviceName, CancellationToken cancellationToken = default(CancellationToken))
+            {
+                (await operations.BeginStopWithHttpMessagesAsync(groupName, serviceName, null, cancellationToken).ConfigureAwait(false)).Dispose();
             }
 
             /// <summary>

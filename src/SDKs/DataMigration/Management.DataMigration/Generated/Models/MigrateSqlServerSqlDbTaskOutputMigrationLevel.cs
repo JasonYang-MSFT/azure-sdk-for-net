@@ -50,8 +50,8 @@ namespace Microsoft.Azure.Management.DataMigration.Models
         /// migration</param>
         /// <param name="migrationValidationResult">Migration Validation
         /// Results</param>
-        /// <param name="migrationReportResult">Migration Validation
-        /// Results</param>
+        /// <param name="migrationReportResult">Migration Report Result,
+        /// provides unique url for downloading your migration report.</param>
         /// <param name="sourceServerVersion">Source server version</param>
         /// <param name="sourceServerBrandVersion">Source server brand
         /// version</param>
@@ -152,7 +152,8 @@ namespace Microsoft.Azure.Management.DataMigration.Models
         public MigrationValidationResult MigrationValidationResult { get; set; }
 
         /// <summary>
-        /// Gets or sets migration Validation Results
+        /// Gets or sets migration Report Result, provides unique url for
+        /// downloading your migration report.
         /// </summary>
         [JsonProperty(PropertyName = "migrationReportResult")]
         public MigrationReportResult MigrationReportResult { get; set; }

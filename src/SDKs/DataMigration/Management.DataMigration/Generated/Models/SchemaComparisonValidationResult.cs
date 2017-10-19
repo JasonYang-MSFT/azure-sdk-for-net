@@ -33,11 +33,13 @@ namespace Microsoft.Azure.Management.DataMigration.Models
         /// Initializes a new instance of the SchemaComparisonValidationResult
         /// class.
         /// </summary>
-        /// <param name="schemaDifferences">Name of the source database</param>
-        /// <param name="validationErrors">Name of the source database</param>
-        /// <param name="sourceDatabaseObjectCount">counts of source database
+        /// <param name="schemaDifferences">List of schema differences between
+        /// the source and target databases</param>
+        /// <param name="validationErrors">List of errors that happened while
+        /// performing schema compare validation</param>
+        /// <param name="sourceDatabaseObjectCount">Count of source database
         /// objects</param>
-        /// <param name="targetDatabaseObjectCount">counts of target database
+        /// <param name="targetDatabaseObjectCount">Count of target database
         /// objects</param>
         public SchemaComparisonValidationResult(SchemaComparisonValidationResultType schemaDifferences = default(SchemaComparisonValidationResultType), ValidationError validationErrors = default(ValidationError), IDictionary<string, long?> sourceDatabaseObjectCount = default(IDictionary<string, long?>), IDictionary<string, long?> targetDatabaseObjectCount = default(IDictionary<string, long?>))
         {
@@ -54,25 +56,27 @@ namespace Microsoft.Azure.Management.DataMigration.Models
         partial void CustomInit();
 
         /// <summary>
-        /// Gets or sets name of the source database
+        /// Gets or sets list of schema differences between the source and
+        /// target databases
         /// </summary>
         [JsonProperty(PropertyName = "schemaDifferences")]
         public SchemaComparisonValidationResultType SchemaDifferences { get; set; }
 
         /// <summary>
-        /// Gets or sets name of the source database
+        /// Gets or sets list of errors that happened while performing schema
+        /// compare validation
         /// </summary>
         [JsonProperty(PropertyName = "validationErrors")]
         public ValidationError ValidationErrors { get; set; }
 
         /// <summary>
-        /// Gets or sets counts of source database objects
+        /// Gets or sets count of source database objects
         /// </summary>
         [JsonProperty(PropertyName = "sourceDatabaseObjectCount")]
         public IDictionary<string, long?> SourceDatabaseObjectCount { get; set; }
 
         /// <summary>
-        /// Gets or sets counts of target database objects
+        /// Gets or sets count of target database objects
         /// </summary>
         [JsonProperty(PropertyName = "targetDatabaseObjectCount")]
         public IDictionary<string, long?> TargetDatabaseObjectCount { get; set; }

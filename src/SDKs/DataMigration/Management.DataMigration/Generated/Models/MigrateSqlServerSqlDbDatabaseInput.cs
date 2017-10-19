@@ -36,7 +36,9 @@ namespace Microsoft.Azure.Management.DataMigration.Models
         /// </summary>
         /// <param name="id">Unique identifier for the database</param>
         /// <param name="name">Name of the database</param>
-        /// <param name="targetDatabaseName">Name of target database</param>
+        /// <param name="targetDatabaseName">Name of target database. Note:
+        /// Target database will be truncated before starting
+        /// migration.</param>
         /// <param name="makeSourceDbReadOnly">Whether to set database read
         /// only before migration</param>
         /// <param name="tableMap">Mapping of source to target tables</param>
@@ -68,7 +70,8 @@ namespace Microsoft.Azure.Management.DataMigration.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets name of target database
+        /// Gets or sets name of target database. Note: Target database will be
+        /// truncated before starting migration.
         /// </summary>
         [JsonProperty(PropertyName = "targetDatabaseName")]
         public string TargetDatabaseName { get; set; }

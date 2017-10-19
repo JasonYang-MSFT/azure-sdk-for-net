@@ -16,24 +16,26 @@ namespace Microsoft.Azure.Management.DataMigration.Models
     /// <summary>
     /// Results for query analysis comparison between the source and target
     /// </summary>
-    public partial class QueryAnalysisResult
+    public partial class QueryAnalysisValidationResult
     {
         /// <summary>
-        /// Initializes a new instance of the QueryAnalysisResult class.
+        /// Initializes a new instance of the QueryAnalysisValidationResult
+        /// class.
         /// </summary>
-        public QueryAnalysisResult()
+        public QueryAnalysisValidationResult()
         {
             CustomInit();
         }
 
         /// <summary>
-        /// Initializes a new instance of the QueryAnalysisResult class.
+        /// Initializes a new instance of the QueryAnalysisValidationResult
+        /// class.
         /// </summary>
         /// <param name="queryResults">List of queries executed and it's
         /// execution results in source and target</param>
         /// <param name="validationErrors">Errors that are part of the
         /// execution</param>
-        public QueryAnalysisResult(QueryExecutionResult queryResults = default(QueryExecutionResult), ValidationError validationErrors = default(ValidationError))
+        public QueryAnalysisValidationResult(QueryExecutionResult queryResults = default(QueryExecutionResult), ValidationError validationErrors = default(ValidationError))
         {
             QueryResults = queryResults;
             ValidationErrors = validationErrors;

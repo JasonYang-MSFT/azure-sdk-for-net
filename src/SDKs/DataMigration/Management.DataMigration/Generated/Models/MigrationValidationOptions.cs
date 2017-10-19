@@ -31,17 +31,18 @@ namespace Microsoft.Azure.Management.DataMigration.Models
         /// </summary>
         /// <param name="enableSchemaValidation">Allows to compare the schema
         /// information between source and target.</param>
-        /// <param name="enableDataIntegrityCheck">Allows to performs a
-        /// checksum based data integrity check between source and target for
-        /// the selected database / tables .</param>
+        /// <param name="enableDataIntegrityValidation">Allows to perform a
+        /// checksum based data integrity validation between source and target
+        /// for the selected database / tables .</param>
         /// <param name="enableQueryAnalysisValidation">Allows to perform a
-        /// quick and intelligent query analysis in the source database and
-        /// compares the performance for those queries in the target
-        /// database.</param>
-        public MigrationValidationOptions(bool? enableSchemaValidation = default(bool?), bool? enableDataIntegrityCheck = default(bool?), bool? enableQueryAnalysisValidation = default(bool?))
+        /// quick and intelligent query analysis by retrieving queries from the
+        /// source database and executes them in the target. The result will
+        /// have execution statistics for executions in source and target
+        /// databases for the extracted queries.</param>
+        public MigrationValidationOptions(bool? enableSchemaValidation = default(bool?), bool? enableDataIntegrityValidation = default(bool?), bool? enableQueryAnalysisValidation = default(bool?))
         {
             EnableSchemaValidation = enableSchemaValidation;
-            EnableDataIntegrityCheck = enableDataIntegrityCheck;
+            EnableDataIntegrityValidation = enableDataIntegrityValidation;
             EnableQueryAnalysisValidation = enableQueryAnalysisValidation;
             CustomInit();
         }
@@ -59,17 +60,19 @@ namespace Microsoft.Azure.Management.DataMigration.Models
         public bool? EnableSchemaValidation { get; set; }
 
         /// <summary>
-        /// Gets or sets allows to performs a checksum based data integrity
-        /// check between source and target for the selected database / tables
-        /// .
+        /// Gets or sets allows to perform a checksum based data integrity
+        /// validation between source and target for the selected database /
+        /// tables .
         /// </summary>
-        [JsonProperty(PropertyName = "enableDataIntegrityCheck")]
-        public bool? EnableDataIntegrityCheck { get; set; }
+        [JsonProperty(PropertyName = "enableDataIntegrityValidation")]
+        public bool? EnableDataIntegrityValidation { get; set; }
 
         /// <summary>
         /// Gets or sets allows to perform a quick and intelligent query
-        /// analysis in the source database and compares the performance for
-        /// those queries in the target database.
+        /// analysis by retrieving queries from the source database and
+        /// executes them in the target. The result will have execution
+        /// statistics for executions in source and target databases for the
+        /// extracted queries.
         /// </summary>
         [JsonProperty(PropertyName = "enableQueryAnalysisValidation")]
         public bool? EnableQueryAnalysisValidation { get; set; }
