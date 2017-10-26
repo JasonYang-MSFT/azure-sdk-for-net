@@ -22,16 +22,31 @@
   </ItemGroup>
   
   <ItemGroup>
-    <None Update="SessionRecords\DataMigration.Tests.ScenarioTests.CRUDResourceTests\CreateResourceGroup.json">
+    <None Update="SessionRecords\DataMigration.Tests.ScenarioTests.CRUDServiceTests\CreateResourceSucceeds.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="SessionRecords\DataMigration.Tests.ScenarioTests.CRUDResourceTests\CreateResourceSucceeds.json">
+    <None Update="SessionRecords\DataMigration.Tests.ScenarioTests.CRUDServiceTests\DeleteResourceSucceeds.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="SessionRecords\DataMigration.Tests.ScenarioTests.CRUDResourceTests\DeleteResourceSucceeds.json">
+    <None Update="SessionRecords\DataMigration.Tests.ScenarioTests.CRUDServiceTests\GetResourceSucceeds.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="SessionRecords\DataMigration.Tests.ScenarioTests.CRUDResourceTests\GetResourceSucceeds.json">
+    <None Update="SessionRecords\DataMigration.Tests.ScenarioTests.CRUDProjectTests\CreateResourceSucceeds.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SessionRecords\DataMigration.Tests.ScenarioTests.CRUDProjectTests\DeleteResourceSucceeds.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SessionRecords\DataMigration.Tests.ScenarioTests.CRUDProjectTests\GetResourceSucceeds.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SessionRecords\DataMigration.Tests.ScenarioTests.CRUDTaskTests\CreateResourceSucceeds.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SessionRecords\DataMigration.Tests.ScenarioTests.CRUDTaskTests\DeleteResourceSucceeds.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SessionRecords\DataMigration.Tests.ScenarioTests.CRUDTaskTests\GetResourceSucceeds.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
