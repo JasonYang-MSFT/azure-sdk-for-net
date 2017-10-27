@@ -342,6 +342,10 @@ namespace Microsoft.Azure.Management.DataMigration
             {
                 _queryParameters.Add(string.Format("api-version={0}", System.Uri.EscapeDataString(Client.ApiVersion)));
             }
+            if (Client.DeleteRunningTasks != null)
+            {
+                _queryParameters.Add(string.Format("deleteRunningTasks={0}", System.Uri.EscapeDataString(Rest.Serialization.SafeJsonConvert.SerializeObject(Client.DeleteRunningTasks, Client.SerializationSettings).Trim('"'))));
+            }
             if (_queryParameters.Count > 0)
             {
                 _url += (_url.Contains("?") ? "&" : "?") + string.Join("&", _queryParameters);
@@ -570,6 +574,10 @@ namespace Microsoft.Azure.Management.DataMigration
             {
                 _queryParameters.Add(string.Format("api-version={0}", System.Uri.EscapeDataString(Client.ApiVersion)));
             }
+            if (Client.DeleteRunningTasks != null)
+            {
+                _queryParameters.Add(string.Format("deleteRunningTasks={0}", System.Uri.EscapeDataString(Rest.Serialization.SafeJsonConvert.SerializeObject(Client.DeleteRunningTasks, Client.SerializationSettings).Trim('"'))));
+            }
             if (_queryParameters.Count > 0)
             {
                 _url += (_url.Contains("?") ? "&" : "?") + string.Join("&", _queryParameters);
@@ -771,6 +779,10 @@ namespace Microsoft.Azure.Management.DataMigration
             {
                 _queryParameters.Add(string.Format("api-version={0}", System.Uri.EscapeDataString(Client.ApiVersion)));
             }
+            if (Client.DeleteRunningTasks != null)
+            {
+                _queryParameters.Add(string.Format("deleteRunningTasks={0}", System.Uri.EscapeDataString(Rest.Serialization.SafeJsonConvert.SerializeObject(Client.DeleteRunningTasks, Client.SerializationSettings).Trim('"'))));
+            }
             if (_queryParameters.Count > 0)
             {
                 _url += (_url.Contains("?") ? "&" : "?") + string.Join("&", _queryParameters);
@@ -964,6 +976,10 @@ namespace Microsoft.Azure.Management.DataMigration
             if (Client.ApiVersion != null)
             {
                 _queryParameters.Add(string.Format("api-version={0}", System.Uri.EscapeDataString(Client.ApiVersion)));
+            }
+            if (Client.DeleteRunningTasks != null)
+            {
+                _queryParameters.Add(string.Format("deleteRunningTasks={0}", System.Uri.EscapeDataString(Rest.Serialization.SafeJsonConvert.SerializeObject(Client.DeleteRunningTasks, Client.SerializationSettings).Trim('"'))));
             }
             if (_queryParameters.Count > 0)
             {

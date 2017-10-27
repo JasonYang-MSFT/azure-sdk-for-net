@@ -35,7 +35,6 @@ namespace Microsoft.Azure.Management.DataMigration.Models
         /// Initializes a new instance of the MigrateSqlServerSqlDbTaskInput
         /// class.
         /// </summary>
-        /// <param name="name">Name of the migration</param>
         /// <param name="sourceConnectionInfo">Information for connecting to
         /// source</param>
         /// <param name="targetConnectionInfo">Information for connecting to
@@ -53,8 +52,8 @@ namespace Microsoft.Azure.Management.DataMigration.Models
         /// from the Query Plan Cache or Query Store and execute them and
         /// compares the execution time between the source and target
         /// database.</param>
-        public MigrateSqlServerSqlDbTaskInput(string name, SqlConnectionInfo sourceConnectionInfo, SqlConnectionInfo targetConnectionInfo, IList<MigrateSqlServerSqlDbDatabaseInput> selectedDatabases, MigrationValidationOptions validationOptions = default(MigrationValidationOptions))
-            : base(name, sourceConnectionInfo, targetConnectionInfo)
+        public MigrateSqlServerSqlDbTaskInput(SqlConnectionInfo sourceConnectionInfo, SqlConnectionInfo targetConnectionInfo, IList<MigrateSqlServerSqlDbDatabaseInput> selectedDatabases, MigrationValidationOptions validationOptions = default(MigrationValidationOptions))
+            : base(sourceConnectionInfo, targetConnectionInfo)
         {
             SelectedDatabases = selectedDatabases;
             ValidationOptions = validationOptions;

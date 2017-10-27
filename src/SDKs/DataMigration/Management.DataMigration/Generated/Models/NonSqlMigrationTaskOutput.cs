@@ -32,7 +32,6 @@ namespace Microsoft.Azure.Management.DataMigration.Models
         /// Initializes a new instance of the NonSqlMigrationTaskOutput class.
         /// </summary>
         /// <param name="id">Result identifier</param>
-        /// <param name="name">Name of migration</param>
         /// <param name="startedOn">Migration start time</param>
         /// <param name="endedOn">Migration end time</param>
         /// <param name="status">Current state of migration. Possible values
@@ -46,10 +45,9 @@ namespace Microsoft.Azure.Management.DataMigration.Models
         /// migration</param>
         /// <param name="sourceServerName">Name of source server</param>
         /// <param name="targetServerName">Name of target server</param>
-        public NonSqlMigrationTaskOutput(string id = default(string), string name = default(string), System.DateTimeOffset? startedOn = default(System.DateTimeOffset?), System.DateTimeOffset? endedOn = default(System.DateTimeOffset?), MigrationStatus? status = default(MigrationStatus?), IDictionary<string, NonSqlDataMigrationTableResult> dataMigrationTableResults = default(IDictionary<string, NonSqlDataMigrationTableResult>), string progressMessage = default(string), string sourceServerName = default(string), string targetServerName = default(string))
+        public NonSqlMigrationTaskOutput(string id = default(string), System.DateTimeOffset? startedOn = default(System.DateTimeOffset?), System.DateTimeOffset? endedOn = default(System.DateTimeOffset?), MigrationStatus? status = default(MigrationStatus?), IDictionary<string, NonSqlDataMigrationTableResult> dataMigrationTableResults = default(IDictionary<string, NonSqlDataMigrationTableResult>), string progressMessage = default(string), string sourceServerName = default(string), string targetServerName = default(string))
             : base(id)
         {
-            Name = name;
             StartedOn = startedOn;
             EndedOn = endedOn;
             Status = status;
@@ -64,12 +62,6 @@ namespace Microsoft.Azure.Management.DataMigration.Models
         /// An initialization method that performs custom operations like setting defaults
         /// </summary>
         partial void CustomInit();
-
-        /// <summary>
-        /// Gets name of migration
-        /// </summary>
-        [JsonProperty(PropertyName = "name")]
-        public string Name { get; private set; }
 
         /// <summary>
         /// Gets migration start time

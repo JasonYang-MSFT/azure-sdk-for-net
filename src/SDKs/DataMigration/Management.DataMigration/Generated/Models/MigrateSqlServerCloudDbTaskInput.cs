@@ -34,7 +34,6 @@ namespace Microsoft.Azure.Management.DataMigration.Models
         /// Initializes a new instance of the MigrateSqlServerCloudDbTaskInput
         /// class.
         /// </summary>
-        /// <param name="name">Name of the migration</param>
         /// <param name="sourceConnectionInfo">Information for connecting to
         /// source</param>
         /// <param name="targetConnectionInfo">Information for connecting to
@@ -48,8 +47,8 @@ namespace Microsoft.Azure.Management.DataMigration.Models
         /// plaintext! Cryptography class contains helper methods to perform
         /// the encryption.
         /// </param>
-        public MigrateSqlServerCloudDbTaskInput(string name, SqlConnectionInfo sourceConnectionInfo, SqlConnectionInfo targetConnectionInfo, IList<MigrateSqlServerSqlServerDatabaseInput> selectedDatabases, string backupShareUserName, string backupSharePassword = default(string))
-            : base(name, sourceConnectionInfo, targetConnectionInfo)
+        public MigrateSqlServerCloudDbTaskInput(SqlConnectionInfo sourceConnectionInfo, SqlConnectionInfo targetConnectionInfo, IList<MigrateSqlServerSqlServerDatabaseInput> selectedDatabases, string backupShareUserName, string backupSharePassword = default(string))
+            : base(sourceConnectionInfo, targetConnectionInfo)
         {
             SelectedDatabases = selectedDatabases;
             BackupShareUserName = backupShareUserName;
