@@ -110,15 +110,5 @@ namespace DataMigration.Tests.Helpers
                 Thread.Sleep(TimeSpan.FromMinutes(minutesToWait));
             }
         }
-
-        /// <summary>
-        /// Returns a random name with the provided base.
-        /// </summary>
-        /// <param name="baseName">Base name to use</param>
-        /// <returns>A new random name.</returns>
-        public static string GetRandomName(string baseName)
-        {
-            return baseName + random.Next();
-        }
     }
 }

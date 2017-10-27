@@ -25,7 +25,6 @@ namespace DataMigration.Tests.ScenarioTests
                 var dmsClient = Utilities.GetDataMigrationManagementClient(context, dmsClientHandler);
                 var service = CreateDMSInstance(context, dmsClient, resourceGroup, DmsDeploymentName);
                 var project = CreateDMSProject(context, dmsClient, resourceGroup, service.Name, DmsProjectName);
-
             }
         }
 

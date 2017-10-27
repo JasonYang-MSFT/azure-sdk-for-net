@@ -19,10 +19,10 @@ namespace DataMigration.Tests.ScenarioTests
 
         public CRUDDMSTestsBase()
         {
-            ResourceGroupName = Utilities.GetRandomName("dmssdkrg");
-            DmsDeploymentName = Utilities.GetRandomName("dmssdk");
-            DmsProjectName = Utilities.GetRandomName("dmssdkproject");
-            DmsTaskName = Utilities.GetRandomName("dmssdktask");
+            ResourceGroupName = "dmssdkrg";
+            DmsDeploymentName = "dmssdkservice";
+            DmsProjectName = "dmssdkproject";
+            DmsTaskName = "dmssdktask";
         }
 
         protected Project CreateDMSProject(MockContext context,
@@ -70,6 +70,18 @@ namespace DataMigration.Tests.ScenarioTests
                 });
 
             return resourceGroup;
+        }
+
+        protected void DeleteResourceGroup(MockContext context,
+            RecordedDelegatingHandler handler,
+            string resourceGroupName)
+        {
+            var resourcesClient =
+                Utilities.GetResourceManagementClient(
+                    context,
+                    handler);
+
+            resourcesClient.ResourceGroups.Delete(resourceGroupName);
         }
     }
 }
