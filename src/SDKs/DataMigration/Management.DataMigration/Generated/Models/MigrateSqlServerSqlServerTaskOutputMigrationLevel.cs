@@ -32,7 +32,6 @@ namespace Microsoft.Azure.Management.DataMigration.Models
         /// MigrateSqlServerSqlServerTaskOutputMigrationLevel class.
         /// </summary>
         /// <param name="id">Result identifier</param>
-        /// <param name="name">Name of migration</param>
         /// <param name="startedOn">Migration start time</param>
         /// <param name="endedOn">Migration end time</param>
         /// <param name="status">Current status of migration. Possible values
@@ -56,10 +55,9 @@ namespace Microsoft.Azure.Management.DataMigration.Models
         /// version</param>
         /// <param name="exceptionsAndWarnings">Migration exceptions and
         /// warnings.</param>
-        public MigrateSqlServerSqlServerTaskOutputMigrationLevel(string id = default(string), string name = default(string), System.DateTimeOffset? startedOn = default(System.DateTimeOffset?), System.DateTimeOffset? endedOn = default(System.DateTimeOffset?), MigrationStatus? status = default(MigrationStatus?), MigrationState? state = default(MigrationState?), string statusMessage = default(string), string message = default(string), IDictionary<string, string> databases = default(IDictionary<string, string>), IDictionary<string, DataItemMigrationSummaryResult> databaseSummary = default(IDictionary<string, DataItemMigrationSummaryResult>), string sourceServerVersion = default(string), string sourceServerBrandVersion = default(string), string targetServerVersion = default(string), string targetServerBrandVersion = default(string), IList<ReportableException> exceptionsAndWarnings = default(IList<ReportableException>))
+        public MigrateSqlServerSqlServerTaskOutputMigrationLevel(string id = default(string), System.DateTimeOffset? startedOn = default(System.DateTimeOffset?), System.DateTimeOffset? endedOn = default(System.DateTimeOffset?), MigrationStatus? status = default(MigrationStatus?), MigrationState? state = default(MigrationState?), string statusMessage = default(string), string message = default(string), IDictionary<string, string> databases = default(IDictionary<string, string>), IDictionary<string, DataItemMigrationSummaryResult> databaseSummary = default(IDictionary<string, DataItemMigrationSummaryResult>), string sourceServerVersion = default(string), string sourceServerBrandVersion = default(string), string targetServerVersion = default(string), string targetServerBrandVersion = default(string), IList<ReportableException> exceptionsAndWarnings = default(IList<ReportableException>))
             : base(id)
         {
-            Name = name;
             StartedOn = startedOn;
             EndedOn = endedOn;
             Status = status;
@@ -80,12 +78,6 @@ namespace Microsoft.Azure.Management.DataMigration.Models
         /// An initialization method that performs custom operations like setting defaults
         /// </summary>
         partial void CustomInit();
-
-        /// <summary>
-        /// Gets name of migration
-        /// </summary>
-        [JsonProperty(PropertyName = "name")]
-        public string Name { get; private set; }
 
         /// <summary>
         /// Gets migration start time

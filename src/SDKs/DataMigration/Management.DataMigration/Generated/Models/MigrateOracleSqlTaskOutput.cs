@@ -32,7 +32,6 @@ namespace Microsoft.Azure.Management.DataMigration.Models
         /// Initializes a new instance of the MigrateOracleSqlTaskOutput class.
         /// </summary>
         /// <param name="id">Result identifier</param>
-        /// <param name="name">Name of migration</param>
         /// <param name="startedOn">Migration start time</param>
         /// <param name="endedOn">Migration end time</param>
         /// <param name="status">Current state of migration. Possible values
@@ -46,8 +45,8 @@ namespace Microsoft.Azure.Management.DataMigration.Models
         /// migration</param>
         /// <param name="sourceServerName">Name of source server</param>
         /// <param name="targetServerName">Name of target server</param>
-        public MigrateOracleSqlTaskOutput(string id = default(string), string name = default(string), System.DateTimeOffset? startedOn = default(System.DateTimeOffset?), System.DateTimeOffset? endedOn = default(System.DateTimeOffset?), MigrationStatus? status = default(MigrationStatus?), IDictionary<string, NonSqlDataMigrationTableResult> dataMigrationTableResults = default(IDictionary<string, NonSqlDataMigrationTableResult>), string progressMessage = default(string), string sourceServerName = default(string), string targetServerName = default(string))
-            : base(id, name, startedOn, endedOn, status, dataMigrationTableResults, progressMessage, sourceServerName, targetServerName)
+        public MigrateOracleSqlTaskOutput(string id = default(string), System.DateTimeOffset? startedOn = default(System.DateTimeOffset?), System.DateTimeOffset? endedOn = default(System.DateTimeOffset?), MigrationStatus? status = default(MigrationStatus?), IDictionary<string, NonSqlDataMigrationTableResult> dataMigrationTableResults = default(IDictionary<string, NonSqlDataMigrationTableResult>), string progressMessage = default(string), string sourceServerName = default(string), string targetServerName = default(string))
+            : base(id, startedOn, endedOn, status, dataMigrationTableResults, progressMessage, sourceServerName, targetServerName)
         {
             CustomInit();
         }

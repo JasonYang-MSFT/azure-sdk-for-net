@@ -35,14 +35,13 @@ namespace Microsoft.Azure.Management.DataMigration.Models
         /// Initializes a new instance of the
         /// MigrateSqlServerSqlServerTaskInput class.
         /// </summary>
-        /// <param name="name">Name of the migration</param>
         /// <param name="sourceConnectionInfo">Information for connecting to
         /// source</param>
         /// <param name="targetConnectionInfo">Information for connecting to
         /// target</param>
         /// <param name="selectedDatabases">Databases to migrate</param>
-        public MigrateSqlServerSqlServerTaskInput(string name, SqlConnectionInfo sourceConnectionInfo, SqlConnectionInfo targetConnectionInfo, IList<MigrateSqlServerSqlServerDatabaseInput> selectedDatabases)
-            : base(name, sourceConnectionInfo, targetConnectionInfo)
+        public MigrateSqlServerSqlServerTaskInput(SqlConnectionInfo sourceConnectionInfo, SqlConnectionInfo targetConnectionInfo, IList<MigrateSqlServerSqlServerDatabaseInput> selectedDatabases)
+            : base(sourceConnectionInfo, targetConnectionInfo)
         {
             SelectedDatabases = selectedDatabases;
             CustomInit();

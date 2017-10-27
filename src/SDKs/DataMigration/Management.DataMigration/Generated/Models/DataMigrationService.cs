@@ -35,6 +35,9 @@ namespace Microsoft.Azure.Management.DataMigration.Models
         /// Initializes a new instance of the DataMigrationService class.
         /// </summary>
         /// <param name="location">Resource location.</param>
+        /// <param name="virtualSubnetId">The ID of the
+        /// Microsoft.Network/virtualNetworks/subnets resource to which the
+        /// service should be joined</param>
         /// <param name="id">Resource ID.</param>
         /// <param name="name">Resource name.</param>
         /// <param name="type">Resource type.</param>
@@ -49,11 +52,8 @@ namespace Microsoft.Azure.Management.DataMigration.Models
         /// 'Succeeded', 'Failed'</param>
         /// <param name="publicKey">The public key of the service, used to
         /// encrypt secrets sent to the service</param>
-        /// <param name="virtualSubnetId">The ID of the
-        /// Microsoft.Network/virtualNetworks/subnets resource to which the
-        /// service should be joined</param>
         /// <param name="sku">Service SKU</param>
-        public DataMigrationService(string location, string id = default(string), string name = default(string), string type = default(string), IDictionary<string, string> tags = default(IDictionary<string, string>), string etag = default(string), string kind = default(string), ServiceProvisioningState? provisioningState = default(ServiceProvisioningState?), string publicKey = default(string), string virtualSubnetId = default(string), ServiceSku sku = default(ServiceSku))
+        public DataMigrationService(string location, string virtualSubnetId, string id = default(string), string name = default(string), string type = default(string), IDictionary<string, string> tags = default(IDictionary<string, string>), string etag = default(string), string kind = default(string), ServiceProvisioningState? provisioningState = default(ServiceProvisioningState?), string publicKey = default(string), ServiceSku sku = default(ServiceSku))
             : base(location, id, name, type, tags)
         {
             Etag = etag;
@@ -122,6 +122,10 @@ namespace Microsoft.Azure.Management.DataMigration.Models
         public override void Validate()
         {
             base.Validate();
+            if (VirtualSubnetId == null)
+            {
+                throw new ValidationException(ValidationRules.CannotBeNull, "VirtualSubnetId");
+            }
         }
     }
 }

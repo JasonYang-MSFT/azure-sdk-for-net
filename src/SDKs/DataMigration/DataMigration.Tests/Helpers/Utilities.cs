@@ -8,7 +8,6 @@ using Microsoft.Azure.Test.HttpRecorder;
 using Microsoft.Rest;
 using Microsoft.Rest.ClientRuntime.Azure.TestFramework;
 using System;
-using System.Net;
 using System.Net.Http;
 using System.Threading;
 
@@ -16,6 +15,11 @@ namespace DataMigration.Tests.Helpers
 {
     public static class Utilities
     {
+        /// <summary>
+        /// Random generator.
+        /// </summary>
+        private static Random random = new Random();
+
         public static bool IsTestTenant = false;
         private static HttpClientHandler Handler = null;
 
@@ -41,7 +45,7 @@ namespace DataMigration.Tests.Helpers
                 return resourcesClient;
             }
         }
-        
+
         public static DataMigrationServiceClient GetDataMigrationManagementClient(MockContext context, RecordedDelegatingHandler handler)
         {
             DataMigrationServiceClient dmClient;
@@ -102,7 +106,7 @@ namespace DataMigration.Tests.Helpers
         public static void WaitIfNotInPlaybackMode(int minutesToWait = 1)
         {
             if (HttpMockServer.Mode != HttpRecorderMode.Playback)
-            { 
+            {
                 Thread.Sleep(TimeSpan.FromMinutes(minutesToWait));
             }
         }
