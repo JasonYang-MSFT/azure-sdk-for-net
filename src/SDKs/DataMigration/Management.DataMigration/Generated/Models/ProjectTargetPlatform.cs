@@ -38,7 +38,9 @@ namespace Microsoft.Azure.Management.DataMigration.Models
         [EnumMember(Value = "SQLMI")]
         SQLMI,
         [EnumMember(Value = "SQLVM")]
-        SQLVM
+        SQLVM,
+        [EnumMember(Value = "Unknown")]
+        Unknown
     }
     internal static class ProjectTargetPlatformEnumExtension
     {
@@ -69,6 +71,8 @@ namespace Microsoft.Azure.Management.DataMigration.Models
                     return "SQLMI";
                 case ProjectTargetPlatform.SQLVM:
                     return "SQLVM";
+                case ProjectTargetPlatform.Unknown:
+                    return "Unknown";
             }
             return null;
         }
@@ -95,6 +99,8 @@ namespace Microsoft.Azure.Management.DataMigration.Models
                     return ProjectTargetPlatform.SQLMI;
                 case "SQLVM":
                     return ProjectTargetPlatform.SQLVM;
+                case "Unknown":
+                    return ProjectTargetPlatform.Unknown;
             }
             return null;
         }

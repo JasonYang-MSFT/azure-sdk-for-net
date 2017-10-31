@@ -32,7 +32,9 @@ namespace Microsoft.Azure.Management.DataMigration.Models
         [EnumMember(Value = "Oracle")]
         Oracle,
         [EnumMember(Value = "Sybase")]
-        Sybase
+        Sybase,
+        [EnumMember(Value = "Unknown")]
+        Unknown
     }
     internal static class ProjectSourcePlatformEnumExtension
     {
@@ -57,6 +59,8 @@ namespace Microsoft.Azure.Management.DataMigration.Models
                     return "Oracle";
                 case ProjectSourcePlatform.Sybase:
                     return "Sybase";
+                case ProjectSourcePlatform.Unknown:
+                    return "Unknown";
             }
             return null;
         }
@@ -77,6 +81,8 @@ namespace Microsoft.Azure.Management.DataMigration.Models
                     return ProjectSourcePlatform.Oracle;
                 case "Sybase":
                     return ProjectSourcePlatform.Sybase;
+                case "Unknown":
+                    return ProjectSourcePlatform.Unknown;
             }
             return null;
         }

@@ -46,11 +46,6 @@ namespace Microsoft.Azure.Management.DataMigration
         string ApiVersion { get; }
 
         /// <summary>
-        /// Delete the resource even if it contains running tasks
-        /// </summary>
-        bool? DeleteRunningTasks { get; set; }
-
-        /// <summary>
         /// Identifier of the subscription
         /// </summary>
         string SubscriptionId { get; set; }
@@ -72,6 +67,11 @@ namespace Microsoft.Azure.Management.DataMigration
         /// </summary>
         bool? GenerateClientRequestId { get; set; }
 
+
+        /// <summary>
+        /// Gets the IResourceSkusOperations.
+        /// </summary>
+        IResourceSkusOperations ResourceSkus { get; }
 
         /// <summary>
         /// Gets the IServicesOperations.
