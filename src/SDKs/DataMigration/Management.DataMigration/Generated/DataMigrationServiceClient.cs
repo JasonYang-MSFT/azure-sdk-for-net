@@ -305,7 +305,7 @@ namespace Microsoft.Azure.Management.DataMigration
             Projects = new ProjectsOperations(this);
             Operations = new Operations(this);
             BaseUri = new System.Uri("https://management.azure.com");
-            ApiVersion = "2017-11-15-preview";
+            ApiVersion = "2017-04-15-privatepreview";
             AcceptLanguage = "en-US";
             LongRunningOperationRetryTimeout = 30;
             GenerateClientRequestId = true;
@@ -341,8 +341,12 @@ namespace Microsoft.Azure.Management.DataMigration
             DeserializationSettings.Converters.Add(new PolymorphicDeserializeJsonConverter<ConnectionInfo>("type"));
             SerializationSettings.Converters.Add(new PolymorphicSerializeJsonConverter<ConnectToSourceSqlServerTaskOutput>("resultType"));
             DeserializationSettings.Converters.Add(new PolymorphicDeserializeJsonConverter<ConnectToSourceSqlServerTaskOutput>("resultType"));
+            SerializationSettings.Converters.Add(new PolymorphicSerializeJsonConverter<MigrateSqlServerCloudDbTaskOutput>("resultType"));
+            DeserializationSettings.Converters.Add(new PolymorphicDeserializeJsonConverter<MigrateSqlServerCloudDbTaskOutput>("resultType"));
             SerializationSettings.Converters.Add(new PolymorphicSerializeJsonConverter<MigrateSqlServerSqlDbTaskOutput>("resultType"));
             DeserializationSettings.Converters.Add(new PolymorphicDeserializeJsonConverter<MigrateSqlServerSqlDbTaskOutput>("resultType"));
+            SerializationSettings.Converters.Add(new PolymorphicSerializeJsonConverter<MigrateSqlServerSqlServerTaskOutput>("resultType"));
+            DeserializationSettings.Converters.Add(new PolymorphicDeserializeJsonConverter<MigrateSqlServerSqlServerTaskOutput>("resultType"));
             CustomInitialize();
             DeserializationSettings.Converters.Add(new TransformationJsonConverter());
             DeserializationSettings.Converters.Add(new CloudErrorJsonConverter());

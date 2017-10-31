@@ -37,7 +37,11 @@ namespace Microsoft.Azure.Management.DataMigration.Models
         /// Source SQL Server</param>
         /// <param name="checkPermissionsGroup">Permission group for
         /// validations. Possible values include: 'Default',
-        /// 'MigrationFromSqlServerToAzureDB'</param>
+        /// 'MigrationFromSqlServerToAzureDB',
+        /// 'MigrationFromSqlServerToAzureMI',
+        /// 'MigrationFromSqlServerToAzureVM', 'MigrationFromOracleToSQL',
+        /// 'MigrationFromOracleToAzureDB', 'MigrationFromOracleToAzureDW',
+        /// 'MigrationFromMySQLToSQL', 'MigrationFromMySQLToAzureDB'</param>
         public ConnectToSourceSqlServerTaskInput(SqlConnectionInfo sourceConnectionInfo, ServerLevelPermissionsGroup? checkPermissionsGroup = default(ServerLevelPermissionsGroup?))
         {
             SourceConnectionInfo = sourceConnectionInfo;
@@ -58,7 +62,11 @@ namespace Microsoft.Azure.Management.DataMigration.Models
 
         /// <summary>
         /// Gets or sets permission group for validations. Possible values
-        /// include: 'Default', 'MigrationFromSqlServerToAzureDB'
+        /// include: 'Default', 'MigrationFromSqlServerToAzureDB',
+        /// 'MigrationFromSqlServerToAzureMI',
+        /// 'MigrationFromSqlServerToAzureVM', 'MigrationFromOracleToSQL',
+        /// 'MigrationFromOracleToAzureDB', 'MigrationFromOracleToAzureDW',
+        /// 'MigrationFromMySQLToSQL', 'MigrationFromMySQLToAzureDB'
         /// </summary>
         [JsonProperty(PropertyName = "checkPermissionsGroup")]
         public ServerLevelPermissionsGroup? CheckPermissionsGroup { get; set; }

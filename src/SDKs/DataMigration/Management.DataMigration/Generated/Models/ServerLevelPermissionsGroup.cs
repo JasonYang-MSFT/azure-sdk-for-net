@@ -24,7 +24,21 @@ namespace Microsoft.Azure.Management.DataMigration.Models
         [EnumMember(Value = "Default")]
         Default,
         [EnumMember(Value = "MigrationFromSqlServerToAzureDB")]
-        MigrationFromSqlServerToAzureDB
+        MigrationFromSqlServerToAzureDB,
+        [EnumMember(Value = "MigrationFromSqlServerToAzureMI")]
+        MigrationFromSqlServerToAzureMI,
+        [EnumMember(Value = "MigrationFromSqlServerToAzureVM")]
+        MigrationFromSqlServerToAzureVM,
+        [EnumMember(Value = "MigrationFromOracleToSQL")]
+        MigrationFromOracleToSQL,
+        [EnumMember(Value = "MigrationFromOracleToAzureDB")]
+        MigrationFromOracleToAzureDB,
+        [EnumMember(Value = "MigrationFromOracleToAzureDW")]
+        MigrationFromOracleToAzureDW,
+        [EnumMember(Value = "MigrationFromMySQLToSQL")]
+        MigrationFromMySQLToSQL,
+        [EnumMember(Value = "MigrationFromMySQLToAzureDB")]
+        MigrationFromMySQLToAzureDB
     }
     internal static class ServerLevelPermissionsGroupEnumExtension
     {
@@ -41,6 +55,20 @@ namespace Microsoft.Azure.Management.DataMigration.Models
                     return "Default";
                 case ServerLevelPermissionsGroup.MigrationFromSqlServerToAzureDB:
                     return "MigrationFromSqlServerToAzureDB";
+                case ServerLevelPermissionsGroup.MigrationFromSqlServerToAzureMI:
+                    return "MigrationFromSqlServerToAzureMI";
+                case ServerLevelPermissionsGroup.MigrationFromSqlServerToAzureVM:
+                    return "MigrationFromSqlServerToAzureVM";
+                case ServerLevelPermissionsGroup.MigrationFromOracleToSQL:
+                    return "MigrationFromOracleToSQL";
+                case ServerLevelPermissionsGroup.MigrationFromOracleToAzureDB:
+                    return "MigrationFromOracleToAzureDB";
+                case ServerLevelPermissionsGroup.MigrationFromOracleToAzureDW:
+                    return "MigrationFromOracleToAzureDW";
+                case ServerLevelPermissionsGroup.MigrationFromMySQLToSQL:
+                    return "MigrationFromMySQLToSQL";
+                case ServerLevelPermissionsGroup.MigrationFromMySQLToAzureDB:
+                    return "MigrationFromMySQLToAzureDB";
             }
             return null;
         }
@@ -53,6 +81,20 @@ namespace Microsoft.Azure.Management.DataMigration.Models
                     return ServerLevelPermissionsGroup.Default;
                 case "MigrationFromSqlServerToAzureDB":
                     return ServerLevelPermissionsGroup.MigrationFromSqlServerToAzureDB;
+                case "MigrationFromSqlServerToAzureMI":
+                    return ServerLevelPermissionsGroup.MigrationFromSqlServerToAzureMI;
+                case "MigrationFromSqlServerToAzureVM":
+                    return ServerLevelPermissionsGroup.MigrationFromSqlServerToAzureVM;
+                case "MigrationFromOracleToSQL":
+                    return ServerLevelPermissionsGroup.MigrationFromOracleToSQL;
+                case "MigrationFromOracleToAzureDB":
+                    return ServerLevelPermissionsGroup.MigrationFromOracleToAzureDB;
+                case "MigrationFromOracleToAzureDW":
+                    return ServerLevelPermissionsGroup.MigrationFromOracleToAzureDW;
+                case "MigrationFromMySQLToSQL":
+                    return ServerLevelPermissionsGroup.MigrationFromMySQLToSQL;
+                case "MigrationFromMySQLToAzureDB":
+                    return ServerLevelPermissionsGroup.MigrationFromMySQLToAzureDB;
             }
             return null;
         }
