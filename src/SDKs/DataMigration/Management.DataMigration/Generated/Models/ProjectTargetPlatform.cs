@@ -21,24 +21,10 @@ namespace Microsoft.Azure.Management.DataMigration.Models
     [JsonConverter(typeof(StringEnumConverter))]
     public enum ProjectTargetPlatform
     {
-        [EnumMember(Value = "SQL10")]
-        SQL10,
-        [EnumMember(Value = "SQL11")]
-        SQL11,
-        [EnumMember(Value = "SQL12")]
-        SQL12,
-        [EnumMember(Value = "SQL13")]
-        SQL13,
-        [EnumMember(Value = "SQL14")]
-        SQL14,
         [EnumMember(Value = "SQLDB")]
         SQLDB,
-        [EnumMember(Value = "SQLDW")]
-        SQLDW,
-        [EnumMember(Value = "SQLMI")]
-        SQLMI,
-        [EnumMember(Value = "SQLVM")]
-        SQLVM
+        [EnumMember(Value = "Unknown")]
+        Unknown
     }
     internal static class ProjectTargetPlatformEnumExtension
     {
@@ -51,24 +37,10 @@ namespace Microsoft.Azure.Management.DataMigration.Models
         {
             switch( value )
             {
-                case ProjectTargetPlatform.SQL10:
-                    return "SQL10";
-                case ProjectTargetPlatform.SQL11:
-                    return "SQL11";
-                case ProjectTargetPlatform.SQL12:
-                    return "SQL12";
-                case ProjectTargetPlatform.SQL13:
-                    return "SQL13";
-                case ProjectTargetPlatform.SQL14:
-                    return "SQL14";
                 case ProjectTargetPlatform.SQLDB:
                     return "SQLDB";
-                case ProjectTargetPlatform.SQLDW:
-                    return "SQLDW";
-                case ProjectTargetPlatform.SQLMI:
-                    return "SQLMI";
-                case ProjectTargetPlatform.SQLVM:
-                    return "SQLVM";
+                case ProjectTargetPlatform.Unknown:
+                    return "Unknown";
             }
             return null;
         }
@@ -77,24 +49,10 @@ namespace Microsoft.Azure.Management.DataMigration.Models
         {
             switch( value )
             {
-                case "SQL10":
-                    return ProjectTargetPlatform.SQL10;
-                case "SQL11":
-                    return ProjectTargetPlatform.SQL11;
-                case "SQL12":
-                    return ProjectTargetPlatform.SQL12;
-                case "SQL13":
-                    return ProjectTargetPlatform.SQL13;
-                case "SQL14":
-                    return ProjectTargetPlatform.SQL14;
                 case "SQLDB":
                     return ProjectTargetPlatform.SQLDB;
-                case "SQLDW":
-                    return ProjectTargetPlatform.SQLDW;
-                case "SQLMI":
-                    return ProjectTargetPlatform.SQLMI;
-                case "SQLVM":
-                    return ProjectTargetPlatform.SQLVM;
+                case "Unknown":
+                    return ProjectTargetPlatform.Unknown;
             }
             return null;
         }

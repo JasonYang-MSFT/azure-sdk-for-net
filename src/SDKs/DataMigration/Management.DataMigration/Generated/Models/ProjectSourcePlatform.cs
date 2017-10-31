@@ -23,16 +23,8 @@ namespace Microsoft.Azure.Management.DataMigration.Models
     {
         [EnumMember(Value = "SQL")]
         SQL,
-        [EnumMember(Value = "Access")]
-        Access,
-        [EnumMember(Value = "DB2")]
-        DB2,
-        [EnumMember(Value = "MySQL")]
-        MySQL,
-        [EnumMember(Value = "Oracle")]
-        Oracle,
-        [EnumMember(Value = "Sybase")]
-        Sybase
+        [EnumMember(Value = "Unknown")]
+        Unknown
     }
     internal static class ProjectSourcePlatformEnumExtension
     {
@@ -47,16 +39,8 @@ namespace Microsoft.Azure.Management.DataMigration.Models
             {
                 case ProjectSourcePlatform.SQL:
                     return "SQL";
-                case ProjectSourcePlatform.Access:
-                    return "Access";
-                case ProjectSourcePlatform.DB2:
-                    return "DB2";
-                case ProjectSourcePlatform.MySQL:
-                    return "MySQL";
-                case ProjectSourcePlatform.Oracle:
-                    return "Oracle";
-                case ProjectSourcePlatform.Sybase:
-                    return "Sybase";
+                case ProjectSourcePlatform.Unknown:
+                    return "Unknown";
             }
             return null;
         }
@@ -67,16 +51,8 @@ namespace Microsoft.Azure.Management.DataMigration.Models
             {
                 case "SQL":
                     return ProjectSourcePlatform.SQL;
-                case "Access":
-                    return ProjectSourcePlatform.Access;
-                case "DB2":
-                    return ProjectSourcePlatform.DB2;
-                case "MySQL":
-                    return ProjectSourcePlatform.MySQL;
-                case "Oracle":
-                    return ProjectSourcePlatform.Oracle;
-                case "Sybase":
-                    return ProjectSourcePlatform.Sybase;
+                case "Unknown":
+                    return ProjectSourcePlatform.Unknown;
             }
             return null;
         }

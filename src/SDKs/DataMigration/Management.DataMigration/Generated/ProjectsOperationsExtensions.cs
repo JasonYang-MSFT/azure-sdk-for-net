@@ -303,66 +303,6 @@ namespace Microsoft.Azure.Management.DataMigration
             }
 
             /// <summary>
-            /// Generates a URL to access project artifacts
-            /// </summary>
-            /// <remarks>
-            /// The project resource is a nested resource representing a stored migration
-            /// project. This method generates a URL that provides an access to
-            /// project-related artifacts required to work with the project in the custom
-            /// tool. User will be able to use the provided URL for a limited time to
-            /// upload or download project artifacts.
-            /// </remarks>
-            /// <param name='operations'>
-            /// The operations group for this extension method.
-            /// </param>
-            /// <param name='groupName'>
-            /// Name of the resource group
-            /// </param>
-            /// <param name='serviceName'>
-            /// Name of the service
-            /// </param>
-            /// <param name='projectName'>
-            /// Name of the project
-            /// </param>
-            public static ProjectArtifactsResponse AccessArtifacts(this IProjectsOperations operations, string groupName, string serviceName, string projectName)
-            {
-                return operations.AccessArtifactsAsync(groupName, serviceName, projectName).GetAwaiter().GetResult();
-            }
-
-            /// <summary>
-            /// Generates a URL to access project artifacts
-            /// </summary>
-            /// <remarks>
-            /// The project resource is a nested resource representing a stored migration
-            /// project. This method generates a URL that provides an access to
-            /// project-related artifacts required to work with the project in the custom
-            /// tool. User will be able to use the provided URL for a limited time to
-            /// upload or download project artifacts.
-            /// </remarks>
-            /// <param name='operations'>
-            /// The operations group for this extension method.
-            /// </param>
-            /// <param name='groupName'>
-            /// Name of the resource group
-            /// </param>
-            /// <param name='serviceName'>
-            /// Name of the service
-            /// </param>
-            /// <param name='projectName'>
-            /// Name of the project
-            /// </param>
-            /// <param name='cancellationToken'>
-            /// The cancellation token.
-            /// </param>
-            public static async Task<ProjectArtifactsResponse> AccessArtifactsAsync(this IProjectsOperations operations, string groupName, string serviceName, string projectName, CancellationToken cancellationToken = default(CancellationToken))
-            {
-                using (var _result = await operations.AccessArtifactsWithHttpMessagesAsync(groupName, serviceName, projectName, null, cancellationToken).ConfigureAwait(false))
-                {
-                    return _result.Body;
-                }
-            }
-
-            /// <summary>
             /// Get projects in a service
             /// </summary>
             /// <remarks>

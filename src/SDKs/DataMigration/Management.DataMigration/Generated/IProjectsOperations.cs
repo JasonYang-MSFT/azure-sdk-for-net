@@ -190,41 +190,6 @@ namespace Microsoft.Azure.Management.DataMigration
         /// </exception>
         Task<AzureOperationResponse<Project>> UpdateWithHttpMessagesAsync(Project parameters, string groupName, string serviceName, string projectName, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
-        /// Generates a URL to access project artifacts
-        /// </summary>
-        /// <remarks>
-        /// The project resource is a nested resource representing a stored
-        /// migration project. This method generates a URL that provides an
-        /// access to project-related artifacts required to work with the
-        /// project in the custom tool. User will be able to use the provided
-        /// URL for a limited time to upload or download project artifacts.
-        /// </remarks>
-        /// <param name='groupName'>
-        /// Name of the resource group
-        /// </param>
-        /// <param name='serviceName'>
-        /// Name of the service
-        /// </param>
-        /// <param name='projectName'>
-        /// Name of the project
-        /// </param>
-        /// <param name='customHeaders'>
-        /// The headers that will be added to request.
-        /// </param>
-        /// <param name='cancellationToken'>
-        /// The cancellation token.
-        /// </param>
-        /// <exception cref="ApiErrorException">
-        /// Thrown when the operation returned an invalid status code
-        /// </exception>
-        /// <exception cref="Microsoft.Rest.SerializationException">
-        /// Thrown when unable to deserialize the response
-        /// </exception>
-        /// <exception cref="Microsoft.Rest.ValidationException">
-        /// Thrown when a required parameter is null
-        /// </exception>
-        Task<AzureOperationResponse<ProjectArtifactsResponse>> AccessArtifactsWithHttpMessagesAsync(string groupName, string serviceName, string projectName, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
         /// Get projects in a service
         /// </summary>
         /// <remarks>

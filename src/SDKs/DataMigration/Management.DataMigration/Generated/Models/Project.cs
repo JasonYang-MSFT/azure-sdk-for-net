@@ -36,11 +36,9 @@ namespace Microsoft.Azure.Management.DataMigration.Models
         /// </summary>
         /// <param name="location">Resource location.</param>
         /// <param name="sourcePlatform">Source platform for the project.
-        /// Possible values include: 'SQL', 'Access', 'DB2', 'MySQL', 'Oracle',
-        /// 'Sybase'</param>
+        /// Possible values include: 'SQL', 'Unknown'</param>
         /// <param name="targetPlatform">Target platform for the project.
-        /// Possible values include: 'SQL10', 'SQL11', 'SQL12', 'SQL13',
-        /// 'SQL14', 'SQLDB', 'SQLDW', 'SQLMI', 'SQLVM'</param>
+        /// Possible values include: 'SQLDB', 'Unknown'</param>
         /// <param name="id">Resource ID.</param>
         /// <param name="name">Resource name.</param>
         /// <param name="type">Resource type.</param>
@@ -71,15 +69,14 @@ namespace Microsoft.Azure.Management.DataMigration.Models
 
         /// <summary>
         /// Gets or sets source platform for the project. Possible values
-        /// include: 'SQL', 'Access', 'DB2', 'MySQL', 'Oracle', 'Sybase'
+        /// include: 'SQL', 'Unknown'
         /// </summary>
         [JsonProperty(PropertyName = "properties.sourcePlatform")]
         public ProjectSourcePlatform SourcePlatform { get; set; }
 
         /// <summary>
         /// Gets or sets target platform for the project. Possible values
-        /// include: 'SQL10', 'SQL11', 'SQL12', 'SQL13', 'SQL14', 'SQLDB',
-        /// 'SQLDW', 'SQLMI', 'SQLVM'
+        /// include: 'SQLDB', 'Unknown'
         /// </summary>
         [JsonProperty(PropertyName = "properties.targetPlatform")]
         public ProjectTargetPlatform TargetPlatform { get; set; }
