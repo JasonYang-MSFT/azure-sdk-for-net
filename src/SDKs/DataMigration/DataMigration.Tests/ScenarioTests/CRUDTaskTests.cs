@@ -93,7 +93,7 @@ namespace DataMigration.Tests.ScenarioTests
                         EncryptConnection = true,
                         TrustServerCertificate = true,
                         UserName = "testuser",
-                        Password = Cryptography.Encrypt(service.PublicKey, "testPassword"),
+                        Password = "testPassword",
                         Authentication = AuthenticationType.SqlAuthentication,
                     }
                 )
