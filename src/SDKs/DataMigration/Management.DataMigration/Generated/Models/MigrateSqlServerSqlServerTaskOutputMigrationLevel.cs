@@ -36,11 +36,11 @@ namespace Microsoft.Azure.Management.DataMigration.Models
         /// <param name="endedOn">Migration end time</param>
         /// <param name="status">Current status of migration. Possible values
         /// include: 'Default', 'Connecting', 'SourceAndTargetSelected',
-        /// 'SelectLogins', 'Configured', 'Running', 'Error', 'Cancelled',
+        /// 'SelectLogins', 'Configured', 'Running', 'Error', 'Stopped',
         /// 'Completed', 'CompletedWithWarnings'</param>
         /// <param name="state">Current state of migration. Possible values
         /// include: 'None', 'InProgress', 'Failed', 'Warning', 'Completed',
-        /// 'Skipped'</param>
+        /// 'Skipped', 'Stopped'</param>
         /// <param name="statusMessage">Migration status message</param>
         /// <param name="message">Migration progress message</param>
         /// <param name="databases">Selected databases as a map from database
@@ -94,7 +94,7 @@ namespace Microsoft.Azure.Management.DataMigration.Models
         /// <summary>
         /// Gets current status of migration. Possible values include:
         /// 'Default', 'Connecting', 'SourceAndTargetSelected', 'SelectLogins',
-        /// 'Configured', 'Running', 'Error', 'Cancelled', 'Completed',
+        /// 'Configured', 'Running', 'Error', 'Stopped', 'Completed',
         /// 'CompletedWithWarnings'
         /// </summary>
         [JsonProperty(PropertyName = "status")]
@@ -102,7 +102,8 @@ namespace Microsoft.Azure.Management.DataMigration.Models
 
         /// <summary>
         /// Gets current state of migration. Possible values include: 'None',
-        /// 'InProgress', 'Failed', 'Warning', 'Completed', 'Skipped'
+        /// 'InProgress', 'Failed', 'Warning', 'Completed', 'Skipped',
+        /// 'Stopped'
         /// </summary>
         [JsonProperty(PropertyName = "state")]
         public MigrationState? State { get; private set; }

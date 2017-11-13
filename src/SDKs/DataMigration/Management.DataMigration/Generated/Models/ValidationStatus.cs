@@ -31,8 +31,10 @@ namespace Microsoft.Azure.Management.DataMigration.Models
         InProgress,
         [EnumMember(Value = "Completed")]
         Completed,
-        [EnumMember(Value = "PartiallyCompleted")]
-        PartiallyCompleted,
+        [EnumMember(Value = "CompletedWithIssues")]
+        CompletedWithIssues,
+        [EnumMember(Value = "Stopped")]
+        Stopped,
         [EnumMember(Value = "Failed")]
         Failed
     }
@@ -57,8 +59,10 @@ namespace Microsoft.Azure.Management.DataMigration.Models
                     return "InProgress";
                 case ValidationStatus.Completed:
                     return "Completed";
-                case ValidationStatus.PartiallyCompleted:
-                    return "PartiallyCompleted";
+                case ValidationStatus.CompletedWithIssues:
+                    return "CompletedWithIssues";
+                case ValidationStatus.Stopped:
+                    return "Stopped";
                 case ValidationStatus.Failed:
                     return "Failed";
             }
@@ -79,8 +83,10 @@ namespace Microsoft.Azure.Management.DataMigration.Models
                     return ValidationStatus.InProgress;
                 case "Completed":
                     return ValidationStatus.Completed;
-                case "PartiallyCompleted":
-                    return ValidationStatus.PartiallyCompleted;
+                case "CompletedWithIssues":
+                    return ValidationStatus.CompletedWithIssues;
+                case "Stopped":
+                    return ValidationStatus.Stopped;
                 case "Failed":
                     return ValidationStatus.Failed;
             }
