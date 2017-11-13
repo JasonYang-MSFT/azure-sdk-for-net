@@ -36,7 +36,7 @@ namespace Microsoft.Azure.Management.DataMigration.Models
         /// <param name="endedOn">Migration end time</param>
         /// <param name="status">Current state of migration. Possible values
         /// include: 'Default', 'Connecting', 'SourceAndTargetSelected',
-        /// 'SelectLogins', 'Configured', 'Running', 'Error', 'Cancelled',
+        /// 'SelectLogins', 'Configured', 'Running', 'Error', 'Stopped',
         /// 'Completed', 'CompletedWithWarnings'</param>
         /// <param name="dataMigrationTableResults">Results of the migration.
         /// The key contains the table name and the value the table result
@@ -78,7 +78,7 @@ namespace Microsoft.Azure.Management.DataMigration.Models
         /// <summary>
         /// Gets current state of migration. Possible values include:
         /// 'Default', 'Connecting', 'SourceAndTargetSelected', 'SelectLogins',
-        /// 'Configured', 'Running', 'Error', 'Cancelled', 'Completed',
+        /// 'Configured', 'Running', 'Error', 'Stopped', 'Completed',
         /// 'CompletedWithWarnings'
         /// </summary>
         [JsonProperty(PropertyName = "status")]

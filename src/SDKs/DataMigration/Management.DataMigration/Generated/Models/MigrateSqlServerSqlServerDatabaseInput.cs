@@ -33,16 +33,14 @@ namespace Microsoft.Azure.Management.DataMigration.Models
         /// Initializes a new instance of the
         /// MigrateSqlServerSqlServerDatabaseInput class.
         /// </summary>
-        /// <param name="id">Unique identifier for the database</param>
         /// <param name="name">Name of the database</param>
         /// <param name="restoreDatabaseName">Name of the database at
         /// destination</param>
         /// <param name="backupAndRestoreFolder">The backup and restore
         /// folder</param>
         /// <param name="databaseFiles">The list of database files</param>
-        public MigrateSqlServerSqlServerDatabaseInput(string id = default(string), string name = default(string), string restoreDatabaseName = default(string), string backupAndRestoreFolder = default(string), IList<DatabaseFileInput> databaseFiles = default(IList<DatabaseFileInput>))
+        public MigrateSqlServerSqlServerDatabaseInput(string name = default(string), string restoreDatabaseName = default(string), string backupAndRestoreFolder = default(string), IList<DatabaseFileInput> databaseFiles = default(IList<DatabaseFileInput>))
         {
-            Id = id;
             Name = name;
             RestoreDatabaseName = restoreDatabaseName;
             BackupAndRestoreFolder = backupAndRestoreFolder;
@@ -54,12 +52,6 @@ namespace Microsoft.Azure.Management.DataMigration.Models
         /// An initialization method that performs custom operations like setting defaults
         /// </summary>
         partial void CustomInit();
-
-        /// <summary>
-        /// Gets or sets unique identifier for the database
-        /// </summary>
-        [JsonProperty(PropertyName = "id")]
-        public string Id { get; set; }
 
         /// <summary>
         /// Gets or sets name of the database

@@ -30,10 +30,7 @@ namespace Microsoft.Azure.Management.DataMigration.Models
         /// Initializes a new instance of the OracleConnectionInfo class.
         /// </summary>
         /// <param name="userName">User name</param>
-        /// <param name="password">Password credential. It must be RSA
-        /// encrypted by the public key of the VM, then base64 encoded. It must
-        /// never be the plaintext!
-        /// </param>
+        /// <param name="password">Password credential.</param>
         /// <param name="serverName">Name of the server</param>
         /// <param name="port">Port for Server</param>
         /// <param name="connectionMode">Connection mode to be used. If
