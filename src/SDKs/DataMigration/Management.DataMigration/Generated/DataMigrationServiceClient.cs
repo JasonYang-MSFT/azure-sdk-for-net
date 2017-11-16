@@ -311,7 +311,7 @@ namespace Microsoft.Azure.Management.DataMigration
             Usages = new UsagesOperations(this);
             Operations = new Operations(this);
             BaseUri = new System.Uri("https://management.azure.com");
-            ApiVersion = "2017-04-15-privatepreview";
+            ApiVersion = "2017-11-15-privatepreview";
             AcceptLanguage = "en-US";
             LongRunningOperationRetryTimeout = 30;
             GenerateClientRequestId = true;
